@@ -3,10 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RMA_2022_23_Student_App.MainPage"
              Shell.NavBarIsVisible="False"
-             BackgroundColor="White">
-
-    <ScrollView BackgroundColor="White" VerticalOptions="CenterAndExpand">
-        <VerticalStackLayout Spacing="20">
+             BackgroundColor="White"
+             >
+    <ScrollView BackgroundColor="White">
+        <VerticalStackLayout Spacing="35">
+            <Image Source="loginup.svg" VerticalOptions="Start"/>
             <Image Source="student.png" HeightRequest="128" WidthRequest="128" HorizontalOptions="Center" VerticalOptions="Center" />
             <Label Text="Login" TextColor="#252437" HorizontalOptions="CenterAndExpand" FontSize="Large" VerticalOptions="Center" FontFamily="MontserratLight" />
             <Frame BorderColor="Transparent" CornerRadius="30" WidthRequest="350" BackgroundColor="#F4F5FC">
@@ -55,6 +56,7 @@
                     </Frame>
                 </VerticalStackLayout>
             </Frame>
+            <Image Source="logindown.svg" VerticalOptions="End" />
         </VerticalStackLayout>
     </ScrollView>
 

@@ -16,10 +16,5 @@ public partial class MainPage : ContentPage
     {
         await Navigation.PushModalAsync(new Login());
     }
-
-    private async void RegistrationClicked(object sender, EventArgs e)
-    {
-        await Navigation.PushModalAsync(new Registration());
-    }
 }
 

@@ -43,17 +43,6 @@
                                IsPassword="True"
                         />
                         </Frame>
-                        <HorizontalStackLayout HorizontalOptions="Center">
-                            <Label Text="Dont have an account? " TextColor="#252437" FontFamily="MontserratLight" VerticalOptions="Center" />
-                            <Button Text="Sign up" 
-                                    TextColor="#0067FF" 
-                                    FontFamily="MontserratLight" 
-                                    BackgroundColor="#F4F5FC" 
-                                    Clicked="RegistrationClicked"
-                                    VerticalOptions="Center"
-                                    Padding="0"/>
-
-                        </HorizontalStackLayout>
                         <Frame WidthRequest="300" CornerRadius="20" HeightRequest="50" BorderColor="Transparent">
                             <Button BackgroundColor="#0067FF" Text="Sign in" TextColor="White" HeightRequest="50" WidthRequest="300"/>
                         </Frame>

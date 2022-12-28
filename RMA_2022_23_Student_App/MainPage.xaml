@@ -4,70 +4,37 @@
              x:Class="RMA_2022_23_Student_App.MainPage"
              Shell.NavBarIsVisible="False"
              BackgroundColor="White"
-             Shell.ForegroundColor="White"
              >
-    <ScrollView BackgroundColor="White">
-        <VerticalStackLayout Spacing="41">
-            <VerticalStackLayout VerticalOptions="Start">
-                <Image Source="loginup.svg"/>
-            </VerticalStackLayout>
-            <VerticalStackLayout Spacing="10">
-                <Image Source="student.png" HeightRequest="128" WidthRequest="128" HorizontalOptions="Center" VerticalOptions="Center" />
+
+    <ScrollView>
+        <VerticalStackLayout>
+            <Frame BorderColor="Transparent" Padding="0" CornerRadius="0">
+                <Image Source="homeup.svg" VerticalOptions="Start" />
+            </Frame>
+            <VerticalStackLayout Spacing="15" VerticalOptions="Center">
+                <Image Source="student.png" HeightRequest="150"/>
                 <HorizontalStackLayout HorizontalOptions="Center">
                     <Label Text="Student" TextColor="#252437" HorizontalOptions="CenterAndExpand" FontSize="Large" VerticalOptions="Center" FontFamily="MontserratLight" />
                     <Label Text="App" TextColor="#0067ff" HorizontalOptions="CenterAndExpand" FontSize="Large" VerticalOptions="Center" FontFamily="MontserratLight" />
                 </HorizontalStackLayout>
-                <Label Text="Login" TextColor="#252437" HorizontalOptions="CenterAndExpand" FontSize="Large" VerticalOptions="Center" FontFamily="MontserratLight" />
-                <Frame BorderColor="Transparent" CornerRadius="30" WidthRequest="350" BackgroundColor="#F4F5FC">
-                    <VerticalStackLayout Spacing="15">
-                        <Label Text="E-mail" TextColor="#252437" FontFamily="MontserratLight" WidthRequest="300" Padding="5, 0"/>
-                        <Frame WidthRequest="300" CornerRadius="20" HeightRequest="50" BorderColor="Transparent">
-                            <Entry x:Name="email"
-                               Placeholder="john@example.com"
-                               FontFamily="MontserratLight"
-                               TextColor="#252437"
-                               VerticalOptions="Center"
-                               HeightRequest="50"
-                               
-                        />
-                        </Frame>
-                        <Label Text="Password" TextColor="#252437" FontFamily="MontserratLight" WidthRequest="300" Padding="5, 0"/>
-                        <Frame WidthRequest="300" CornerRadius="20" HeightRequest="50" BorderColor="Transparent">
-                            <Entry x:Name="password"
-                               Placeholder="password"
-                               FontFamily="MontserratLight"
-                               TextColor="#252437"
-                               VerticalOptions="Center"
-                               HeightRequest="50"
-                               IsPassword="True"
-                        />
-                        </Frame>
-                        <HorizontalStackLayout HorizontalOptions="Center">
-                            <Label>
-                                <Label.FormattedText>
-                                    <FormattedString>
-                                        <Span Text="Dont have an account? " TextColor="#252437" FontFamily="MontserratLight" />
-                                        <Span Text="Sign up"
-                                          TextColor="#0067ff" FontFamily="MontserratLight"
-                                          TextDecorations="Underline">
-                                            <Span.GestureRecognizers>
-                                                <TapGestureRecognizer Command="{Binding TapCommand}"
-                                          CommandParameter="https://learn.microsoft.com/dotnet/maui/" />
-                                            </Span.GestureRecognizers>
-                                        </Span>
-                                    </FormattedString>
-                                </Label.FormattedText>
-                            </Label>
-                        </HorizontalStackLayout>
-                        <Frame WidthRequest="300" CornerRadius="20" HeightRequest="50" BorderColor="Transparent">
-                            <Button Clicked="Registration_Clicked" BackgroundColor="#0067FF" Text="Sign in" TextColor="White" HeightRequest="50" WidthRequest="300"/>
-                        </Frame>
-                    </VerticalStackLayout>
+                <Label 
+                Text="Everything about your tasks on one place!" 
+                TextColor="#252437" 
+                FontSize="Small" 
+                VerticalOptions="Center" 
+                FontFamily="MontserratLight" 
+                HorizontalTextAlignment="Center"
+                />
+                <Frame WidthRequest="300" CornerRadius="20" HeightRequest="50" BorderColor="Transparent">
+                    <Button Clicked="LoginClicked" BackgroundColor="#F4F5FC" Text="Sign in" TextColor="#252437" HeightRequest="50" WidthRequest="300"/>
+                </Frame>
+                <Frame WidthRequest="300" CornerRadius="20" HeightRequest="50" BorderColor="Transparent">
+                    <Button Clicked="RegistrationClicked" BackgroundColor="#0067FF" Text="Sign up" TextColor="White" HeightRequest="50" WidthRequest="300"/>
                 </Frame>
             </VerticalStackLayout>
-            <VerticalStackLayout VerticalOptions="End">
-                <Image Source="logindown.svg" />
-            </VerticalStackLayout>
+            <AbsoluteLayout>
+                <Image Source="homedown.svg" VerticalOptions="Start" AbsoluteLayout.LayoutBounds="1, 6" AbsoluteLayout.LayoutFlags="PositionProportional" />
+            </AbsoluteLayout>
         </VerticalStackLayout>
     </ScrollView>
 

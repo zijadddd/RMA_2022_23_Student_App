@@ -12,15 +12,15 @@
                 <Image Source="student.png" HeightRequest="128" WidthRequest="128" HorizontalOptions="Center" VerticalOptions="Center" />
                 <HorizontalStackLayout HorizontalOptions="Center">
                     <Label Text="Student" TextColor="#252437" HorizontalOptions="CenterAndExpand" FontSize="Large" VerticalOptions="Center" FontFamily="MontserratLight" />
-                    <Label Text="App" TextColor="#8ED385" HorizontalOptions="CenterAndExpand" FontSize="Large" VerticalOptions="Center" FontFamily="MontserratLight" />
+                    <Label Text="App" TextColor="#0067ff" HorizontalOptions="CenterAndExpand" FontSize="Large" VerticalOptions="Center" FontFamily="MontserratLight" />
                 </HorizontalStackLayout>
                 <Label Text="Sign Up" TextColor="#252437" HorizontalOptions="CenterAndExpand" FontSize="Large" VerticalOptions="Center" FontFamily="MontserratLight" />
-                <Frame BorderColor="Transparent" CornerRadius="30" WidthRequest="350" BackgroundColor="#dcffce">
+                <Frame BorderColor="Transparent" CornerRadius="30" WidthRequest="350" BackgroundColor="#F4F5FC">
                     <VerticalStackLayout Spacing="15" >
-                        <Label Text="Name" TextColor="#252437" FontFamily="MontserratLight" WidthRequest="300" Padding="5, 0"/>
+                        <Label Text="First name" TextColor="#252437" FontFamily="MontserratLight" WidthRequest="300" Padding="5, 0"/>
                         <Frame WidthRequest="300" CornerRadius="20" HeightRequest="50" BorderColor="Transparent">
                             <Entry 
-                               x:Name="Name"
+                               x:Name="firstName"
                                
                                Placeholder="John"
                                FontFamily="MontserratLight"
@@ -30,10 +30,58 @@
                                
                         />
                         </Frame>
-                        
+                        <Label Text="Last name" TextColor="#252437" FontFamily="MontserratLight" WidthRequest="300" Padding="5, 0"/>
+                        <Frame WidthRequest="300" CornerRadius="20" HeightRequest="50" BorderColor="Transparent">
+                            <Entry 
+                               x:Name="lastName"
+                               
+                               Placeholder="Wick"
+                               FontFamily="MontserratLight"
+                               TextColor="#252437"
+                               VerticalOptions="Center"
+                               HeightRequest="50"
+                               
+                        />
+                        </Frame>
+                        <Label Text="Adress" TextColor="#252437" FontFamily="MontserratLight" WidthRequest="300" Padding="5, 0"/>
+                        <Frame WidthRequest="300" CornerRadius="20" HeightRequest="50" BorderColor="Transparent">
+                            <Entry 
+                               x:Name="address"
+                               
+                               Placeholder="Adress bb"
+                               FontFamily="MontserratLight"
+                               TextColor="#252437"
+                               VerticalOptions="Center"
+                               HeightRequest="50"
+                               
+                        />
+                        </Frame>
+                        <Label Text="Country" TextColor="#252437" FontFamily="MontserratLight" WidthRequest="300" Padding="5, 0"/>
+                        <Frame WidthRequest="300" CornerRadius="20" HeightRequest="50" BorderColor="Transparent">
+                            <Picker x:Name="picker"
+                                    Title="Select a country"
+                                    WidthRequest="300"
+                                    HeightRequest="50"
+                                    HorizontalOptions="Start"
+                                    VerticalOptions="Center"
+                                    FontFamily="MontserratLight" />
+                        </Frame>
+                        <Label Text="City" TextColor="#252437" FontFamily="MontserratLight" WidthRequest="300" Padding="5, 0"/>
+                        <Frame WidthRequest="300" CornerRadius="20" HeightRequest="50" BorderColor="Transparent">
+                            <Entry 
+                               x:Name="city"
+                               
+                               Placeholder="Zenica"
+                               FontFamily="MontserratLight"
+                               TextColor="#252437"
+                               VerticalOptions="Center"
+                               HeightRequest="50"
+                               
+                        />
+                        </Frame>
                         <Label Text="E-mail" TextColor="#252437" FontFamily="MontserratLight" WidthRequest="300" Padding="5, 0"/>
                         <Frame WidthRequest="300" CornerRadius="20" HeightRequest="50" BorderColor="Transparent">
-                            <Entry x:Name="emaill"
+                            <Entry x:Name="email"
                                Placeholder="john@example.com"
                                FontFamily="MontserratLight"
                                TextColor="#252437"
@@ -42,9 +90,21 @@
                                
                         />
                         </Frame>
+                        <Label Text="Phone number" TextColor="#252437" FontFamily="MontserratLight" WidthRequest="300" Padding="5, 0"/>
+                        <Frame WidthRequest="300" CornerRadius="20" HeightRequest="50" BorderColor="Transparent">
+                            <Entry x:Name="phoneNumber"
+                               Placeholder="0604568976"
+                               FontFamily="MontserratLight"
+                               TextColor="#252437"
+                               VerticalOptions="Center"
+                               HeightRequest="50"
+                               Keyboard="Numeric"
+                               
+                        />
+                        </Frame>
                         <Label Text="Password" TextColor="#252437" FontFamily="MontserratLight" WidthRequest="300" Padding="5, 0"/>
                         <Frame WidthRequest="300" CornerRadius="20" HeightRequest="50" BorderColor="Transparent">
-                            <Entry x:Name="passwordd"
+                            <Entry x:Name="password"
                                Placeholder="password"
                                FontFamily="MontserratLight"
                                TextColor="#252437"
@@ -53,35 +113,43 @@
                                IsPassword="True"
                         />
                         </Frame>
-                        
+                        <Label Text="Repeat password" TextColor="#252437" FontFamily="MontserratLight" WidthRequest="300" Padding="5, 0"/>
+                        <Frame WidthRequest="300" CornerRadius="20" HeightRequest="50" BorderColor="Transparent">
+                            <Entry x:Name="repeatedPassword"
+                               Placeholder="password"
+                               FontFamily="MontserratLight"
+                               TextColor="#252437"
+                               VerticalOptions="Center"
+                               HeightRequest="50"
+                               IsPassword="True"
+                        />
+                        </Frame>
+
                         <HorizontalStackLayout HorizontalOptions="Center">
-                            <CheckBox Color="Green"/>
                             <Label TextColor="#252437" FontFamily="MontserratLight" VerticalOptions="Center" Text="Agree with "/>
                             <Label TextColor="#252437" FontFamily="MontserratLight" VerticalOptions="Center" Text="Terms &#38; Conditions"/>
+                            <CheckBox Color="#0067ff"/>
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout HorizontalOptions="Center">
+                            <Label Text="Already have an account? " TextColor="#252437" FontFamily="MontserratLight" VerticalOptions="Center" />
+                            <Button Text="Sign in" 
+                                    TextColor="#0067ff" 
+                                    FontFamily="MontserratLight" 
+                                    BackgroundColor="#F4F5FC" 
+                                    Clicked="LoginClicked"
+                                    VerticalOptions="Center"
+                                    Padding="0"/>
+
                         </HorizontalStackLayout>
                         <Frame WidthRequest="300" CornerRadius="20" HeightRequest="50" BorderColor="Transparent">
-                            <Button BackgroundColor="#0067FF" Text="CREATE ACCOUNT" TextColor="White" HeightRequest="50" WidthRequest="300"/>
+                            <Button BackgroundColor="#0067ff" Text="Sign up" TextColor="White" HeightRequest="50" WidthRequest="300"/>
                         </Frame>
                     </VerticalStackLayout>
                 </Frame>
             </VerticalStackLayout>
-            <HorizontalStackLayout HorizontalOptions="Center" Margin="10">
-                <Label>
-                    <Label.FormattedText>
-                        <FormattedString>
-                            <Span Text="Already have an account? " TextColor="#252437" FontFamily="MontserratLight" />
-                            <Span Text="Sign in"
-                                          TextColor="#0067ff" FontFamily="MontserratLight"
-                                          TextDecorations="Underline">
-                                <Span.GestureRecognizers>
-                                    <TapGestureRecognizer Command="{Binding TapCommand}"
-                                          CommandParameter="https://learn.microsoft.com/dotnet/maui/" />
-                                </Span.GestureRecognizers>
-                            </Span>
-                        </FormattedString>
-                    </Label.FormattedText>
-                </Label>
-            </HorizontalStackLayout>
+            <AbsoluteLayout>
+                <Image Source="registrationdown.svg" VerticalOptions="Start" AbsoluteLayout.LayoutBounds="0.5, 1" AbsoluteLayout.LayoutFlags="PositionProportional" />
+            </AbsoluteLayout>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

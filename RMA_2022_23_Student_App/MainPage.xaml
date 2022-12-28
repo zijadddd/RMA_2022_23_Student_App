@@ -30,7 +30,7 @@
                 </Frame>
             </VerticalStackLayout>
             <AbsoluteLayout>
-                <Image Source="homedown.svg" VerticalOptions="Start" AbsoluteLayout.LayoutBounds="1, 6" AbsoluteLayout.LayoutFlags="PositionProportional" />
+                <Image Source="homedown.svg" VerticalOptions="Start" AbsoluteLayout.LayoutBounds="1, 10" AbsoluteLayout.LayoutFlags="PositionProportional" />
             </AbsoluteLayout>
         </VerticalStackLayout>
     </ScrollView>

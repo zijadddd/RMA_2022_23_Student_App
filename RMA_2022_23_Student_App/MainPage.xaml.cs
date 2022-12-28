@@ -12,5 +12,10 @@ public partial class MainPage : ContentPage
 		InitializeComponent();
         BindingContext = this;
     }
+
+    private async void Registration_Clicked(object sender, EventArgs e)
+    {
+        await Navigation.PushModalAsync(new Registration());
+    }
 }
 

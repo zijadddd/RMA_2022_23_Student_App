@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RMA_2022_23_Student_App.Registration"
+             Title="Registration" BackgroundColor="White">
+    <ScrollView>
+        <VerticalStackLayout >
+            <VerticalStackLayout VerticalOptions="Start">
+                <Image Source="registrationup.svg"/>
+            </VerticalStackLayout>
+            <VerticalStackLayout Spacing="10">
+                <Image Source="student.png" HeightRequest="128" WidthRequest="128" HorizontalOptions="Center" VerticalOptions="Center" />
+                <HorizontalStackLayout HorizontalOptions="Center">
+                    <Label Text="Student" TextColor="#252437" HorizontalOptions="CenterAndExpand" FontSize="Large" VerticalOptions="Center" FontFamily="MontserratLight" />
+                    <Label Text="App" TextColor="#8ED385" HorizontalOptions="CenterAndExpand" FontSize="Large" VerticalOptions="Center" FontFamily="MontserratLight" />
+                </HorizontalStackLayout>
+                <Label Text="Sign Up" TextColor="#252437" HorizontalOptions="CenterAndExpand" FontSize="Large" VerticalOptions="Center" FontFamily="MontserratLight" />
+                <Frame BorderColor="Transparent" CornerRadius="30" WidthRequest="350" BackgroundColor="#dcffce">
+                    <VerticalStackLayout Spacing="15" >
+                        <Label Text="Name" TextColor="#252437" FontFamily="MontserratLight" WidthRequest="300" Padding="5, 0"/>
+                        <Frame WidthRequest="300" CornerRadius="20" HeightRequest="50" BorderColor="Transparent">
+                            <Entry 
+                               x:Name="Name"
+                               
+                               Placeholder="John"
+                               FontFamily="MontserratLight"
+                               TextColor="#252437"
+                               VerticalOptions="Center"
+                               HeightRequest="50"
+                               
+                        />
+                        </Frame>
+                        
+                        <Label Text="E-mail" TextColor="#252437" FontFamily="MontserratLight" WidthRequest="300" Padding="5, 0"/>
+                        <Frame WidthRequest="300" CornerRadius="20" HeightRequest="50" BorderColor="Transparent">
+                            <Entry x:Name="emaill"
+                               Placeholder="john@example.com"
+                               FontFamily="MontserratLight"
+                               TextColor="#252437"
+                               VerticalOptions="Center"
+                               HeightRequest="50"
+                               
+                        />
+                        </Frame>
+                        <Label Text="Password" TextColor="#252437" FontFamily="MontserratLight" WidthRequest="300" Padding="5, 0"/>
+                        <Frame WidthRequest="300" CornerRadius="20" HeightRequest="50" BorderColor="Transparent">
+                            <Entry x:Name="passwordd"
+                               Placeholder="password"
+                               FontFamily="MontserratLight"
+                               TextColor="#252437"
+                               VerticalOptions="Center"
+                               HeightRequest="50"
+                               IsPassword="True"
+                        />
+                        </Frame>
+                        
+                        <HorizontalStackLayout HorizontalOptions="Center">
+                            <CheckBox Color="Green"/>
+                            <Label TextColor="#252437" FontFamily="MontserratLight" VerticalOptions="Center" Text="Agree with "/>
+                            <Label TextColor="#252437" FontFamily="MontserratLight" VerticalOptions="Center" Text="Terms &#38; Conditions"/>
+                        </HorizontalStackLayout>
+                        <Frame WidthRequest="300" CornerRadius="20" HeightRequest="50" BorderColor="Transparent">
+                            <Button BackgroundColor="#0067FF" Text="CREATE ACCOUNT" TextColor="White" HeightRequest="50" WidthRequest="300"/>
+                        </Frame>
+                    </VerticalStackLayout>
+                </Frame>
+            </VerticalStackLayout>
+            <HorizontalStackLayout HorizontalOptions="Center" Margin="10">
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Already have an account? " TextColor="#252437" FontFamily="MontserratLight" />
+                            <Span Text="Sign in"
+                                          TextColor="#0067ff" FontFamily="MontserratLight"
+                                          TextDecorations="Underline">
+                                <Span.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding TapCommand}"
+                                          CommandParameter="https://learn.microsoft.com/dotnet/maui/" />
+                                </Span.GestureRecognizers>
+                            </Span>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

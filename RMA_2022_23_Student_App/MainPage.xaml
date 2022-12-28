@@ -60,7 +60,7 @@
                             </Label>
                         </HorizontalStackLayout>
                         <Frame WidthRequest="300" CornerRadius="20" HeightRequest="50" BorderColor="Transparent">
-                            <Button BackgroundColor="#0067FF" Text="Sign in" TextColor="White" HeightRequest="50" WidthRequest="300"/>
+                            <Button Clicked="Registration_Clicked" BackgroundColor="#0067FF" Text="Sign in" TextColor="White" HeightRequest="50" WidthRequest="300"/>
                         </Frame>
                     </VerticalStackLayout>
                 </Frame>

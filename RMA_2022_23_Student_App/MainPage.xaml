@@ -28,6 +28,9 @@
                 <Frame WidthRequest="300" CornerRadius="20" HeightRequest="50" BorderColor="Transparent">
                     <Button Clicked="LoginClicked" BackgroundColor="#F4F5FC" Text="Sign in" TextColor="#252437" HeightRequest="50" WidthRequest="300"/>
                 </Frame>
+                <Frame WidthRequest="300" CornerRadius="20" HeightRequest="50" BorderColor="Transparent">
+                    <Button Clicked="RegistrationClicked" BackgroundColor="#0067ff" Text="Sign up" TextColor="White" HeightRequest="50" WidthRequest="300"/>
+                </Frame>
             </VerticalStackLayout>
             <AbsoluteLayout>
                 <Image Source="homedown.svg" VerticalOptions="Start" AbsoluteLayout.LayoutBounds="1, 10" AbsoluteLayout.LayoutFlags="PositionProportional" />

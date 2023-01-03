@@ -9,4 +9,14 @@ public partial class Login : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private async void RegistrationClicked(object sender, EventArgs e)
+    {
+        await Navigation.PushModalAsync(new Registration());
+    }
+
+    private async void ProfilePageClicked(object sender, EventArgs e)
+    {
+        await Navigation.PushModalAsync(new ProfilePage());
+    }
 }

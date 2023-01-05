@@ -3,8 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RMA_2022_23_Student_App.Login"
              Title="Login"
-             Shell.NavBarIsVisible="False"
-             BackgroundColor="White">
+             Shell.NavBarIsVisible="False">
 
 
     <ScrollView BackgroundColor="White">
@@ -55,7 +54,7 @@
 
                         </HorizontalStackLayout>
                         <Frame WidthRequest="300" CornerRadius="20" HeightRequest="50" BorderColor="Transparent">
-                            <Button BackgroundColor="#0067FF" Text="Sign in" TextColor="White" HeightRequest="50" WidthRequest="300" Clicked="ProfilePageClicked"/>
+                            <Button BackgroundColor="#0067FF" Text="Sign in" TextColor="White" HeightRequest="50" WidthRequest="300" Clicked="TabbedPageClicked" FontFamily="MontserratMedium"/>
                         </Frame>
                     </VerticalStackLayout>
                 </Frame>

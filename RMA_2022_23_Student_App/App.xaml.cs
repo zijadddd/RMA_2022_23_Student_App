@@ -13,6 +13,7 @@ public partial class App : Application
             #if __ANDROID__
                 handler.PlatformView.TextCursorDrawable.SetTint(Color.Parse("#0067ff").ToAndroid());
             #endif
+            Application.Current.UserAppTheme = AppTheme.Light;
         });
 
         MainPage = new AppShell();

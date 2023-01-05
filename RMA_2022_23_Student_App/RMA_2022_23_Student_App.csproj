@@ -64,15 +64,36 @@
 	<ItemGroup>
 	  <MauiSplashScreen Include="Resources\Splash\splash.png" />
 	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="ActiveSubjects.xaml.cs">
+	    <DependentUpon>ActiveSubjects.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="TabbeddPage.xaml.cs">
+	    <DependentUpon>TabbeddPage.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
 	
 	<ItemGroup>
+	  <MauiXaml Update="ActivityPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="ClassPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Login.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="ActiveSubjects.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="ProfilePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Registration.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="TabbeddPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

@@ -15,8 +15,8 @@ public partial class Login : ContentPage
         await Navigation.PushModalAsync(new Registration());
     }
 
-    private async void ProfilePageClicked(object sender, EventArgs e)
+    private async void TabbedPageClicked(object sender, EventArgs e)
     {
-        await Navigation.PushModalAsync(new ProfilePage());
+        await Navigation.PushModalAsync(new TabbeddPage());
     }
 }

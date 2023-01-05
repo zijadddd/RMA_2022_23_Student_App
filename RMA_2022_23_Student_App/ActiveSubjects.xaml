@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RMA_2022_23_Student_App.ActiveSubjects"
+             Title="ActiveSubjects"
+             Shell.NavBarIsVisible="False">
+    <ScrollView>
+        <VerticalStackLayout>
+            <Border VerticalOptions="StartAndExpand" BackgroundColor="#f4f5fc" StrokeShape="RoundRectangle 0, 0, 40, 40" StrokeThickness="0" Padding="0" HeightRequest="230">
+                <VerticalStackLayout>
+                    <FlexLayout Direction="Row" AlignItems="Center" JustifyContent="SpaceBetween" VerticalOptions="Start" HeightRequest="100">
+                        <Frame BackgroundColor="Transparent" BorderColor="Transparent" Margin="5">
+                            <VerticalStackLayout>
+                                <Label x:Name="date" FontFamily="MontserratMedium" FontSize="Micro" TextColor="Gray" FontAttributes="Bold"/>
+                                <HorizontalStackLayout>
+                                    <Label Text="Hey, " FontFamily="MontserratLight" FontSize="Large" TextColor="#2a2a3e" FontAttributes="Bold" />
+                                    <Label Text="Zijad" FontFamily="MontserratMedium" FontSize="Large" TextColor="#2a2a3e" />
+                                </HorizontalStackLayout>
+                            </VerticalStackLayout>
+                        </Frame>
+                        <Frame HeightRequest="70" WidthRequest="70" CornerRadius="20" HorizontalOptions="End" BorderColor="Transparent" Margin="10" Padding="0">
+                            <Image Source="user.jpg" HeightRequest="70" WidthRequest="70" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                        </Frame>
+                    </FlexLayout>
+                    <FlexLayout HorizontalOptions="Center" Direction="Row" AlignItems="Center" JustifyContent="SpaceAround" Margin="0, 20">
+                        <Border BackgroundColor="#0067ff" WidthRequest="90" HeightRequest="100" StrokeShape="RoundRectangle 20, 20, 20, 20" StrokeThickness="0" Padding="0">
+                            <Border.Shadow>
+                                <Shadow Brush="#0067ff" Offset="10, 10" Opacity="0.5" Radius="50"/>
+                            </Border.Shadow>
+                            <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                                <Label Text="13" TextColor="White" FontSize="25" FontFamily="MontserratMedium" FontAttributes="Bold" HorizontalOptions="Center" />
+                                <Label Text="Active" TextColor="White" Opacity="0.6" FontSize="15" FontFamily="MontserratMedium" FontAttributes="Bold" HorizontalOptions="Center" />
+                            </VerticalStackLayout>
+                        </Border>
+                        <Border BackgroundColor="Transparent" WidthRequest="90" HeightRequest="100" StrokeShape="RoundRectangle 20, 20, 20, 20" StrokeThickness="0" Padding="0">
+                            <Border.Shadow>
+                                <Shadow Brush="#0067ff" Offset="10, 10" Opacity="0" Radius="50"/>
+                            </Border.Shadow>
+                            <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                                <Label Text="15" TextColor="#24253d" FontSize="25" FontFamily="MontserratMedium" FontAttributes="Bold" HorizontalOptions="Center" />
+                                <Label Text="Pending" TextColor="#24253d" Opacity="0.3" FontSize="15" FontFamily="MontserratMedium" FontAttributes="Bold" HorizontalOptions="Center" />
+                            </VerticalStackLayout>
+                        </Border>
+                        <Border BackgroundColor="Transparent" WidthRequest="90" HeightRequest="100" StrokeShape="RoundRectangle 20, 20, 20, 20" StrokeThickness="0" Padding="0">
+                            <Border.Shadow>
+                                <Shadow Brush="#0067ff" Offset="10, 10" Opacity="0" Radius="50"/>
+                            </Border.Shadow>
+                            <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                                <Label Text="21" TextColor="#24253d" FontSize="25" FontFamily="MontserratMedium" FontAttributes="Bold" HorizontalOptions="Center" />
+                                <Label Text="Completed" TextColor="#24253d" Opacity="0.3" FontSize="15" FontFamily="MontserratMedium" FontAttributes="Bold" HorizontalOptions="Center" />
+                            </VerticalStackLayout>
+                        </Border>
+                    </FlexLayout>
+                </VerticalStackLayout>
+            </Border>
+            <VerticalStackLayout Margin="20">
+                <Frame HeightRequest="295" BackgroundColor="#cde7fc" BorderColor="Transparent" CornerRadius="40">
+                    <VerticalStackLayout>
+                        <Frame BorderColor="White" CornerRadius="20" WidthRequest="80" HeightRequest="100" HorizontalOptions="End">
+                            <VerticalStackLayout VerticalOptions="Center" WidthRequest="80" HeightRequest="80">
+                                <Label Text="12" TextColor="#23243a" FontSize="45" FontFamily="MontserratMedium" FontAttributes="Bold" HorizontalOptions="Center" />
+                                <Label Text="Enrolled" TextColor="#23243a" FontSize="10" FontFamily="MontserratMedium" FontAttributes="Bold" HorizontalOptions="Center" />
+                            </VerticalStackLayout>
+                        </Frame>
+                        <Frame HeightRequest="145" CornerRadius="40" BorderColor="Transparent" BackgroundColor="#3e8dfd" Opacity="1" Margin="0, 10" VerticalOptions="End">
+                            <VerticalStackLayout Spacing="5">
+                                <Label Text="Razvoj mobilnih aplikacija" FontFamily="MontserratMedium" TextColor="White" FontSize="20" FontAttributes="Bold"/>
+                                <Label Text="Esad Kadušić" FontFamily="MontserratMedium" TextColor="White" FontSize="15"/>
+                                <Button Text="Enroll" BackgroundColor="Transparent" BorderColor="White" BorderWidth="1" WidthRequest="100" CornerRadius="20" Padding="15" FontAttributes="Bold" FontFamily="MontserratMedium" HorizontalOptions="End" Clicked="ClassPageClicked" TextColor="White"/>
+                            </VerticalStackLayout>
+                        </Frame>
+                    </VerticalStackLayout>
+                </Frame>
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

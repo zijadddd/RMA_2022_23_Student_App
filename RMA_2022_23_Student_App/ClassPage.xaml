@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RMA_2022_23_Student_App.ClassPage"
+             Title="ClassPage">
+    <ScrollView>
+        <VerticalStackLayout Padding="30">
+            <Label Text="Razvoj mobilnih aplikacija" FontSize="20" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
+            <Label x:Name="date" FontFamily="MontserratMedium" FontSize="Micro" TextColor="Gray" />
+            <HorizontalStackLayout Spacing="20" Margin="0, 10">
+                <Frame WidthRequest="70" HeightRequest="70" CornerRadius="25" BackgroundColor="#cde7fc" BorderColor="Transparent">
+                    <Image Source="Calendar.svg" WidthRequest="20" HeightRequest="20" VerticalOptions="Center" HorizontalOptions="Center"/>
+                </Frame>
+                <VerticalStackLayout VerticalOptions="Center" Spacing="5">
+                    <Label Text="Every Tuesday" FontFamily="MontserratLight" FontAttributes="Bold" TextColor="Gray" FontSize="12"/>
+                    <Label Text="14:15 - 17:15" FontFamily="MontserratMedium" FontAttributes="Bold" TextColor="#2a2a3e" FontSize="15" />
+                </VerticalStackLayout>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout Spacing="20" Margin="0, 10">
+                <Frame WidthRequest="70" HeightRequest="70" CornerRadius="25" BackgroundColor="#e6ceff" BorderColor="Transparent">
+                    <Image Source="Cursor.svg" WidthRequest="20" HeightRequest="20" VerticalOptions="Center" HorizontalOptions="Center"/>
+                </Frame>
+                <VerticalStackLayout VerticalOptions="Center" Spacing="5">
+                    <Label Text="Location" FontFamily="MontserratLight" FontAttributes="Bold" TextColor="Gray" FontSize="12"/>
+                    <Label Text="meet.google.com/puj-fkho-yuw" FontFamily="MontserratMedium" FontAttributes="Bold" TextColor="#236cde" FontSize="15" />
+                </VerticalStackLayout>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout Spacing="20" Margin="0, 10">
+                <Frame WidthRequest="70" HeightRequest="70" CornerRadius="25" BackgroundColor="#dcffce" BorderColor="Transparent">
+                    <Image Source="studenticon.svg" WidthRequest="20" HeightRequest="20" VerticalOptions="Center" HorizontalOptions="Center"/>
+                </Frame>
+                <VerticalStackLayout VerticalOptions="Center" Spacing="5">
+                    <Label Text="Number of students" FontFamily="MontserratLight" FontAttributes="Bold" TextColor="Gray" FontSize="12"/>
+                    <Label Text="12" FontFamily="MontserratMedium" FontAttributes="Bold" TextColor="#2a2a3e" FontSize="15" />
+                </VerticalStackLayout>
+            </HorizontalStackLayout>
+            <Label Text="Classmates" FontFamily="MontserratMedium" FontSize="20" Margin="0, 10" TextColor="#2a2a3e"/>
+            <Frame HeightRequest="70" CornerRadius="30" BackgroundColor="#f4f5fc" BorderColor="Transparent">
+                <FlexLayout HeightRequest="70" VerticalOptions="Center" HorizontalOptions="Center" Direction="Row" AlignItems="Center" JustifyContent="SpaceAround">
+                    <Frame HeightRequest="50" WidthRequest="50" CornerRadius="50" BorderColor="Transparent">
+                        <Image Source="people1.jpg" HeightRequest="50" WidthRequest="50" Aspect="AspectFill" />
+                    </Frame>
+                    <Frame HeightRequest="50" WidthRequest="50" CornerRadius="50" BorderColor="Transparent">
+                        <Image Source="people2.jepg" HeightRequest="50" WidthRequest="50" Aspect="AspectFill" />
+                    </Frame>
+                    <Frame HeightRequest="50" WidthRequest="50" CornerRadius="50" BorderColor="Transparent">
+                        <Image Source="people3.jepg" HeightRequest="50" WidthRequest="50" Aspect="AspectFill" />
+                    </Frame>
+                    <Frame HeightRequest="50" WidthRequest="50" CornerRadius="50" BorderColor="Transparent">
+                        <Image Source="people4.jpg" HeightRequest="50" WidthRequest="50" Aspect="AspectFill"/>
+                    </Frame>
+                    <Frame HeightRequest="50" WidthRequest="50" CornerRadius="50" BorderColor="Transparent">
+                        <Image Source="people5.png" HeightRequest="50" WidthRequest="50" Aspect="AspectFill"/>
+                    </Frame>
+                </FlexLayout>
+            </Frame>
+            <Label Text="List of points" FontFamily="MontserratMedium" FontSize="20" Margin="0, 10" TextColor="#2a2a3e"/>
+            <Frame BackgroundColor="#f4f5fc" BorderColor="Transparent" HeightRequest="255" CornerRadius="30">
+                <VerticalStackLayout>
+                    <Label Text="Presence: 10b" FontFamily="MontserratMedium" TextColor="#2a2a3e" />
+                    <BoxView HeightRequest="1" BackgroundColor="#dedfe3" Margin="0, 10"/>
+                    <Label Text="Seminar work: 30b" FontFamily="MontserratMedium" TextColor="#2a2a3e" />
+                    <BoxView HeightRequest="1" BackgroundColor="#dedfe3" Margin="0, 10"/>
+                    <Label Text="First partial exam: 13b" FontFamily="MontserratMedium" TextColor="#2a2a3e" />
+                    <BoxView HeightRequest="1" BackgroundColor="#dedfe3" Margin="0, 10"/>
+                    <Label Text="Second partial exam: 15b" FontFamily="MontserratMedium" TextColor="#2a2a3e" />
+                    <BoxView HeightRequest="1" BackgroundColor="#dedfe3" Margin="0, 10"/>
+                    <Label Text="Final exam: 28b" FontFamily="MontserratMedium" TextColor="#2a2a3e" />
+                    <BoxView HeightRequest="1" BackgroundColor="#dedfe3" Margin="0, 10"/>
+                    <FlexLayout HeightRequest="20" Direction="Row" AlignItems="Center" JustifyContent="SpaceBetween">
+                        <Label Text="Total: 68b" FontFamily="MontserratMedium" TextColor="#2a2a3e" HorizontalOptions="Start"/>
+                        <Label Text="Grade: 7" FontFamily="MontserratMedium" TextColor="#2a2a3e" HorizontalOptions="End"/>
+                    </FlexLayout>
+                </VerticalStackLayout>
+            </Frame>
+            <Label Text="Activity" FontFamily="MontserratMedium" FontSize="20" Margin="0, 10" TextColor="#2a2a3e"/>
+            <Grid ColumnSpacing="17" HorizontalOptions="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="35" />
+                    <RowDefinition Height="35" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3" />
+                    <ColumnDefinition Width="3" />
+                    <ColumnDefinition Width="3" />
+                    <ColumnDefinition Width="3" />
+                    <ColumnDefinition Width="3" />
+                    <ColumnDefinition Width="3" />
+                    <ColumnDefinition Width="3" />
+                    <ColumnDefinition Width="3" />
+                    <ColumnDefinition Width="3" />
+                    <ColumnDefinition Width="3" />
+                    <ColumnDefinition Width="3" />
+                    <ColumnDefinition Width="3" />
+                    <ColumnDefinition Width="3" />
+                    <ColumnDefinition Width="3" />
+                    <ColumnDefinition Width="3" />
+                    <ColumnDefinition Width="3" />
+                </Grid.ColumnDefinitions>
+                <BoxView HeightRequest="15" WidthRequest="3" Color="#0067ff" Grid.Row="0" Grid.Column="0" CornerRadius="10"/>
+                <BoxView HeightRequest="15" WidthRequest="3" Color="#ff7272" Grid.Row="0" Grid.Column="1" CornerRadius="10"/>
+                <BoxView HeightRequest="15" WidthRequest="3" Color="#0067ff" Grid.Row="0" Grid.Column="2" CornerRadius="10"/>
+                <BoxView HeightRequest="15" WidthRequest="3" Color="#ff7272" Grid.Row="0" Grid.Column="3" CornerRadius="10"/>
+                <BoxView HeightRequest="15" WidthRequest="3" Color="#0067ff" Grid.Row="0" Grid.Column="4" CornerRadius="10"/>
+                <BoxView HeightRequest="15" WidthRequest="3" Color="#0067ff" Grid.Row="0" Grid.Column="5" CornerRadius="10"/>
+                <BoxView HeightRequest="15" WidthRequest="3" Color="#ff7272" Grid.Row="0" Grid.Column="6" CornerRadius="10"/>
+                <BoxView HeightRequest="15" WidthRequest="3" Color="#0067ff" Grid.Row="0" Grid.Column="7" CornerRadius="10"/>
+                <BoxView HeightRequest="15" WidthRequest="3" Color="#0067ff" Grid.Row="0" Grid.Column="8" CornerRadius="10"/>
+                <BoxView HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="0" Grid.Column="9" CornerRadius="10"/>
+                <BoxView HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="0" Grid.Column="10" CornerRadius="10"/>
+                <BoxView HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="0" Grid.Column="11" CornerRadius="10"/>
+                <BoxView HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="0" Grid.Column="12" CornerRadius="10"/>
+                <BoxView HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="0" Grid.Column="13" CornerRadius="10"/>
+                <BoxView HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="0" Grid.Column="14" CornerRadius="10"/>
+                <BoxView HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="0" Grid.Column="15" CornerRadius="10"/>
+                <BoxView HeightRequest="15" WidthRequest="3" Color="#ff7272" Grid.Row="1" Grid.Column="0" CornerRadius="10"/>
+                <BoxView HeightRequest="15" WidthRequest="3" Color="#0067ff" Grid.Row="1" Grid.Column="1" CornerRadius="10"/>
+                <BoxView HeightRequest="15" WidthRequest="3" Color="#0067ff" Grid.Row="1" Grid.Column="2" CornerRadius="10"/>
+                <BoxView HeightRequest="15" WidthRequest="3" Color="#0067ff" Grid.Row="1" Grid.Column="3" CornerRadius="10"/>
+                <BoxView HeightRequest="15" WidthRequest="3" Color="#ff7272" Grid.Row="1" Grid.Column="4" CornerRadius="10"/>
+                <BoxView HeightRequest="15" WidthRequest="3" Color="#0067ff" Grid.Row="1" Grid.Column="5" CornerRadius="10"/>
+                <BoxView HeightRequest="15" WidthRequest="3" Color="#0067ff" Grid.Row="1" Grid.Column="6" CornerRadius="10"/>
+                <BoxView HeightRequest="15" WidthRequest="3" Color="#ff7272" Grid.Row="1" Grid.Column="7" CornerRadius="10"/>
+                <BoxView HeightRequest="15" WidthRequest="3" Color="#0067ff" Grid.Row="1" Grid.Column="8" CornerRadius="10"/>
+                <BoxView HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="1" Grid.Column="9" CornerRadius="10"/>
+                <BoxView HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="1" Grid.Column="10" CornerRadius="10"/>
+                <BoxView HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="1" Grid.Column="11" CornerRadius="10"/>
+                <BoxView HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="1" Grid.Column="12" CornerRadius="10"/>
+                <BoxView HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="1" Grid.Column="13" CornerRadius="10"/>
+                <BoxView HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="1" Grid.Column="14" CornerRadius="10"/>
+                <BoxView HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="1" Grid.Column="15" CornerRadius="10"/>
+            </Grid>
+            <Button Text="See activity" BackgroundColor="#236cde" BorderColor="Transparent" BorderWidth="1" WidthRequest="150" CornerRadius="20" Padding="15" FontAttributes="Bold" FontFamily="MontserratMedium" HorizontalOptions="Center" Clicked="ActivityPageClicked" Margin="0, 15" TextColor="White"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

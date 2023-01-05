@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RMA_2022_23_Student_App.Registration"
-             Title="Registration" BackgroundColor="White">
+             Title="Registration">
     <ScrollView>
         <VerticalStackLayout >
             <VerticalStackLayout VerticalOptions="Start">
@@ -142,7 +142,7 @@
 
                         </HorizontalStackLayout>
                         <Frame WidthRequest="300" CornerRadius="20" HeightRequest="50" BorderColor="Transparent">
-                            <Button BackgroundColor="#0067ff" Text="Sign up" TextColor="White" HeightRequest="50" WidthRequest="300"/>
+                            <Button BackgroundColor="#0067ff" Text="Sign up" TextColor="White" HeightRequest="50" WidthRequest="300" FontFamily="MontserratMedium"/>
                         </Frame>
                     </VerticalStackLayout>
                 </Frame>

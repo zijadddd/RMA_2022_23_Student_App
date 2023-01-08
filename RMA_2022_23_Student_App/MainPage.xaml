@@ -16,12 +16,12 @@
                     <Label Text="App" TextColor="#0067ff" HorizontalOptions="CenterAndExpand" FontSize="Large" VerticalOptions="Center" FontFamily="MontserratLight" />
                 </HorizontalStackLayout>
                 <Label 
-                Text="Everything about your tasks on one place!" 
-                TextColor="#252437" 
-                FontSize="Small" 
-                VerticalOptions="Center" 
-                FontFamily="MontserratLight" 
-                HorizontalTextAlignment="Center"
+                    Text="Everything about your tasks on one place!" 
+                    TextColor="#252437" 
+                    FontSize="Small" 
+                    VerticalOptions="Center" 
+                    FontFamily="MontserratLight" 
+                    HorizontalTextAlignment="Center"
                 />
                 <Frame WidthRequest="300" CornerRadius="20" HeightRequest="50" BorderColor="Transparent">
                     <Button Clicked="LoginClicked" BackgroundColor="#F4F5FC" Text="Sign in" TextColor="#252437" HeightRequest="50" WidthRequest="300" FontFamily="MontserratMedium"/>

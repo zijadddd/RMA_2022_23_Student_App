@@ -1,8 +1,8 @@
 namespace RMA_2022_23_Student_App;
 
-public partial class ActiveSubjects : ContentPage
+public partial class Subjects : ContentPage
 {
-	public ActiveSubjects()
+	public Subjects()
 	{
 		InitializeComponent();
 

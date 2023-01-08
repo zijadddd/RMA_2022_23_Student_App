@@ -66,8 +66,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="ActiveSubjects.xaml.cs">
-	    <DependentUpon>ActiveSubjects.xaml</DependentUpon>
+	  <Compile Update="Subjects.xaml.cs">
+	    <DependentUpon>Subjects.xaml</DependentUpon>
 	  </Compile>
 	  <Compile Update="TabbeddPage.xaml.cs">
 	    <DependentUpon>TabbeddPage.xaml</DependentUpon>
@@ -84,7 +84,7 @@
 	  <MauiXaml Update="Login.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="ActiveSubjects.xaml">
+	  <MauiXaml Update="Subjects.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="ProfilePage.xaml">

@@ -9,5 +9,5 @@
             UnselectedTabColor="Gray"
             >
     <local:ProfilePage IconImageSource="profile.svg" Title=""/>
-    <local:ActiveSubjects IconImageSource="subject.svg" Title=""/>
+    <local:Subjects IconImageSource="subject.svg" Title=""/>
 </TabbedPage>

@@ -6,7 +6,7 @@
     <ScrollView>
         <VerticalStackLayout Spacing="20">
             <Frame HeightRequest="100" WidthRequest="100" CornerRadius="50" BorderColor="Transparent" Margin="0, 10">
-                <Image Source="people5.png" HeightRequest="100" WidthRequest="100" Aspect="AspectFill"/>
+                <Image Source="people5.jpg" HeightRequest="100" WidthRequest="100" Aspect="AspectFill"/>
             </Frame>
             <Label Text="Zijad Doglod" FontFamily="MontserratMedium" TextColor="#2a2a3e" FontSize="20" FontAttributes="Bold" HorizontalOptions="Center"/>
             <HorizontalStackLayout Spacing="10" Margin="20, 0" HorizontalOptions="Center">

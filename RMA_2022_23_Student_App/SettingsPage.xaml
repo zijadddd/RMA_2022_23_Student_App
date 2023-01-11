@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RMA_2022_23_Student_App.SettingsPage"
+             Title="SettingsPage"
+             Shell.NavBarIsVisible="False">
+    <ScrollView Margin="0" Padding="0">
+        <VerticalStackLayout>
+            <Label FontSize="25" FontAttributes="Bold" Text="Settings" HorizontalOptions="Center" Margin="0,70,0,50"/>
+            <SearchBar BackgroundColor="#f1f1f1"  HorizontalOptions="Center" Placeholder="Search for a setting..." />
+            <HorizontalStackLayout Margin="22,30,0,0" HorizontalOptions="Center" WidthRequest="300">
+                <Image HorizontalOptions="Start" HeightRequest="20" WidthRequest="20" Source="notification.svg"/>
+                <Label WidthRequest="240" Margin="10,0,0,0" HorizontalOptions="Start" FontSize="20" Text="Notification"/>
+                <Image HorizontalOptions="End" HeightRequest="20" WidthRequest="20" Source="right.svg"/>
+            </HorizontalStackLayout>
+            <BoxView
+                 Color="Gray"
+                 WidthRequest="300"
+                 Margin="10,20,0,20"
+                 HeightRequest="0.5"
+                 VerticalOptions="Center"
+                 HorizontalOptions="Center"/>
+
+            <HorizontalStackLayout Margin="22,0,0,0" HorizontalOptions="Center" WidthRequest="300">
+                <Image HorizontalOptions="Start" HeightRequest="20" WidthRequest="20" Source="eye.svg"/>
+                <Label WidthRequest="240" Margin="10,0,0,0" HorizontalOptions="Start" FontSize="20" Text="Appearance"/>
+                <Image HorizontalOptions="End" HeightRequest="20" WidthRequest="20" Source="right.svg"/>
+            </HorizontalStackLayout>
+            <BoxView
+                 Color="Gray"
+                 WidthRequest="300"
+                 Margin="10,20,0,20"
+                 HeightRequest="0.5"
+                 VerticalOptions="Center"
+                 HorizontalOptions="Center"/>
+
+            <HorizontalStackLayout Margin="22,0,0,0" HorizontalOptions="Center" WidthRequest="300">
+                <Image HorizontalOptions="Start" HeightRequest="20" WidthRequest="20" Source="privacy.svg"/>
+                <Label WidthRequest="240" Margin="10,0,0,0" HorizontalOptions="Start" FontSize="20" Text="Privacy &#38; Security"/>
+                <Image HorizontalOptions="End" HeightRequest="20" WidthRequest="20" Source="right.svg"/>
+            </HorizontalStackLayout>
+            <BoxView
+                 Color="Gray"
+                 WidthRequest="300"
+                 Margin="10,20,0,20"
+                 HeightRequest="0.5"
+                 VerticalOptions="Center"
+                 HorizontalOptions="Center"/>
+
+            <HorizontalStackLayout Margin="22,0,0,0" HorizontalOptions="Center" WidthRequest="300">
+                <Image HorizontalOptions="Start" HeightRequest="20" WidthRequest="20" Source="headphone.svg"/>
+                <Label WidthRequest="240" Margin="10,0,0,0" HorizontalOptions="Start" FontSize="20" Text="Help and Support"/>
+                <Image HorizontalOptions="End" HeightRequest="20" WidthRequest="20" Source="right.svg"/>
+            </HorizontalStackLayout>
+            <BoxView
+                 Color="Gray"
+                 WidthRequest="300"
+                 Margin="10,20,0,20"
+                 HeightRequest="0.5"
+                 VerticalOptions="Center"
+                 HorizontalOptions="Center"/>
+
+            <HorizontalStackLayout Margin="22,0,0,0" HorizontalOptions="Center" WidthRequest="300">
+                <Image HorizontalOptions="Start" HeightRequest="20" WidthRequest="20" Source="about.svg"/>
+                <Label WidthRequest="240" Margin="10,0,0,0" HorizontalOptions="Start" FontSize="20" Text="About"/>
+                <Image HorizontalOptions="End" HeightRequest="20" WidthRequest="20" Source="right.svg"/>
+            </HorizontalStackLayout>
+            <BoxView
+                 Color="Gray"
+                 WidthRequest="300"
+                 Margin="10,20,0,0"
+                 HeightRequest="0.5"
+                 VerticalOptions="Center"
+                 HorizontalOptions="Center"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

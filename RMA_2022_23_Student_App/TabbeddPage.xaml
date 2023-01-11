@@ -10,4 +10,5 @@
             >
     <local:ProfilePage IconImageSource="profile.svg" Title=""/>
     <local:Subjects IconImageSource="subject.svg" Title=""/>
+    <local:SettingsPage IconImageSource="settings.svg" Title="" />
 </TabbedPage>

@@ -6,8 +6,14 @@
     xmlns:local="clr-namespace:RMA_2022_23_Student_App"
     Shell.FlyoutBehavior="Disabled">
 
+
     <ShellContent
         Title="Home"
+        ContentTemplate="{DataTemplate local:IntroScreenView}"
+        Route="IntroScreenView" />
+
+    <ShellContent
+        Title="Main"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
 

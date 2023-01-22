@@ -1,11 +1,5 @@
 ﻿using RMA_2022_23_Student_App.Models;
-using RMA_2022_23_Student_App;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 
 namespace RMA_2022_23_Student_App.ViewModels
@@ -44,21 +38,21 @@ namespace RMA_2022_23_Student_App.ViewModels
             {
                 IntroTitle = "Welcome To StudentApp",
                 IntroDescription = "Enjoy the captivating process of online education in a place and at a time of your choice",
-                IntroImage = "stack"
+                IntroImage = "student1"
             });
 
             IntroScreens.Add(new IntroScreenModels
             {
                 IntroTitle = "Anytime, Anywhere",
                 IntroDescription = "Now you can check homework anytime right from mobile",
-                IntroImage = "elearning"
+                IntroImage = "student2"
             });
 
             IntroScreens.Add(new IntroScreenModels
             {
                 IntroTitle = "Ready to Find A Course",
                 IntroDescription = "Join our online school that will help you learn the cutting-edge skills to scale new heights in your creative career.",
-                IntroImage = "homew"
+                IntroImage = "student3"
             });
         }
 

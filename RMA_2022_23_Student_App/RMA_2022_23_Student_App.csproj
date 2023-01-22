@@ -66,6 +66,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
+	  <PackageReference Include="SQLitePCLRaw.bundle_green" Version="2.1.4" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <Compile Update="Subjects.xaml.cs">
 	    <DependentUpon>Subjects.xaml</DependentUpon>
 	  </Compile>
@@ -101,6 +106,6 @@
 	  </MauiXaml>
 	</ItemGroup>
 	
-	<ProjectExtensions><VisualStudio><UserProperties XamarinHotReloadGenericExceptionInfoBarRMA_2022_23_Student_AppHideInfoBar="True" /></VisualStudio></ProjectExtensions>
+	<ProjectExtensions><VisualStudio><UserProperties XamarinHotReloadDebuggerTimeoutExceptionRMA_2022_23_Student_AppHideInfoBar="True" XamarinHotReloadGenericExceptionInfoBarRMA_2022_23_Student_AppHideInfoBar="True" /></VisualStudio></ProjectExtensions>
 
 </Project>

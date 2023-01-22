@@ -8,53 +8,47 @@
              x:DataType="viewModels:IntroScreenViewModel"
              Title="IntroScreenView" Background="white">
     
-    <Grid Margin="0,60,0,20" RowDefinitions="*,Auto">
+    <Grid Margin="0,20,0,20" RowDefinitions="*,Auto">
         <CarouselView Grid.Row="0" 
                       Position="{Binding Position}"
                       IndicatorView="indicatorView" 
-                      Loop="False"
+                      Loop="True"
                       HorizontalOptions="FillAndExpand" VerticalOptions="Start" 
                       ItemsSource="{Binding IntroScreens}">
             <CarouselView.ItemTemplate>
                 <DataTemplate x:DataType="models:IntroScreenModels">
                     <Grid RowDefinitions="60*,40*">
-                        <Frame WidthRequest="350" BackgroundColor="#cde7fc" BorderColor="White">
-                            <Image Source="{Binding IntroImage}" Aspect="AspectFit" Grid.Row="0" />
+                        <Frame WidthRequest="350" CornerRadius="50" BorderColor="Transparent">
+                            <Image Source="{Binding IntroImage}" Aspect="AspectFill" WidthRequest="380" HeightRequest="380" Grid.Row="0" />
                         </Frame>
-                        <VerticalStackLayout WidthRequest="320" Spacing="10" Grid.Row="1" Margin="20,0,20,20">
-                            <Label Text="{Binding IntroTitle}" Margin="0,20,0,0" FontSize="36" HorizontalTextAlignment="Center" HorizontalOptions="Center" FontAttributes="Bold" TextColor="#0067ff"/>
-                            <Label Text="{Binding IntroDescription}" Margin="0,20,0,0" FontSize="20" HorizontalTextAlignment="Center" HorizontalOptions="Center" TextColor="Black" />
+                        <VerticalStackLayout Grid.Row="1" Margin="20,45,20,20">
+                            <Label Text="{Binding IntroTitle}" FontSize="36" FontFamily="MontserratMedium" HorizontalTextAlignment="Center" HorizontalOptions="Center" FontAttributes="Bold" TextColor="#252437"/>
+                            <Label Text="{Binding IntroDescription}" Margin="0,15,0,0" FontSize="18" FontFamily="MontserratLight" HorizontalTextAlignment="Center" HorizontalOptions="Center" TextColor="#252437" />
                         </VerticalStackLayout>
                     </Grid>
                 </DataTemplate>
             </CarouselView.ItemTemplate>
         </CarouselView>
-        
+
         <VerticalStackLayout  Grid.Row="1" HorizontalOptions="Center" VerticalOptions="Start">
-
-
-            
             <IndicatorView x:Name="indicatorView" 
-                           Margin="0,0,0,50"
+                           Margin="0,0,0,45"
                            VerticalOptions="Center"
                            HorizontalOptions="Center"
-                           IndicatorSize="15"                          
-                           IndicatorColor="#c5c8f5"  
-                           SelectedIndicatorColor="Red" /> 
-
+                           IndicatorSize="12"                          
+                           IndicatorColor="#F4F5FC"  
+                           SelectedIndicatorColor="#0067ff" /> 
             <Frame 
                 HorizontalOptions="EndAndExpand"
                 Padding="0"
-                
-                   CornerRadius="30"
-                    HeightRequest="60" 
-                   WidthRequest="300" 
-                   BackgroundColor="#0067ff"
-                BorderColor="#0067ff">
-                <Label  TextColor="White" 
-                        Text="{Binding ButtonText}"
-                       FontSize="28"
-                       
+                CornerRadius="30"
+                HeightRequest="60" 
+                WidthRequest="220" 
+                BackgroundColor="#0067ff"
+                BorderColor="Transparent">
+                <Label TextColor="White" 
+                       Text="{Binding ButtonText}"
+                       FontSize="20"              
                        HorizontalTextAlignment="Center" 
                        VerticalTextAlignment="Center" />
                 <Frame.GestureRecognizers>

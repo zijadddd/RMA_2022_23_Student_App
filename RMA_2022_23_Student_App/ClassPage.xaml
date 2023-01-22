@@ -50,7 +50,7 @@
                         <Image Source="people4.jpg" HeightRequest="50" WidthRequest="50" Aspect="AspectFill"/>
                     </Frame>
                     <Frame HeightRequest="50" WidthRequest="50" CornerRadius="50" BorderColor="Transparent">
-                        <Image Source="people5.png" HeightRequest="50" WidthRequest="50" Aspect="AspectFill"/>
+                        <Image Source="people5.jpg" HeightRequest="50" WidthRequest="50" Aspect="AspectFill"/>
                     </Frame>
                 </FlexLayout>
             </Frame>

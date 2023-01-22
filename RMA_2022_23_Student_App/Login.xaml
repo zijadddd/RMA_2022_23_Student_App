@@ -54,7 +54,7 @@
 
                         </HorizontalStackLayout>
                         <Frame WidthRequest="300" CornerRadius="20" HeightRequest="50" BorderColor="Transparent">
-                            <Button BackgroundColor="#0067FF" Text="Sign in" TextColor="White" HeightRequest="50" WidthRequest="300" Clicked="TabbedPageClicked" FontFamily="MontserratMedium"/>
+                            <Button x:Name="LoginButton" BackgroundColor="#0067FF" Text="Sign in" TextColor="White" HeightRequest="50" WidthRequest="300" Clicked="LoginClicked" FontFamily="MontserratMedium"/>
                         </Frame>
                     </VerticalStackLayout>
                 </Frame>

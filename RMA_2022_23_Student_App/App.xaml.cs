@@ -1,4 +1,5 @@
 ﻿using Microsoft.Maui.Controls.Compatibility.Platform.Android;
+using RMA_2022_23_Student_App.Data;
 
 namespace RMA_2022_23_Student_App;
 
@@ -15,6 +16,8 @@ public partial class App : Application
             #endif
             Application.Current.UserAppTheme = AppTheme.Light;
         });
+
+
 
         MainPage = new AppShell();
 	}

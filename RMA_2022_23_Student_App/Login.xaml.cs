@@ -19,11 +19,11 @@ public partial class Login : ContentPage
         try
         {
             var query = _connection.Table<Student>().Where(s => s.email == email.Text);
-            var student = await query.FirstOrDefaultAsync();
+            Student student = await query.FirstOrDefaultAsync();
 
             if (student != null)
             {
-                if (student.password == password.Text) await Navigation.PushModalAsync(new TabbeddPage());
+                if (student.password == password.Text) await Navigation.PushModalAsync(new TabbeddPage(student));
                 else await DisplayAlert("Error", "Incorrect password", "Ok");
             } else await DisplayAlert("Error", "User with this email does not exist!", "Ok");
         }
@@ -36,7 +36,7 @@ public partial class Login : ContentPage
 
     private async void RegistrationClicked(object sender, EventArgs e)
     {
-        await Navigation.PushModalAsync(new Registration());
+        await Navigation.PushAsync(new Registration());
     }
 
 }

@@ -8,7 +8,8 @@
             SelectedTabColor="#2b73db"
             UnselectedTabColor="Gray"
             >
-    <local:ProfilePage IconImageSource="profile.svg" Title=""/>
+<!--    <local:ProfilePage IconImageSource="profile.svg" Title="" />
     <local:Subjects IconImageSource="subject.svg" Title=""/>
-    <local:SettingsPage IconImageSource="settings.svg" Title="" />
+    <local:SettingsPage IconImageSource="settings.svg" Title="" /> -->
+    
 </TabbedPage>

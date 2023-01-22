@@ -33,5 +33,10 @@ namespace RMA_2022_23_Student_App.Models
         public string faculty { get; set; }
         [MaxLength(100)]
         public string department { get; set; }
+
+        [MaxLength(1000)]
+        public string description { get; set; }
+        [MaxLength(10000)]
+        public string profilePhotoUrl { get; set; }
     }
 }

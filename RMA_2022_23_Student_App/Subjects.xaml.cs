@@ -3,6 +3,8 @@
 //using Microsoft.Maui.Controls.Shapes;
 //using Microsoft.Maui.Graphics;
 
+using RMA_2022_23_Student_App.Models;
+
 namespace RMA_2022_23_Student_App;
 
 public partial class Subjects : ContentPage
@@ -12,7 +14,7 @@ public partial class Subjects : ContentPage
 	private bool isTappedPendingSubjects = false;
 	private bool isTappedCompletedSubjects = false;
 
-    public Subjects()
+    public Subjects(Student student)
     {
         InitializeComponent();
 
@@ -23,6 +25,9 @@ public partial class Subjects : ContentPage
         ActiveSubjectsNumber.TextColor = Color.FromRgb(255, 255, 255);
         ActiveSubjectsText.TextColor = Color.FromRgb(255, 255, 255);
         ActiveSubjectsText.Opacity = 0.6;
+
+        studentFullName.Text = student.firstName;
+        studentProfilePhoto.Source = student.profilePhotoUrl;
 
         String temp = "";
         String[] dates = { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" };
@@ -50,119 +55,6 @@ public partial class Subjects : ContentPage
             ActiveSubjectsText.TextColor = Color.FromRgb(255, 255, 255);
             ActiveSubjectsText.Opacity = 0.6;
             this.isTappedActiveSubjects = true;
-
-/*            Frame frame = new Frame
-            {
-                Padding = 0,
-                HeightRequest = 295,
-                BackgroundColor = Color.FromRgb(37, 150, 190),
-                BorderColor = Colors.Transparent,
-                CornerRadius = 40,
-                Content = new VerticalStackLayout
-                {
-                    Children =
-                    {
-                        new Frame
-                        {
-                            Margin = new Thickness(0, 10, 0, 10),
-                            WidthRequest = double.Parse("350"),
-                            HeightRequest = double.Parse("280"),
-                            CornerRadius = float.Parse("30"),
-                            BackgroundColor = Colors.Transparent,
-                            BorderColor = Colors.Transparent,
-                            Content = new Image
-                            {
-                                Source = ImageSource.FromFile("socialmedia.png"),
-                                Aspect = Aspect.AspectFill
-                            }
-                        },
-                        new Frame
-                        {
-                            Margin = new Thickness(0, -290, 13, 30),
-                            BorderColor = Colors.Transparent,
-                            CornerRadius = float.Parse("30"),
-                            WidthRequest = double.Parse("80"),
-                            HeightRequest = double.Parse("100"),
-                            HorizontalOptions = LayoutOptions.End,
-                            Content = new VerticalStackLayout
-                            {
-                                VerticalOptions = LayoutOptions.Center,
-                                WidthRequest = double.Parse("80"),
-                                HeightRequest = double.Parse("80"),
-                                Children =
-                                {
-                                    new Label
-                                    {
-                                        Text = "12",
-                                        TextColor = Color.FromRgb(35, 36, 58),
-                                        FontSize = double.Parse("45"),
-                                        FontFamily = "MontserratMedium",
-                                        FontAttributes = FontAttributes.Bold,
-                                        HorizontalOptions = LayoutOptions.Center
-                                    },
-                                    new Label
-                                    {
-                                        Text = "Students",
-                                        TextColor = Color.FromRgb(35, 36, 58),
-                                        FontSize = double.Parse("10"),
-                                        FontFamily = "MontserratMedium",
-                                        FontAttributes = FontAttributes.Bold,
-                                        HorizontalOptions = LayoutOptions.Center
-                                    }
-                                }
-                            }
-                        },
-                        new Frame
-                        {
-                            Padding = new Thickness(20, 20, 20, 0),
-                            HeightRequest = double.Parse("145"),
-                            Margin = new Thickness(10, 0, 10, 10),
-                            CornerRadius = float.Parse("40"),
-                            BorderColor = Colors.Transparent,
-                            BackgroundColor = Color.FromRgba("#AA3e8dfd"),
-                            VerticalOptions = LayoutOptions.End,
-                            Content = new VerticalStackLayout
-                            {
-                                Spacing = 5,
-                                Children =
-                                {
-                                    new Label
-                                    {
-                                        Text = "Razvoj mobilnih aplikacija",
-                                        FontFamily = "MontserratMedium",
-                                        TextColor = Colors.White,
-                                        FontSize = 20,
-                                        FontAttributes = FontAttributes.Bold
-                                    },
-                                    new Label
-                                    {
-                                        Text = "Esad Kadušiæ",
-                                        FontFamily = "MontserratMedium",
-                                        TextColor = Colors.White,
-                                        FontSize = 15
-                                    },
-                                    new Button
-                                    {
-                                        // FontAttributes="Bold" FontFamily="MontserratMedium" HorizontalOptions="End" Clicked="ClassPageClicked" TextColor="White"/>
-                                        Text = "Enter",
-                                        BackgroundColor = Colors.Transparent,
-                                        BorderColor = Colors.White,
-                                        BorderWidth = 1,
-                                        WidthRequest = double.Parse("100"),
-                                        CornerRadius = int.Parse("20"),
-                                        Padding = new Thickness(15),
-                                        FontAttributes = FontAttributes.Bold,
-                                        FontFamily = "MontserratMedium",
-                                        HorizontalOptions = LayoutOptions.End,
-                                        TextColor = Colors.White
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            };
-            Subjects.ChildAdded += frame; */
         }
         if (this.isTappedPendingSubjects == true)
         {

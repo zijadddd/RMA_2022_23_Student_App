@@ -21,6 +21,6 @@ public partial class ClassPage : ContentPage
 
     private async void ActivityPageClicked(object sender, EventArgs e)
     {
-        await Navigation.PushModalAsync(new ActivityPage());
+        await Navigation.PushAsync(new ActivityPage());
     }
 }

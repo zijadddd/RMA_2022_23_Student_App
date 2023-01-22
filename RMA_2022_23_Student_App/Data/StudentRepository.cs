@@ -22,7 +22,7 @@ namespace RMA_2022_23_Student_App.Data
         }
 
         public void AddNewStudent(string firstName, string lastName, string birthDate, string location, string phoneNumber, string email, string password,
-                                  string index, string university, string faculty, string department) {
+                                  string index, string university, string faculty, string department, string description, string profilePhotoUrl) {
             int result = 0;
             try
             {
@@ -39,6 +39,8 @@ namespace RMA_2022_23_Student_App.Data
                 if (string.IsNullOrEmpty(university)) throw new Exception("University field cannot be null or empty.");
                 if (string.IsNullOrEmpty(faculty)) throw new Exception("Faculty field cannot be null or empty.");
                 if (string.IsNullOrEmpty(department)) throw new Exception("Department field cannot be null or empty.");
+                if (string.IsNullOrEmpty(description)) throw new Exception("Description field cannot be null or empty.");
+                if (string.IsNullOrEmpty(profilePhotoUrl)) throw new Exception("Profile photo url field cannot be null or empty.");
 
                 result = conn.Insert(new Student { firstName = firstName, 
                                                    lastName = lastName,
@@ -50,7 +52,9 @@ namespace RMA_2022_23_Student_App.Data
                                                    index = index,
                                                    university = university,
                                                    faculty = faculty,
-                                                   department = department});
+                                                   department = department,
+                                                   description = description,
+                                                   profilePhotoUrl = profilePhotoUrl});
 
                 StatusMessage = string.Format("{0} zapis(a) dodano (Student: {1})", result, firstName + " " + lastName);
             }

@@ -14,12 +14,12 @@
                                 <Label x:Name="date" FontFamily="MontserratMedium" FontSize="Micro" TextColor="Gray" FontAttributes="Bold"/>
                                 <HorizontalStackLayout>
                                     <Label Text="Hey, " FontFamily="MontserratLight" FontSize="Large" TextColor="#2a2a3e" FontAttributes="Bold" />
-                                    <Label Text="Zijad" FontFamily="MontserratMedium" FontSize="Large" TextColor="#2a2a3e" />
+                                    <Label x:Name="studentFullName" FontFamily="MontserratMedium" FontSize="Large" TextColor="#2a2a3e" />
                                 </HorizontalStackLayout>
                             </VerticalStackLayout>
                         </Frame>
                         <Frame HeightRequest="70" WidthRequest="70" CornerRadius="20" HorizontalOptions="End" BorderColor="Transparent" Margin="10" Padding="0">
-                            <Image Source="people5.jpg" HeightRequest="70" WidthRequest="70" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                            <Image x:Name="studentProfilePhoto" HeightRequest="70" WidthRequest="70" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
                         </Frame>
                     </FlexLayout>
                     <FlexLayout HorizontalOptions="Center" Direction="Row" AlignItems="Center" JustifyContent="SpaceAround" Margin="0, 20">

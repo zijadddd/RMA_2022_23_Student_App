@@ -12,6 +12,6 @@ public partial class Registration : ContentPage
 
     private async void LoginClicked(object sender, EventArgs e)
     {
-        await Navigation.PushModalAsync(new Login());
+        await Navigation.PushAsync(new Login());
     }
 }

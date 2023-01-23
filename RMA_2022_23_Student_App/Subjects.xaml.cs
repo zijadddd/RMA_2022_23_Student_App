@@ -3,6 +3,7 @@
 //using Microsoft.Maui.Controls.Shapes;
 //using Microsoft.Maui.Graphics;
 
+using RMA_2022_23_Student_App.Data;
 using RMA_2022_23_Student_App.Models;
 
 namespace RMA_2022_23_Student_App;
@@ -13,6 +14,7 @@ public partial class Subjects : ContentPage
 	private bool isTappedActiveSubjects = true;
 	private bool isTappedPendingSubjects = false;
 	private bool isTappedCompletedSubjects = false;
+    public IList<Subject> subjectList { get; set; }
 
     public Subjects(Student student)
     {
@@ -38,6 +40,9 @@ public partial class Subjects : ContentPage
         else if (todayDate.Day % 10 == 3 && todayDate.Day != 13) temp += "rd";
         else temp += "th";
         date.Text = temp;
+
+        SubjectRepository _subjectRepository = new SubjectRepository();
+        listView.ItemsSource = _subjectRepository.GetAllSubjects();     
     }
 
     private async void ClassPageClicked(object sender, EventArgs e)

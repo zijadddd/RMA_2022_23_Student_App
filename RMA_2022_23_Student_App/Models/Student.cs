@@ -1,4 +1,5 @@
 ﻿using SQLite;
+using SQLiteNetExtensions.Attributes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,7 @@ namespace RMA_2022_23_Student_App.Models
     public class Student
     {
         [PrimaryKey, AutoIncrement]
-        public int Id { get; set; }
+        public int studentId { get; set; }
         [MaxLength(50)]
         public string firstName { get; set; }
         [MaxLength(50)]
@@ -38,5 +39,7 @@ namespace RMA_2022_23_Student_App.Models
         public string description { get; set; }
         [MaxLength(10000)]
         public string profilePhotoUrl { get; set; }
+        [ManyToMany(typeof(StudentSubject))]
+        public List<Subject> subjects { get; set; }
     }
 }

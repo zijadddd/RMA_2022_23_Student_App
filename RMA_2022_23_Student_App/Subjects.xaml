@@ -63,79 +63,49 @@
                 </VerticalStackLayout>
             </Border>
             <VerticalStackLayout Margin="20" Spacing="10">
-                <Frame Padding="0" HeightRequest="295" BackgroundColor="#cde7fc" BorderColor="Transparent" CornerRadius="40">
-                    <VerticalStackLayout>
-                        <Frame
-                            Margin="0,10,0,10" 
-                            WidthRequest="350" 
-                            HeightRequest="280" 
-                            CornerRadius="30"
-                            BackgroundColor="Transparent"
-                            BorderColor="Transparent">
-                            <Image
-                            Aspect="AspectFill"
-                            Source="socialmedia.png"/>
-                        </Frame>
-                        <Frame Margin="0,-290,13, 30" BorderColor="White" CornerRadius="30" WidthRequest="80" HeightRequest="100" HorizontalOptions="End">
-                            <VerticalStackLayout VerticalOptions="Center" WidthRequest="80" HeightRequest="80">
-                                <Label Text="12" TextColor="#23243a" FontSize="45" FontFamily="MontserratMedium" FontAttributes="Bold" HorizontalOptions="Center" />
-                                <Label Text="Students" TextColor="#23243a" FontSize="10" FontFamily="MontserratMedium" FontAttributes="Bold" HorizontalOptions="Center" />
-                            </VerticalStackLayout>
-                        </Frame>
-                        <Border
-                            Padding="20,20,20,0"
-                            HeightRequest="145"
-                                 Margin="10,0,10,10" 
-                                 StrokeShape="RoundRectangle 40,40,40,40"
-                                 Stroke="Transparent" 
-                                 BackgroundColor="#AA3e8dfd"  
-                                 VerticalOptions="End">
+                <ListView x:Name="listView" RowHeight="295">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Frame Padding="0" HeightRequest="295" BackgroundColor="{Binding primaryColor}" BorderColor="Transparent" CornerRadius="40">
+                                    <VerticalStackLayout>
+                                        <Frame
+                                            Margin="0,10,0,10" 
+                                            WidthRequest="350" 
+                                            HeightRequest="280" 
+                                            CornerRadius="30"
+                                            BackgroundColor="Transparent"
+                                            BorderColor="Transparent">
+                                            <Image Aspect="AspectFill" Source="{Binding classImgUrl}"/>
+                                        </Frame>
+                                        <Frame Margin="0,-290,13, 30" BorderColor="White" CornerRadius="30" WidthRequest="80" HeightRequest="100" HorizontalOptions="End">
+                                            <VerticalStackLayout VerticalOptions="Center" WidthRequest="80" HeightRequest="80">
+                                                <Label Text="38" TextColor="#23243a" FontSize="45" FontFamily="MontserratMedium" FontAttributes="Bold" HorizontalOptions="Center" />
+                                                <Label Text="Students" TextColor="#23243a" FontSize="10" FontFamily="MontserratMedium" FontAttributes="Bold" HorizontalOptions="Center" />
+                                            </VerticalStackLayout>
+                                        </Frame>
+                                        <Border
+                                            Padding="20,20,20,0"
+                                            HeightRequest="145"
+                                            Margin="10,0,10,10" 
+                                            StrokeShape="RoundRectangle 40,40,40,40"
+                                            Stroke="Transparent" 
+                                            BackgroundColor="{Binding secondaryColor}"  
+                                            VerticalOptions="End">
 
-                            <VerticalStackLayout Spacing="5">
-                                <Label Text="Razvoj mobilnih aplikacija" FontFamily="MontserratMedium" TextColor="White" FontSize="20" FontAttributes="Bold"/>
-                                <Label Text="Esad Kadušić" FontFamily="MontserratMedium" TextColor="White" FontSize="15"/>
-                                <Button Text="Enter" BackgroundColor="Transparent" BorderColor="White" BorderWidth="1" WidthRequest="100" CornerRadius="20" Padding="15" FontAttributes="Bold" FontFamily="MontserratMedium" HorizontalOptions="End" Clicked="ClassPageClicked" TextColor="White"/>
-                            </VerticalStackLayout>
-                        </Border>
-                    </VerticalStackLayout>
-                </Frame>
-                <Frame Padding="0" HeightRequest="295" BackgroundColor="#e6ceff" BorderColor="Transparent" CornerRadius="40">
-                    <VerticalStackLayout>
-                        <Frame
-                            Margin="0,10,0,10" 
-                            WidthRequest="350" 
-                            HeightRequest="280" 
-                            CornerRadius="30"
-                            BackgroundColor="Transparent"
-                            BorderColor="Transparent">
-                            <Image
-                            Aspect="AspectFill"
-                            Source="socialmedia.png"/>
-                        </Frame>
-                        <Frame Margin="0,-290,13, 30" BorderColor="White" CornerRadius="30" WidthRequest="80" HeightRequest="100" HorizontalOptions="End">
-                            <VerticalStackLayout VerticalOptions="Center" WidthRequest="80" HeightRequest="80">
-                                <Label Text="38" TextColor="#23243a" FontSize="45" FontFamily="MontserratMedium" FontAttributes="Bold" HorizontalOptions="Center" />
-                                <Label Text="Students" TextColor="#23243a" FontSize="10" FontFamily="MontserratMedium" FontAttributes="Bold" HorizontalOptions="Center" />
-                            </VerticalStackLayout>
-                        </Frame>
-                        <Border
-                            Padding="20,20,20,0"
-                            HeightRequest="145"
-                                 Margin="10,0,10,10" 
-                                 StrokeShape="RoundRectangle 40,40,40,40"
-                                 Stroke="Transparent" 
-                                 BackgroundColor="#AAd078ff"  
-                                 VerticalOptions="End">
-
-                            <VerticalStackLayout Spacing="5">
-                                <Label Text="Web programiranje" FontFamily="MontserratMedium" TextColor="White" FontSize="20" FontAttributes="Bold"/>
-                                <Label Text="Đulaga Hadžić" FontFamily="MontserratMedium" TextColor="White" FontSize="15"/>
-                                <Button Text="Enter" BackgroundColor="Transparent" BorderColor="White" BorderWidth="1" WidthRequest="100" CornerRadius="20" Padding="15" FontAttributes="Bold" FontFamily="MontserratMedium" HorizontalOptions="End" Clicked="ClassPageClicked" TextColor="White"/>
-                            </VerticalStackLayout>
-                        </Border>
-                    </VerticalStackLayout>
-                </Frame>
-            </VerticalStackLayout>
+                                            <VerticalStackLayout Spacing="5">
+                                                <Label Text="{Binding name}" FontFamily="MontserratMedium" TextColor="White" FontSize="20" FontAttributes="Bold"/>
+                                                <Label Text="{Binding professor}" FontFamily="MontserratMedium" TextColor="White" FontSize="15"/>
+                                                <Button Text="Enter" BackgroundColor="Transparent" BorderColor="White" BorderWidth="1" WidthRequest="100" CornerRadius="20" Padding="15" FontAttributes="Bold" FontFamily="MontserratMedium" HorizontalOptions="End" Clicked="ClassPageClicked" TextColor="White"/>
+                                            </VerticalStackLayout>
+                                        </Border>
+                                    </VerticalStackLayout>
+                                </Frame>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </VerticalStackLayout> 
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

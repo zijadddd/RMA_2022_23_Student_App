@@ -28,8 +28,8 @@ namespace RMA_2022_23_Student_App.Data
             {
                 Init();
 
-                if (string.IsNullOrEmpty(firstName)) throw new Exception("First field name cannot be null or empty.");
-                if (string.IsNullOrEmpty(lastName)) throw new Exception("Last field name cannot be null or empty.");
+                if (string.IsNullOrEmpty(firstName)) throw new Exception("First name field cannot be null or empty.");
+                if (string.IsNullOrEmpty(lastName)) throw new Exception("Last name field cannot be null or empty.");
                 if (string.IsNullOrEmpty(birthDate)) throw new Exception("Birth field date cannot be null or empty.");
                 if (string.IsNullOrEmpty(location)) throw new Exception("Location field cannot be null or empty.");
                 if (string.IsNullOrEmpty(phoneNumber)) throw new Exception("Phone field number cannot be null or empty.");

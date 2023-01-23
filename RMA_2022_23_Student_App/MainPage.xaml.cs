@@ -21,7 +21,7 @@ public partial class MainPage : ContentPage
 
     private async void LoginClicked(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new Login());
+        Application.Current.MainPage = new Login();
     }
     private async void RegistrationClicked(object sender, EventArgs e)
     {

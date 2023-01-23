@@ -1,6 +1,5 @@
 using RMA_2022_23_Student_App.Models;
 using SQLite;
-using System.Windows.Input;
 
 namespace RMA_2022_23_Student_App;
 
@@ -23,7 +22,11 @@ public partial class Login : ContentPage
 
             if (student != null)
             {
-                if (student.password == password.Text) await Navigation.PushModalAsync(new TabbeddPage(student));  
+                if (student.password == password.Text)
+                {
+                    TabbeddPage.student = student;
+                    Application.Current.MainPage = new TabbeddPage();
+                } 
                 else await DisplayAlert("Error", "Incorrect password", "Ok");
             } else await DisplayAlert("Error", "User with this email does not exist!", "Ok");
         }
@@ -31,7 +34,6 @@ public partial class Login : ContentPage
         {
             await DisplayAlert("Error", ex.Message, "OK");
         }
-
     }
 
     private async void RegistrationClicked(object sender, EventArgs e)

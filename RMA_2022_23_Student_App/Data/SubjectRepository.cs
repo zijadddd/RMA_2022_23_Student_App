@@ -1,10 +1,5 @@
 ﻿using RMA_2022_23_Student_App.Models;
 using SQLite;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RMA_2022_23_Student_App.Data
 {

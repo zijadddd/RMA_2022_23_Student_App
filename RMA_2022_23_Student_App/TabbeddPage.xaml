@@ -7,9 +7,11 @@
             android:TabbedPage.ToolbarPlacement="Bottom"
             SelectedTabColor="#2b73db"
             UnselectedTabColor="Gray"
+            BarBackgroundColor="White"
             >
-<!--    <local:ProfilePage IconImageSource="profile.svg" Title="" />
-    <local:Subjects IconImageSource="subject.svg" Title=""/>
-    <local:SettingsPage IconImageSource="settings.svg" Title="" /> -->
+
+    <local:ProfilePage IconImageSource="profile.svg" Title="Profile" />
+    <local:Subjects IconImageSource="subject.svg" Title="Subjects"/>
+    <local:SettingsPage IconImageSource="settings.svg" Title="Settings" /> 
     
 </TabbedPage>

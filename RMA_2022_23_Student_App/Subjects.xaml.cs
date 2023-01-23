@@ -1,8 +1,3 @@
-//using Microsoft.Maui;
-//using Microsoft.Maui.Controls;
-//using Microsoft.Maui.Controls.Shapes;
-//using Microsoft.Maui.Graphics;
-
 using RMA_2022_23_Student_App.Data;
 using RMA_2022_23_Student_App.Models;
 
@@ -16,7 +11,7 @@ public partial class Subjects : ContentPage
 	private bool isTappedCompletedSubjects = false;
     public IList<Subject> subjectList { get; set; }
 
-    public Subjects(Student student)
+    public Subjects()
     {
         InitializeComponent();
 
@@ -28,8 +23,8 @@ public partial class Subjects : ContentPage
         ActiveSubjectsText.TextColor = Color.FromRgb(255, 255, 255);
         ActiveSubjectsText.Opacity = 0.6;
 
-        studentFullName.Text = student.firstName;
-        studentProfilePhoto.Source = student.profilePhotoUrl;
+        studentFullName.Text = TabbeddPage.student.firstName;
+        studentProfilePhoto.Source = TabbeddPage.student.profilePhotoUrl;
 
         String temp = "";
         String[] dates = { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" };

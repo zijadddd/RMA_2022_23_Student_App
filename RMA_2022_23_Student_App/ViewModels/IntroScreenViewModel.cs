@@ -60,7 +60,7 @@ namespace RMA_2022_23_Student_App.ViewModels
         {
             if (Position >= IntroScreens.Count - 1)
             {
-                await AppShell.Current.GoToAsync($"//{nameof(MainPage)}");
+                Application.Current.MainPage = new MainPage();
             }
             else
             {

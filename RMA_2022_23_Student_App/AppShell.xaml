@@ -19,4 +19,19 @@
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
 
+    <ShellContent
+        Title="Profile page"
+        ContentTemplate="{DataTemplate local:ProfilePage}"
+        Route="ProfilePage" />
+
+    <ShellContent
+        Title="Subjects page"
+        ContentTemplate="{DataTemplate local:Subjects}"
+        Route="Subjects" />
+
+    <ShellContent
+        Title="Settings page"
+        ContentTemplate="{DataTemplate local:SettingsPage}"
+        Route="SettingsPage" />
+
 </Shell>

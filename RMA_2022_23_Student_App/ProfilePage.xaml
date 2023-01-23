@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RMA_2022_23_Student_App.ProfilePage"
              Title="ProfilePage"
-             Shell.NavBarIsVisible="False">
+             Shell.NavBarIsVisible="False"
+             xmlns:helpers="clr-namespace:RMA_2022_23_Student_App.Helpers">
     <ScrollView>
         <VerticalStackLayout Spacing="20">
             <Frame HeightRequest="100" WidthRequest="100" CornerRadius="50" BorderColor="Transparent" Margin="0, 10">
@@ -12,39 +13,87 @@
             <Label x:Name="fullName" FontFamily="MontserratMedium" TextColor="#2a2a3e" FontSize="20" FontAttributes="Bold" HorizontalOptions="Center"/>
             <HorizontalStackLayout Spacing="10" Margin="20, 0" HorizontalOptions="Center">
                 <Frame HeightRequest="30" WidthRequest="30" CornerRadius="50" BorderColor="Transparent" BackgroundColor="#cde7fc">
-                    <Image Source="calendar.svg" HeightRequest="15" WidthRequest="15" HorizontalOptions="Center" VerticalOptions="Center"/>
+                    <Label FontFamily="MaterialIcons" 
+                           Text="{x:Static helpers:IconFont.Calendar_month}" 
+                           HorizontalTextAlignment="Center"
+                           TextColor="#387ee7"
+                           HeightRequest="15" WidthRequest="15" 
+                           HorizontalOptions="Center" 
+                           VerticalOptions="Center"/>
                 </Frame>
                 <Label x:Name="birthDate" FontFamily="MontserratMedium" TextColor="#2a2a3e" FontSize="13" VerticalOptions="Center" />
                 <Frame HeightRequest="30" WidthRequest="30" CornerRadius="50" BorderColor="Transparent" BackgroundColor="#cde7fc">
-                    <Image Source="location.svg" HeightRequest="15" WidthRequest="15" HorizontalOptions="Center" VerticalOptions="Center"/>
+                    <Label FontFamily="MaterialIcons" 
+                           Text="{x:Static helpers:IconFont.Location_city}" 
+                           HorizontalTextAlignment="Center"
+                           TextColor="#387ee7"
+                           HeightRequest="15" WidthRequest="15" 
+                           HorizontalOptions="Center" 
+                           VerticalOptions="Center"/>
                 </Frame>
                 <Label x:Name="location"  FontFamily="MontserratMedium" TextColor="#2a2a3e" FontSize="13" VerticalOptions="Center" />
                 <Frame HeightRequest="30" WidthRequest="30" CornerRadius="50" BorderColor="Transparent" BackgroundColor="#cde7fc">
-                    <Image Source="phone.svg" HeightRequest="15" WidthRequest="15" HorizontalOptions="Center" VerticalOptions="Center"/>
+                    <Label FontFamily="MaterialIcons" 
+                           Text="{x:Static helpers:IconFont.Phone}" 
+                           HorizontalTextAlignment="Center"
+                           TextColor="#387ee7"
+                           HeightRequest="15" WidthRequest="15" 
+                           HorizontalOptions="Center" 
+                           VerticalOptions="Center"/>
                 </Frame>
                 <Label x:Name="phoneNumber" FontFamily="MontserratMedium" TextColor="#2a2a3e" FontSize="13" VerticalOptions="Center" />
             </HorizontalStackLayout>
             <HorizontalStackLayout Spacing="10" Margin="20, 0" HorizontalOptions="Center">
                 <Frame HeightRequest="30" WidthRequest="30" CornerRadius="50" BorderColor="Transparent" BackgroundColor="#cde7fc">
-                    <Image Source="email.svg" HeightRequest="15" WidthRequest="15" HorizontalOptions="Center" VerticalOptions="Center"/>
+                    <Label FontFamily="MaterialIcons" 
+                           Text="{x:Static helpers:IconFont.Email}" 
+                           HorizontalTextAlignment="Center"
+                           TextColor="#387ee7"
+                           HeightRequest="15" WidthRequest="15" 
+                           HorizontalOptions="Center" 
+                           VerticalOptions="Center"/>
                 </Frame>
                 <Label x:Name="email" FontFamily="MontserratMedium" TextColor="#2a2a3e" FontSize="13" VerticalOptions="Center" />
                 <Frame HeightRequest="30" WidthRequest="30" CornerRadius="50" BorderColor="Transparent" BackgroundColor="#cde7fc">
-                    <Image Source="index.svg" HeightRequest="15" WidthRequest="15" HorizontalOptions="Center" VerticalOptions="Center"/>
+                    <Label FontFamily="MaterialIcons" 
+                           Text="{x:Static helpers:IconFont.Book}" 
+                           HorizontalTextAlignment="Center"
+                           TextColor="#387ee7"
+                           HeightRequest="15" WidthRequest="15" 
+                           HorizontalOptions="Center" 
+                           VerticalOptions="Center"/>
                 </Frame>
                 <Label x:Name="index" FontFamily="MontserratMedium" TextColor="#2a2a3e" FontSize="13" VerticalOptions="Center" />
             </HorizontalStackLayout>
             <HorizontalStackLayout Spacing="10" Margin="20, 0" HorizontalOptions="Center">
                 <Frame HeightRequest="30" WidthRequest="30" CornerRadius="50" BorderColor="Transparent" BackgroundColor="#cde7fc">
-                    <Image Source="university.svg" HeightRequest="15" WidthRequest="15" HorizontalOptions="Center" VerticalOptions="Center"/>
+                    <Label FontFamily="MaterialIcons" 
+                           Text="{x:Static helpers:IconFont.School}" 
+                           HorizontalTextAlignment="Center"
+                           TextColor="#387ee7"
+                           HeightRequest="15" WidthRequest="15" 
+                           HorizontalOptions="Center" 
+                           VerticalOptions="Center"/>
                 </Frame>
                 <Label x:Name="university"  FontFamily="MontserratMedium" TextColor="#2a2a3e" FontSize="13" VerticalOptions="Center" />
                 <Frame HeightRequest="30" WidthRequest="30" CornerRadius="50" BorderColor="Transparent" BackgroundColor="#cde7fc">
-                    <Image Source="faculty.svg" HeightRequest="15" WidthRequest="15" HorizontalOptions="Center" VerticalOptions="Center"/>
+                    <Label FontFamily="MaterialIcons" 
+                           Text="{x:Static helpers:IconFont.Square_foot}" 
+                           HorizontalTextAlignment="Center"
+                           TextColor="#387ee7"
+                           HeightRequest="15" WidthRequest="15" 
+                           HorizontalOptions="Center" 
+                           VerticalOptions="Center"/>
                 </Frame>
                 <Label x:Name="faculty" FontFamily="MontserratMedium" TextColor="#2a2a3e" FontSize="13" VerticalOptions="Center" />
                 <Frame HeightRequest="30" WidthRequest="30" CornerRadius="50" BorderColor="Transparent" BackgroundColor="#cde7fc">
-                    <Image Source="odsijek.svg" HeightRequest="15" WidthRequest="15" HorizontalOptions="Center" VerticalOptions="Center"/>
+                    <Label FontFamily="MaterialIcons" 
+                           Text="{x:Static helpers:IconFont.History_edu}" 
+                           HorizontalTextAlignment="Center"
+                           TextColor="#387ee7"
+                           HeightRequest="15" WidthRequest="15" 
+                           HorizontalOptions="Center" 
+                           VerticalOptions="Center"/>
                 </Frame>
                 <Label x:Name="department" FontFamily="MontserratMedium" TextColor="#2a2a3e" FontSize="13" VerticalOptions="Center" />
             </HorizontalStackLayout>

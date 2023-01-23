@@ -2,14 +2,24 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RMA_2022_23_Student_App.ClassPage"
-             Title="ClassPage">
+             Title="ClassPage"
+             xmlns:helpers="clr-namespace:RMA_2022_23_Student_App.Helpers">
     <ScrollView>
         <VerticalStackLayout Padding="30">
             <Label Text="Razvoj mobilnih aplikacija" FontSize="20" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
             <Label x:Name="date" FontFamily="MontserratMedium" FontSize="Micro" TextColor="Gray" />
             <HorizontalStackLayout Spacing="20" Margin="0, 10">
                 <Frame WidthRequest="70" HeightRequest="70" CornerRadius="25" BackgroundColor="#cde7fc" BorderColor="Transparent">
-                    <Image Source="Calendar.svg" WidthRequest="20" HeightRequest="20" VerticalOptions="Center" HorizontalOptions="Center"/>
+                    <Label FontFamily="MaterialIcons" 
+                           Text="{x:Static helpers:IconFont.Calendar_month}" 
+                           TextColor="#387ee7"
+                           HorizontalTextAlignment="Center" 
+                           VerticalTextAlignment="Center"
+                           FontSize="20"
+                           WidthRequest="20" 
+                           HeightRequest="20" 
+                           VerticalOptions="Center" 
+                           HorizontalOptions="Center"/>
                 </Frame>
                 <VerticalStackLayout VerticalOptions="Center" Spacing="5">
                     <Label Text="Every Tuesday" FontFamily="MontserratLight" FontAttributes="Bold" TextColor="Gray" FontSize="12"/>
@@ -18,7 +28,16 @@
             </HorizontalStackLayout>
             <HorizontalStackLayout Spacing="20" Margin="0, 10">
                 <Frame WidthRequest="70" HeightRequest="70" CornerRadius="25" BackgroundColor="#e6ceff" BorderColor="Transparent">
-                    <Image Source="Cursor.svg" WidthRequest="20" HeightRequest="20" VerticalOptions="Center" HorizontalOptions="Center"/>
+                    <Label FontFamily="MaterialIcons" 
+                           Text="{x:Static helpers:IconFont.Link}"
+                           TextColor="#d89af9"
+                           HorizontalTextAlignment="Center" 
+                           VerticalTextAlignment="Center"
+                           FontSize="20"
+                           WidthRequest="20" 
+                           HeightRequest="20" 
+                           VerticalOptions="Center" 
+                           HorizontalOptions="Center"/>
                 </Frame>
                 <VerticalStackLayout VerticalOptions="Center" Spacing="5">
                     <Label Text="Location" FontFamily="MontserratLight" FontAttributes="Bold" TextColor="Gray" FontSize="12"/>
@@ -27,7 +46,16 @@
             </HorizontalStackLayout>
             <HorizontalStackLayout Spacing="20" Margin="0, 10">
                 <Frame WidthRequest="70" HeightRequest="70" CornerRadius="25" BackgroundColor="#dcffce" BorderColor="Transparent">
-                    <Image Source="studenticon.svg" WidthRequest="20" HeightRequest="20" VerticalOptions="Center" HorizontalOptions="Center"/>
+                    <Label FontFamily="MaterialIcons" 
+                           Text="{x:Static helpers:IconFont.People}" 
+                           TextColor="#5ebd4e"
+                           HorizontalTextAlignment="Center" 
+                           VerticalTextAlignment="Center"
+                           FontSize="20"
+                           WidthRequest="20" 
+                           HeightRequest="20" 
+                           VerticalOptions="Center" 
+                           HorizontalOptions="Center"/>
                 </Frame>
                 <VerticalStackLayout VerticalOptions="Center" Spacing="5">
                     <Label Text="Number of students" FontFamily="MontserratLight" FontAttributes="Bold" TextColor="Gray" FontSize="12"/>

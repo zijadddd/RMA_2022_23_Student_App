@@ -23,5 +23,5 @@ public partial class TabbeddPage : TabbedPage
         Children[2].IconImageSource = "settings.svg";
     }
 
-    protected override bool OnBackButtonPressed() { return true; }
+    //protected override bool OnBackButtonPressed() { return true; }
 }

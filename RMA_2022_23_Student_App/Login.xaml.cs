@@ -23,7 +23,7 @@ public partial class Login : ContentPage
 
             if (student != null)
             {
-                if (student.password == password.Text) await Navigation.PushModalAsync(new TabbeddPage(student));
+                if (student.password == password.Text) await Navigation.PushModalAsync(new TabbeddPage(student));  
                 else await DisplayAlert("Error", "Incorrect password", "Ok");
             } else await DisplayAlert("Error", "User with this email does not exist!", "Ok");
         }

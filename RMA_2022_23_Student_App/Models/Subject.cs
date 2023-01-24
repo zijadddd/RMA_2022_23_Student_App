@@ -17,9 +17,16 @@ namespace RMA_2022_23_Student_App.Models
         [MaxLength(10)]
         public string primaryColor { get; set; } 
         [MaxLength(10)]
-        public string secondaryColor { get; set; } 
-        //[ManyToMany(typeof(StudentSubject))]
-        //public List<Student> students { get; set; }
+        public string secondaryColor { get; set; }
+        [MaxLength(100)]
+        public string day { get; set; }
+        [MaxLength(100)]
+        public string time { get; set; }
+        [MaxLength(200)]
+        public string link { get; set; }
+
+        [ManyToMany(typeof(StudentSubject))]
+        public List<Student> students { get; set; }
 
     }
 }

@@ -6,11 +6,11 @@
              Shell.BackgroundColor="White">
 
     <ScrollView>
-        <VerticalStackLayout>
+        <VerticalStackLayout BackgroundColor="White">
             <Frame BorderColor="Transparent" Padding="0" CornerRadius="0">
                 <Image Source="homeup.svg" VerticalOptions="Start" />
             </Frame>
-            <VerticalStackLayout Spacing="15" VerticalOptions="Center">
+            <VerticalStackLayout Spacing="15" VerticalOptions="Center" BackgroundColor="Transparent">
                 <Image Source="student.png" HeightRequest="150"/>
                 <HorizontalStackLayout HorizontalOptions="Center">
                     <Label Text="Student" TextColor="#252437" HorizontalOptions="CenterAndExpand" FontSize="Large" VerticalOptions="Center" FontFamily="MontserratLight" />

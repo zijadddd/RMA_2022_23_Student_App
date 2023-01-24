@@ -6,7 +6,7 @@
              xmlns:helpers="clr-namespace:RMA_2022_23_Student_App.Helpers">
     <ScrollView>
         <VerticalStackLayout Padding="30">
-            <Label Text="Razvoj mobilnih aplikacija" FontSize="20" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
+            <Label x:Name="subjectName" FontSize="20" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
             <Label x:Name="date" FontFamily="MontserratMedium" FontSize="Micro" TextColor="Gray" />
             <HorizontalStackLayout Spacing="20" Margin="0, 10">
                 <Frame WidthRequest="70" HeightRequest="70" CornerRadius="25" BackgroundColor="#cde7fc" BorderColor="Transparent">
@@ -22,8 +22,8 @@
                            HorizontalOptions="Center"/>
                 </Frame>
                 <VerticalStackLayout VerticalOptions="Center" Spacing="5">
-                    <Label Text="Every Tuesday" FontFamily="MontserratLight" FontAttributes="Bold" TextColor="Gray" FontSize="12"/>
-                    <Label Text="14:15 - 17:15" FontFamily="MontserratMedium" FontAttributes="Bold" TextColor="#2a2a3e" FontSize="15" />
+                    <Label x:Name="day" FontFamily="MontserratLight" FontAttributes="Bold" TextColor="Gray" FontSize="12"/>
+                    <Label x:Name="time" FontFamily="MontserratMedium" FontAttributes="Bold" TextColor="#2a2a3e" FontSize="15" />
                 </VerticalStackLayout>
             </HorizontalStackLayout>
             <HorizontalStackLayout Spacing="20" Margin="0, 10">
@@ -41,7 +41,7 @@
                 </Frame>
                 <VerticalStackLayout VerticalOptions="Center" Spacing="5">
                     <Label Text="Location" FontFamily="MontserratLight" FontAttributes="Bold" TextColor="Gray" FontSize="12"/>
-                    <Label Text="meet.google.com/puj-fkho-yuw" FontFamily="MontserratMedium" FontAttributes="Bold" TextColor="#236cde" FontSize="15" />
+                    <Label x:Name="link" FontFamily="MontserratMedium" FontAttributes="Bold" TextColor="#236cde" FontSize="15" />
                 </VerticalStackLayout>
             </HorizontalStackLayout>
             <HorizontalStackLayout Spacing="20" Margin="0, 10">
@@ -59,35 +59,37 @@
                 </Frame>
                 <VerticalStackLayout VerticalOptions="Center" Spacing="5">
                     <Label Text="Number of students" FontFamily="MontserratLight" FontAttributes="Bold" TextColor="Gray" FontSize="12"/>
-                    <Label Text="12" FontFamily="MontserratMedium" FontAttributes="Bold" TextColor="#2a2a3e" FontSize="15" />
+                    <Label x:Name="numOfStudents" FontFamily="MontserratMedium" FontAttributes="Bold" TextColor="#2a2a3e" FontSize="15" />
                 </VerticalStackLayout>
             </HorizontalStackLayout>
             <Label Text="Classmates" FontFamily="MontserratMedium" FontSize="20" Margin="0, 10" TextColor="#2a2a3e"/>
             <Frame HeightRequest="70" CornerRadius="30" BackgroundColor="#f4f5fc" BorderColor="Transparent">
                 <FlexLayout HeightRequest="70" VerticalOptions="Center" HorizontalOptions="Center" Direction="Row" AlignItems="Center" JustifyContent="SpaceAround">
-                    <Frame HeightRequest="50" WidthRequest="50" CornerRadius="50" BorderColor="Transparent">
-                        <Image Source="people1.jpg" HeightRequest="50" WidthRequest="50" Aspect="AspectFill" />
+                    <Frame HeightRequest="50" WidthRequest="50" CornerRadius="50" BorderColor="Transparent" BackgroundColor="#f4f5fc">
+                        <Image x:Name="student1" HeightRequest="50" WidthRequest="50" Aspect="AspectFill" />
                     </Frame>
-                    <Frame HeightRequest="50" WidthRequest="50" CornerRadius="50" BorderColor="Transparent">
-                        <Image Source="people2.jepg" HeightRequest="50" WidthRequest="50" Aspect="AspectFill" />
+                    <Frame HeightRequest="50" WidthRequest="50" CornerRadius="50" BorderColor="Transparent" BackgroundColor="#f4f5fc">
+                        <Image x:Name="student2" HeightRequest="50" WidthRequest="50" Aspect="AspectFill" />
                     </Frame>
-                    <Frame HeightRequest="50" WidthRequest="50" CornerRadius="50" BorderColor="Transparent">
-                        <Image Source="people3.jepg" HeightRequest="50" WidthRequest="50" Aspect="AspectFill" />
+                    <Frame HeightRequest="50" WidthRequest="50" CornerRadius="50" BorderColor="Transparent" BackgroundColor="#f4f5fc">
+                        <Image x:Name="student3" HeightRequest="50" WidthRequest="50" Aspect="AspectFill" />
                     </Frame>
-                    <Frame HeightRequest="50" WidthRequest="50" CornerRadius="50" BorderColor="Transparent">
-                        <Image Source="people4.jpg" HeightRequest="50" WidthRequest="50" Aspect="AspectFill"/>
+                    <Frame HeightRequest="50" WidthRequest="50" CornerRadius="50" BorderColor="Transparent" BackgroundColor="#f4f5fc">
+                        <Image x:Name="student4" HeightRequest="50" WidthRequest="50" Aspect="AspectFill"/>
                     </Frame>
-                    <Frame HeightRequest="50" WidthRequest="50" CornerRadius="50" BorderColor="Transparent">
-                        <Image Source="people5.jpg" HeightRequest="50" WidthRequest="50" Aspect="AspectFill"/>
+                    <Frame HeightRequest="50" WidthRequest="50" CornerRadius="50" BorderColor="Transparent" BackgroundColor="#f4f5fc">
+                        <Image x:Name="student5" HeightRequest="50" WidthRequest="50" Aspect="AspectFill"/>
                     </Frame>
                 </FlexLayout>
             </Frame>
             <Label Text="List of points" FontFamily="MontserratMedium" FontSize="20" Margin="0, 10" TextColor="#2a2a3e"/>
-            <Frame BackgroundColor="#f4f5fc" BorderColor="Transparent" HeightRequest="255" CornerRadius="30">
+            <Frame BackgroundColor="#f4f5fc" BorderColor="Transparent" HeightRequest="295" CornerRadius="30">
                 <VerticalStackLayout>
                     <Label x:Name="presence" FontFamily="MontserratMedium" TextColor="#2a2a3e" /> 
                     <BoxView HeightRequest="1" BackgroundColor="#dedfe3" Margin="0, 10"/>
                     <Label x:Name="seminarWork"  FontFamily="MontserratMedium" TextColor="#2a2a3e" /> 
+                    <BoxView HeightRequest="1" BackgroundColor="#dedfe3" Margin="0, 10"/>
+                    <Label x:Name="homework"  FontFamily="MontserratMedium" TextColor="#2a2a3e" />
                     <BoxView HeightRequest="1" BackgroundColor="#dedfe3" Margin="0, 10"/>
                     <Label x:Name="firstPartialExam"  FontFamily="MontserratMedium" TextColor="#2a2a3e" /> 
                     <BoxView HeightRequest="1" BackgroundColor="#dedfe3" Margin="0, 10"/>

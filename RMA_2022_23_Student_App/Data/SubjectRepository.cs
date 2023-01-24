@@ -16,7 +16,7 @@ namespace RMA_2022_23_Student_App.Data
             conn.CreateTable<StudentSubject>();
         }
 
-        public void addNewSubject(int subjectId, string name, string professor, string classImgUrl, string primaryColor, string secondaryColor)
+        public void addNewSubject(int subjectId, string name, string professor, string classImgUrl, string primaryColor, string secondaryColor, string day, string time, string link)
         {
             int result = 0;
             try
@@ -27,16 +27,26 @@ namespace RMA_2022_23_Student_App.Data
                 if (string.IsNullOrEmpty(classImgUrl)) throw new Exception("Class image url field cannot be null or empty.");
                 if (string.IsNullOrEmpty(primaryColor)) throw new Exception("Primary color field cannot be null or empty.");
                 if (string.IsNullOrEmpty(secondaryColor)) throw new Exception("Secondary color url field cannot be null or empty.");
+                if (string.IsNullOrEmpty(day)) throw new Exception("Day field cannot be null or empty.");
+                if (string.IsNullOrEmpty(time)) throw new Exception("Time field cannot be null or empty.");
+                if (string.IsNullOrEmpty(link)) throw new Exception("Secondary color url field cannot be null or empty.");
 
-                result = conn.Insert(new Subject
+                List<Subject> subjects = this.GetAllSubjects();
+                Subject subject = new Subject
                 {
                     subjectId = subjectId,
                     name = name,
                     professor = professor,
                     classImgUrl = classImgUrl,
                     primaryColor = primaryColor,
-                    secondaryColor = secondaryColor
-                });
+                    secondaryColor = secondaryColor,
+                    day = day,
+                    time = time,
+                    link = link
+                };
+
+                if(subjects.Count > 0) foreach (Subject i in subjects) if (subject.subjectId == i.subjectId) return;
+                result = conn.Insert(subject);
 
                 StatusMessage = string.Format("{0} zapis(a) dodano (Subject: {1})", result, name);
             }

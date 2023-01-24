@@ -1,4 +1,5 @@
 ﻿using SQLite;
+using SQLiteNetExtensions.Attributes;
 
 namespace RMA_2022_23_Student_App.Models
 {
@@ -33,7 +34,7 @@ namespace RMA_2022_23_Student_App.Models
         public string description { get; set; }
         [MaxLength(10000)]
         public string profilePhotoUrl { get; set; }
-        //[ManyToMany(typeof(StudentSubject))]
-        //public List<Subject> subjects { get; set; }
+        [ManyToMany(typeof(StudentSubject))]
+        public List<Subject> subjects { get; set; }
     }
 }

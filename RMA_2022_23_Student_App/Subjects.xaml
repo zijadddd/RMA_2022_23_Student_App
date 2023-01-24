@@ -40,7 +40,7 @@
                                         </Frame>
                                         <Frame Margin="0,-290,13, 30" BorderColor="White" CornerRadius="30" WidthRequest="80" HeightRequest="100" HorizontalOptions="End">
                                             <VerticalStackLayout VerticalOptions="Center" WidthRequest="80" HeightRequest="80">
-                                                <Label Text="38" TextColor="#23243a" FontSize="45" FontFamily="MontserratMedium" FontAttributes="Bold" HorizontalOptions="Center" />
+                                                <Label Text="{Binding numOfStudents}" ClassId="{Binding subjectId}" TextColor="#23243a" FontSize="45" FontFamily="MontserratMedium" FontAttributes="Bold" HorizontalOptions="Center" />
                                                 <Label Text="Students" TextColor="#23243a" FontSize="10" FontFamily="MontserratMedium" FontAttributes="Bold" HorizontalOptions="Center" />
                                             </VerticalStackLayout>
                                         </Frame>

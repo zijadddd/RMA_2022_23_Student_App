@@ -42,21 +42,28 @@ namespace RMA_2022_23_Student_App.Data
                 if (string.IsNullOrEmpty(description)) throw new Exception("Description field cannot be null or empty.");
                 if (string.IsNullOrEmpty(profilePhotoUrl)) throw new Exception("Profile photo url field cannot be null or empty.");
 
-                result = conn.Insert(new Student { 
-                                                   studentId = studentId,
-                                                   firstName = firstName, 
-                                                   lastName = lastName,
-                                                   birthDate = birthDate,
-                                                   location = location,
-                                                   phoneNumber = phoneNumber,
-                                                   email = email,
-                                                   password = password,
-                                                   index = index,
-                                                   university = university,
-                                                   faculty = faculty,
-                                                   department = department,
-                                                   description = description,
-                                                   profilePhotoUrl = profilePhotoUrl});
+                Student student = new Student
+                {
+                    studentId = studentId,
+                    firstName = firstName,
+                    lastName = lastName,
+                    birthDate = birthDate,
+                    location = location,
+                    phoneNumber = phoneNumber,
+                    email = email,
+                    password = password,
+                    index = index,
+                    university = university,
+                    faculty = faculty,
+                    department = department,
+                    description = description,
+                    profilePhotoUrl = profilePhotoUrl
+                };
+
+                List<Student> students = new List<Student>();
+
+                if(students.Count > 0) foreach (Student i in students) if (student.studentId == i.studentId) return;
+                conn.Insert(student);
 
                 StatusMessage = string.Format("{0} zapis(a) dodano (Student: {1})", result, firstName + " " + lastName);
             }

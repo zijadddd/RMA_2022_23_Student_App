@@ -1,13 +1,14 @@
 ﻿using SQLite;
+using SQLiteNetExtensions.Attributes;
 
 namespace RMA_2022_23_Student_App.Models
 {
     [Table("studentsubject")]
     public class StudentSubject
     {
-        [Column ("studentId")]
+        [ForeignKey(typeof(Student)), Column ("studentId")]
         public int studentId { get; set; }
-        [Column("subjectId")]
+        [ForeignKey(typeof(Subject)), Column("subjectId")]
         public int subjectId { get; set; }
 
         [Column("isActivePendingOrCompleted")]
@@ -17,6 +18,8 @@ namespace RMA_2022_23_Student_App.Models
         public string presence { get; set; }
         [MaxLength(10)]
         public string seminarWork { get; set; }
+        [MaxLength(10)]
+        public string homework { get; set; }
         [MaxLength(10)]
         public string firstPartialExam { get; set; }
         [MaxLength(10)]

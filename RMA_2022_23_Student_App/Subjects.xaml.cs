@@ -1,5 +1,4 @@
 using RMA_2022_23_Student_App.Data;
-using RMA_2022_23_Student_App.Models;
 
 namespace RMA_2022_23_Student_App;
 

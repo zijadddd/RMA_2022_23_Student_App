@@ -40,7 +40,7 @@ namespace RMA_2022_23_Student_App.Data
                             break;
                         }
                     }                
-                    if (subject != null) subjects.Add(new SubjectModel(subject.subjectId, subject.name, subject.professor, subject.classImgUrl, subject.primaryColor, subject.secondaryColor));
+                    if (subject != null) subjects.Add(new SubjectModel(subject.subjectId, subject.name, subject.professor, subject.classImgUrl, subject.primaryColor, subject.secondaryColor, subject.day, subject.time, subject.link, this.getNumberOfStudents(subject.subjectId)));
                 }
                 return subjects;
             } catch (Exception ex)
@@ -50,28 +50,35 @@ namespace RMA_2022_23_Student_App.Data
             return null;
         }
 
-        public void addStudentToSubject(int studentId, int subjectId, int isActivePendingOrCompleted ,string presence, string seminarWork, string firstPartialExam, string secondPartialExam, string finalExam)
+        public void addStudentToSubject(int studentId, int subjectId, int isActivePendingOrCompleted ,string presence, string seminarWork, string homework, string firstPartialExam, string secondPartialExam, string finalExam)
         {
             try
             {
                 if (string.IsNullOrEmpty(presence)) throw new Exception("Presence field cannot be null or empty.");
                 if (string.IsNullOrEmpty(seminarWork)) throw new Exception("Seminar work field cannot be null or empty.");
+                if (string.IsNullOrEmpty(homework)) throw new Exception("Homework field cannot be null or empty.");
                 if (string.IsNullOrEmpty(firstPartialExam)) throw new Exception("First partial exam field cannot be null or empty.");
                 if (string.IsNullOrEmpty(secondPartialExam)) throw new Exception("Second partial exam field cannot be null or empty.");
                 if (string.IsNullOrEmpty(finalExam)) throw new Exception("Final exam field cannot be null or empty.");
 
                 Init();
-                conn.Insert(new StudentSubject { 
+                StudentSubject studentSubject = new StudentSubject
+                {
                     studentId = studentId,
                     subjectId = subjectId,
                     isActivePendingOrCompleted = isActivePendingOrCompleted,
                     presence = presence,
                     seminarWork = seminarWork,
+                    homework = homework,
                     firstPartialExam = firstPartialExam,
                     secondPartialExam = secondPartialExam,
                     finalExam = finalExam
-                });
-                } catch (Exception ex)
+                };
+
+                var query = conn.Table<StudentSubject>().ToList();
+                if (query.Count > 0) foreach (StudentSubject i in query) if (studentSubject.studentId == i.studentId && studentSubject.subjectId == i.subjectId) return;
+                conn.Insert(studentSubject);
+            } catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
             }
@@ -88,6 +95,61 @@ namespace RMA_2022_23_Student_App.Data
                 if (studentSubject != null) return studentSubject;
             }
             catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            return null;
+        }
+
+        public SubjectModel getInfoAboutSubject(int subjectId)
+        {
+            try
+            {
+                Init();
+                var query = conn.Table<Subject>().Where(s => s.subjectId == subjectId);
+                Subject subject = query.FirstOrDefault();
+
+                if (subject != null) return new SubjectModel(subject.subjectId, subject.name, subject.professor, subject.classImgUrl, subject.primaryColor, subject.secondaryColor, subject.day, subject.time, subject.link, this.getNumberOfStudents(subject.subjectId));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            return null;
+        }
+
+        public int getNumberOfStudents(int subjectId)
+        {
+            try
+            {
+                Init();
+                var query = conn.Table<StudentSubject>().Where(s => s.subjectId == subjectId);
+                int students = 0;
+                foreach (StudentSubject studentSubject in query) students++;
+                if (query == null) return 0;
+                else return students;
+            } catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            return 0;
+        }
+
+        public List<Student> getStudentsOfClass(int subjectId)
+        {
+            try
+            {
+                Init();
+                var query = conn.Table<StudentSubject>().Where(s => s.subjectId == subjectId);
+                List<Student> students = new List<Student>();
+                foreach(StudentSubject i in query)
+                {
+                    var student = conn.Table<Student>().Where(s => s.studentId == i.studentId);
+                    var temp = student.FirstOrDefault();
+                    students.Add(temp);
+                }
+                return students;
+            } catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
             }

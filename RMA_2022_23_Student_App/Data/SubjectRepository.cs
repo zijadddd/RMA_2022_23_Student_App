@@ -16,7 +16,7 @@ namespace RMA_2022_23_Student_App.Data
             conn.CreateTable<StudentSubject>();
         }
 
-        public void addNewSubject(string name, string professor, string classImgUrl, string primaryColor, string secondaryColor)
+        public void addNewSubject(int subjectId, string name, string professor, string classImgUrl, string primaryColor, string secondaryColor)
         {
             int result = 0;
             try
@@ -30,6 +30,7 @@ namespace RMA_2022_23_Student_App.Data
 
                 result = conn.Insert(new Subject
                 {
+                    subjectId = subjectId,
                     name = name,
                     professor = professor,
                     classImgUrl = classImgUrl,
@@ -62,44 +63,20 @@ namespace RMA_2022_23_Student_App.Data
             return null;
         }
 
-        public List<SubjectModel> GetAllSubjects()
+        public List<Subject> GetAllSubjects()
         {
             try
             {
                 Init();
-                List<SubjectModel> subjects = new List<SubjectModel>();
-                List<Subject> subjectsDemo = conn.Table<Subject>().ToList();
-                for(int i = 0; i < subjectsDemo.Count; i++)
-                {
-                    subjects.Add(new SubjectModel(subjectsDemo[i].subjectId, subjectsDemo[i].name, subjectsDemo[i].professor, subjectsDemo[i].classImgUrl, subjectsDemo[i].primaryColor, subjectsDemo[i].secondaryColor));
-                }
-                return subjects;
+                return conn.Table<Subject>().ToList();
             }
             catch (Exception ex)
             {
                 StatusMessage = string.Format("It's not possible to load data from database. {0}", ex.Message);
             }
 
-            return new List<SubjectModel>();
-        }
+            return new List<Subject>();
+        } 
 
-        public class SubjectModel
-        {
-            public int subjectId;
-            public string name { get; set; }
-            public string professor { get; set; }
-            public string classImgUrl { get; set; }
-            public Color primaryColor { get; set; }
-            public Color secondaryColor { get; set; }
-            public SubjectModel(int subjectId, string name, string professor, string classImgUrl, string primaryColor, string secondaryColor)
-            {
-                this.subjectId = subjectId;
-                this.name = name;
-                this.professor = professor;
-                this.classImgUrl = classImgUrl;
-                this.primaryColor = Color.FromHex(primaryColor);
-                this.secondaryColor = Color.FromHex(secondaryColor);
-            }
-        }
     }
 }

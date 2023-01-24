@@ -6,64 +6,24 @@
              Shell.NavBarIsVisible="False">
     <ScrollView>
         <VerticalStackLayout>
-            <Border VerticalOptions="StartAndExpand" BackgroundColor="#f4f5fc" StrokeShape="RoundRectangle 0, 0, 40, 40" StrokeThickness="0" Padding="0" HeightRequest="230">
-                <VerticalStackLayout>
-                    <FlexLayout Direction="Row" AlignItems="Center" JustifyContent="SpaceBetween" VerticalOptions="Start" HeightRequest="100">
-                        <Frame BackgroundColor="Transparent" BorderColor="Transparent" Margin="5">
-                            <VerticalStackLayout>
-                                <Label x:Name="date" FontFamily="MontserratMedium" FontSize="Micro" TextColor="Gray" FontAttributes="Bold"/>
-                                <HorizontalStackLayout>
-                                    <Label Text="Hey, " FontFamily="MontserratLight" FontSize="Large" TextColor="#2a2a3e" FontAttributes="Bold" />
-                                    <Label x:Name="studentFullName" FontFamily="MontserratMedium" FontSize="Large" TextColor="#2a2a3e" />
-                                </HorizontalStackLayout>
-                            </VerticalStackLayout>
-                        </Frame>
-                        <Frame HeightRequest="70" WidthRequest="70" CornerRadius="20" HorizontalOptions="End" BorderColor="Transparent" Margin="10" Padding="0">
-                            <Image x:Name="studentProfilePhoto" HeightRequest="70" WidthRequest="70" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
-                        </Frame>
-                    </FlexLayout>
-                    <FlexLayout HorizontalOptions="Center" Direction="Row" AlignItems="Center" JustifyContent="SpaceAround" Margin="0, 20">
-                        <Border x:Name="ActiveSubjects" WidthRequest="90" HeightRequest="100" StrokeShape="RoundRectangle 20, 20, 20, 20" StrokeThickness="0" Padding="0">
-                            <Border.Shadow>
-                                <Shadow Brush="#0067ff" Offset="10, 10" Radius="50"/>
-                            </Border.Shadow>
-                            <VerticalStackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
-                                <Label x:Name="ActiveSubjectsNumber" Text="13" FontSize="25" FontFamily="MontserratMedium" FontAttributes="Bold" HorizontalOptions="Center" />
-                                <Label x:Name="ActiveSubjectsText" Text="Active" FontSize="15" FontFamily="MontserratMedium" FontAttributes="Bold" HorizontalOptions="Center" />
-                            </VerticalStackLayout>
-                            <Border.GestureRecognizers>
-                                <TapGestureRecognizer Tapped="OnActiveSubjectsTapped" />
-                            </Border.GestureRecognizers>
-                        </Border>
-                        <Border x:Name="PendingSubjects" BackgroundColor="Transparent" WidthRequest="90" HeightRequest="100" StrokeShape="RoundRectangle 20, 20, 20, 20" StrokeThickness="0" Padding="0">
-                            <Border.Shadow>
-                                <Shadow Brush="#0067ff" Offset="10, 10" Opacity="0" Radius="50"/>
-                            </Border.Shadow>
-                            <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center">
-                                <Label x:Name="PendingSubjectsNumber" Text="15" TextColor="#24253d" FontSize="25" FontFamily="MontserratMedium" FontAttributes="Bold" HorizontalOptions="Center" />
-                                <Label x:Name="PendingSubjectsText" Text="Pending" TextColor="#24253d" Opacity="0.3" FontSize="15" FontFamily="MontserratMedium" FontAttributes="Bold" HorizontalOptions="Center" />
-                            </VerticalStackLayout>
-                            <Border.GestureRecognizers>
-                                <TapGestureRecognizer Tapped="OnPendingSubjectsTapped" />
-                            </Border.GestureRecognizers>
-                        </Border>
-                        <Border x:Name="CompletedSubjects" BackgroundColor="Transparent" WidthRequest="90" HeightRequest="100" StrokeShape="RoundRectangle 20, 20, 20, 20" StrokeThickness="0" Padding="0">
-                            <Border.Shadow>
-                                <Shadow Brush="#0067ff" Offset="10, 10" Opacity="0" Radius="50"/>
-                            </Border.Shadow>
-                            <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center">
-                                <Label x:Name="CompletedSubjectsNumber" Text="21" TextColor="#24253d" FontSize="25" FontFamily="MontserratMedium" FontAttributes="Bold" HorizontalOptions="Center" />
-                                <Label x:Name="CompletedSubjectsText" Text="Completed" TextColor="#24253d" Opacity="0.3" FontSize="15" FontFamily="MontserratMedium" FontAttributes="Bold" HorizontalOptions="Center" />
-                            </VerticalStackLayout>
-                            <Border.GestureRecognizers>
-                                <TapGestureRecognizer Tapped="OnCompletedSubjectsTapped" />
-                            </Border.GestureRecognizers>
-                        </Border>
-                    </FlexLayout>
-                </VerticalStackLayout>
+            <Border VerticalOptions="StartAndExpand" BackgroundColor="#f4f5fc" StrokeShape="RoundRectangle 0, 0, 40, 40" StrokeThickness="0" Padding="0" HeightRequest="100">
+                <FlexLayout Direction="Row" AlignItems="Center" JustifyContent="SpaceBetween" VerticalOptions="Start" HeightRequest="100">
+                    <Frame BackgroundColor="Transparent" BorderColor="Transparent" Margin="5">
+                        <VerticalStackLayout>
+                            <Label x:Name="date" FontFamily="MontserratMedium" FontSize="Micro" TextColor="Gray" FontAttributes="Bold"/>
+                            <HorizontalStackLayout>
+                                <Label Text="Hey, " FontFamily="MontserratLight" FontSize="Large" TextColor="#2a2a3e" FontAttributes="Bold" />
+                                <Label x:Name="studentFullName" FontFamily="MontserratMedium" FontSize="Large" TextColor="#2a2a3e" />
+                            </HorizontalStackLayout>
+                        </VerticalStackLayout>
+                    </Frame>
+                    <Frame HeightRequest="70" WidthRequest="70" CornerRadius="20" HorizontalOptions="End" BorderColor="Transparent" Margin="10" Padding="0">
+                        <Image x:Name="studentProfilePhoto" HeightRequest="70" WidthRequest="70" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                    </Frame>
+                </FlexLayout>
             </Border>
             <VerticalStackLayout Margin="20" Spacing="10">
-                <ListView x:Name="listView" SeparatorVisibility="None" RowHeight="295" HorizontalOptions="Center">
+                <ListView x:Name="listView" SeparatorVisibility="None" RowHeight="320" HorizontalOptions="Center">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
@@ -96,7 +56,7 @@
                                             <VerticalStackLayout Spacing="5">
                                                 <Label Text="{Binding name}" FontFamily="MontserratMedium" TextColor="White" FontSize="18" FontAttributes="Bold"/>
                                                 <Label Text="{Binding professor}" FontFamily="MontserratMedium" TextColor="White" FontSize="15"/>
-                                                <Button Text="Enter" BackgroundColor="Transparent" BorderColor="White" BorderWidth="1" WidthRequest="100" CornerRadius="20" Padding="15" FontAttributes="Bold" FontFamily="MontserratMedium" HorizontalOptions="End" Clicked="ClassPageClicked" TextColor="White"/>
+                                                <Button Clicked="OpenClassPage" ClassId="{Binding subjectId}" Text="Enter" BackgroundColor="Transparent" BorderColor="White" BorderWidth="1" WidthRequest="100" CornerRadius="20" Padding="15" FontAttributes="Bold" FontFamily="MontserratMedium" HorizontalOptions="End" TextColor="White" />
                                             </VerticalStackLayout>
                                         </Border>
                                     </VerticalStackLayout>

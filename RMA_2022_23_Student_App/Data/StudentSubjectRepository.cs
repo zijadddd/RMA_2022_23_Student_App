@@ -1,5 +1,6 @@
 ﻿using RMA_2022_23_Student_App.Models;
 using SQLite;
+using System.Windows.Input;
 
 namespace RMA_2022_23_Student_App.Data
 {
@@ -20,20 +21,26 @@ namespace RMA_2022_23_Student_App.Data
             _subjectRepository = new SubjectRepository();
         }
 
-        public List<Subject> getAllStudentSubjects(int studentId)
+        public List<SubjectModel> getAllStudentSubjects(int studentId)
         {
             try
             {
                 Init();
                 List<StudentSubject> studentSubjects = conn.Table<StudentSubject>().Where(ss => ss.studentId == studentId).ToList();
-                if (studentSubjects == null || studentSubjects.Count == 0) return null;
-                List<Subject> subjects = new List<Subject>();
+                List<SubjectModel> subjects = new List<SubjectModel>();
+                List<Subject> allSubjects = new List<Subject>(_subjectRepository.GetAllSubjects());
                 for (int i = 0; i < studentSubjects.Count; i++)
                 {
-                    var query = conn.Table<Subject>().Where(s => s.subjectId == studentSubjects[i].subjectId);
-                    Subject subject = query.FirstOrDefault();
-
-                    if (subject != null) subjects.Add(subject);
+                    Subject subject = new Subject();
+                    for(int j = 0; j < allSubjects.Count; j++)
+                    {
+                        if (allSubjects[j].subjectId == studentSubjects[i].subjectId)
+                        {
+                            subject = allSubjects[j];
+                            break;
+                        }
+                    }                
+                    if (subject != null) subjects.Add(new SubjectModel(subject.subjectId, subject.name, subject.professor, subject.classImgUrl, subject.primaryColor, subject.secondaryColor));
                 }
                 return subjects;
             } catch (Exception ex)
@@ -43,24 +50,7 @@ namespace RMA_2022_23_Student_App.Data
             return null;
         }
 
-        /*
-         public int isActivePendingOrCompleted { get; set; } // 0 - Active, 1 - Pending, 2 - Completed
-
-        [MaxLength(10)]
-        public string presence { get; set; }
-        [MaxLength(10)]
-        public string seminarWork { get; set; }
-        [MaxLength(10)]
-        public string firstPartialExam { get; set; }
-        [MaxLength(10)]
-        public string secondPartialExam { get; set; }
-        [MaxLength(10)]
-        public string finalExam { get; set; }
-         
-         */
-
-
-        public void addStudentToSubject(int studentId, int subjectId, string presence, string seminarWork, string firstPartialExam, string secondPartialExam, string finalExam)
+        public void addStudentToSubject(int studentId, int subjectId, int isActivePendingOrCompleted ,string presence, string seminarWork, string firstPartialExam, string secondPartialExam, string finalExam)
         {
             try
             {
@@ -71,29 +61,37 @@ namespace RMA_2022_23_Student_App.Data
                 if (string.IsNullOrEmpty(finalExam)) throw new Exception("Final exam field cannot be null or empty.");
 
                 Init();
-                StudentSubject studentSubject = new StudentSubject();
-                var queryOne = conn.Table<Student>().Where(s => s.studentId == studentId);
-                Student student = queryOne.FirstOrDefault();
-                var queryTwo = conn.Table<Subject>().Where(s => s.subjectId == subjectId);
-                Subject subject = queryTwo.FirstOrDefault();
-
-                if (student != null) studentSubject.studentId = studentId;
-                if (subject != null) studentSubject.subjectId = subjectId;
-
                 conn.Insert(new StudentSubject { 
                     studentId = studentId,
                     subjectId = subjectId,
+                    isActivePendingOrCompleted = isActivePendingOrCompleted,
                     presence = presence,
                     seminarWork = seminarWork,
                     firstPartialExam = firstPartialExam,
                     secondPartialExam = secondPartialExam,
                     finalExam = finalExam
-
                 });
                 } catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
             }
+        }
+
+        public StudentSubject getStudentInfoAboutSubject(int studentId, int subjectId)
+        {
+            try
+            {
+                Init();
+                var query = conn.Table<StudentSubject>().Where(s => s.studentId == studentId && s.subjectId == subjectId);
+                StudentSubject studentSubject = query.FirstOrDefault();
+
+                if (studentSubject != null) return studentSubject;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            return null;
         }
     }
 }

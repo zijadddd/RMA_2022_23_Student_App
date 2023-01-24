@@ -21,7 +21,7 @@ namespace RMA_2022_23_Student_App.Data
             conn.CreateTable<Student>();
         }
 
-        public void AddNewStudent(string firstName, string lastName, string birthDate, string location, string phoneNumber, string email, string password,
+        public void AddNewStudent(int studentId, string firstName, string lastName, string birthDate, string location, string phoneNumber, string email, string password,
                                   string index, string university, string faculty, string department, string description, string profilePhotoUrl) {
             int result = 0;
             try
@@ -42,7 +42,9 @@ namespace RMA_2022_23_Student_App.Data
                 if (string.IsNullOrEmpty(description)) throw new Exception("Description field cannot be null or empty.");
                 if (string.IsNullOrEmpty(profilePhotoUrl)) throw new Exception("Profile photo url field cannot be null or empty.");
 
-                result = conn.Insert(new Student { firstName = firstName, 
+                result = conn.Insert(new Student { 
+                                                   studentId = studentId,
+                                                   firstName = firstName, 
                                                    lastName = lastName,
                                                    birthDate = birthDate,
                                                    location = location,

@@ -1,17 +1,11 @@
 ﻿using SQLite;
-using SQLiteNetExtensions.Attributes;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RMA_2022_23_Student_App.Models
 {
     [Table("students")]
     public class Student
     {
-        [PrimaryKey, AutoIncrement]
+        [PrimaryKey]
         public int studentId { get; set; }
         [MaxLength(50)]
         public string firstName { get; set; }
@@ -39,7 +33,7 @@ namespace RMA_2022_23_Student_App.Models
         public string description { get; set; }
         [MaxLength(10000)]
         public string profilePhotoUrl { get; set; }
-        [ManyToMany(typeof(StudentSubject))]
-        public List<Subject> subjects { get; set; }
+        //[ManyToMany(typeof(StudentSubject))]
+        //public List<Subject> subjects { get; set; }
     }
 }

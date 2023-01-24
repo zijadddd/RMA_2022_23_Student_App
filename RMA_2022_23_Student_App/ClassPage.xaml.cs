@@ -1,8 +1,12 @@
+using RMA_2022_23_Student_App.Data;
+using RMA_2022_23_Student_App.Models;
+
 namespace RMA_2022_23_Student_App;
 
 public partial class ClassPage : ContentPage
 {
-	public ClassPage()
+    private StudentSubjectRepository _studentSubjectRepository;
+	public ClassPage(int subjectId)
 	{
 		InitializeComponent();
 
@@ -17,6 +21,14 @@ public partial class ClassPage : ContentPage
         else if (todayDate.Day % 10 == 3 && todayDate.Day != 13) temp += "rd";
         else temp += "th";
         date.Text = temp;
+
+        _studentSubjectRepository = new StudentSubjectRepository();
+        StudentSubject studentSubject = _studentSubjectRepository.getStudentInfoAboutSubject(TabbeddPage.student.studentId, subjectId);
+        presence.Text = "Presence: " + studentSubject.presence;
+        seminarWork.Text = "Seminar work: " + studentSubject.seminarWork;
+        firstPartialExam.Text = "First partial exam: " + studentSubject.firstPartialExam;
+        secondPartialExam.Text = "Second partial exam: " + studentSubject.secondPartialExam;
+        finalExam.Text = "Final exam: " + studentSubject.finalExam;
     }
 
     private async void ActivityPageClicked(object sender, EventArgs e)

@@ -20,7 +20,7 @@ public partial class MainPage : ContentPage
 
         _subjectRepository.addNewSubject(1, "Razvoj mobilnih aplikacija", "Esad Kadušić", "socialmedia.png", "#cde7fc", "#AA3e8dfd", "Every Monday", "15:30 - 17:30", "meet.google.com/puj-fkho-yuw");
         _subjectRepository.addNewSubject(2, "Web programiranje", "Đulaga Hadžić", "subjectone.png", "#e6ceff", "#AAd078ff", "Every Tuesday", "09:15 - 12:15", "meet.google.com/koj-lghu-zuj");
-        _subjectRepository.addNewSubject(3, "Uvod u tehnike programiranja", "Adnan Dželihođić", "socialmedia.png", "#cde7fc", "#AA3e8dfd", "Every Wednesday", "12:15 - 15:15", "meet.google.com/rik-pfpo-jok");
+        _subjectRepository.addNewSubject(3, "Uvod u tehnike programiranja", "Adnan Dželihođić", "socialmedia.png", "#cfd8dc", "#AA78909c", "Every Wednesday", "12:15 - 15:15", "meet.google.com/rik-pfpo-jok");
         _subjectRepository.addNewSubject(4, "Razvoj softvera", "Mujo Hodzic", "socialmedia.png", "#dcffce", "#AA8ed385", "Every Friday", "15:15 - 17:00", "meet.google.com/jus-zvyt-joq");
         _subjectRepository.addNewSubject(5, "Embedded i Real Time sistemi", "Elmir Babovic", "subjectone.png", "#ffcdd2", "#AAe57373", "Every Friday", "17:15 - 19:00", "meet.google.com/aqm-oexz-ikb");
 

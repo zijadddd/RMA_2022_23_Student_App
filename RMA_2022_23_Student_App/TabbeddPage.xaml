@@ -13,5 +13,6 @@
     <local:ProfilePage IconImageSource="profile.svg" Title="Profile" />
     <local:Subjects IconImageSource="subject.svg" Title="Subjects"/>
     <local:SettingsPage IconImageSource="settings.svg" Title="Settings" />
+    <local:QRScanner IconImageSource="scanner.png" Title="QR Scanner" />
 
 </TabbedPage>

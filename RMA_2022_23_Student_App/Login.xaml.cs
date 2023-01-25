@@ -35,10 +35,4 @@ public partial class Login : ContentPage
             await DisplayAlert("Error", ex.Message, "OK");
         }
     }
-
-    private async void RegistrationClicked(object sender, EventArgs e)
-    {
-        await Navigation.PushAsync(new Registration());
-    }
-
 }

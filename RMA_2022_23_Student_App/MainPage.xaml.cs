@@ -33,9 +33,5 @@ public partial class MainPage : ContentPage
     {
         Application.Current.MainPage = new Login();
     }
-    private async void RegistrationClicked(object sender, EventArgs e)
-    {
-        await Navigation.PushAsync(new Registration());
-    }
 }
 

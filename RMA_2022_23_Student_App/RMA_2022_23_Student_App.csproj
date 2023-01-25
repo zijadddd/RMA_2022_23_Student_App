@@ -104,9 +104,6 @@
 	  <MauiXaml Update="ProfilePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Registration.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
 	  <MauiXaml Update="TabbeddPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

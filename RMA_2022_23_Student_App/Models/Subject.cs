@@ -24,9 +24,5 @@ namespace RMA_2022_23_Student_App.Models
         public string time { get; set; }
         [MaxLength(200)]
         public string link { get; set; }
-
-        [ManyToMany(typeof(StudentSubject))]
-        public List<Student> students { get; set; }
-
     }
 }

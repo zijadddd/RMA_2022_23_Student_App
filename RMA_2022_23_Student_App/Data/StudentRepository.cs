@@ -64,12 +64,10 @@ namespace RMA_2022_23_Student_App.Data
 
                 if(students.Count > 0) foreach (Student i in students) if (student.studentId == i.studentId) return;
                 conn.Insert(student);
-
-                StatusMessage = string.Format("{0} zapis(a) dodano (Student: {1})", result, firstName + " " + lastName);
             }
             catch (Exception ex)
             {
-                StatusMessage = string.Format("Nije moguće dodati {0}. Greška: {1}", firstName + " " + lastName, ex.Message);
+                Console.WriteLine(ex.Message);
             }
         }
 

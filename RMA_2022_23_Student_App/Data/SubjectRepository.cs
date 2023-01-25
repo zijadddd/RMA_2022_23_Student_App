@@ -13,7 +13,6 @@ namespace RMA_2022_23_Student_App.Data
             if (conn != null) return;
             conn = new SQLiteConnection(Database.DatabasePath, Database.Flags);
             conn.CreateTable<Subject>();
-            conn.CreateTable<StudentSubject>();
         }
 
         public void addNewSubject(int subjectId, string name, string professor, string classImgUrl, string primaryColor, string secondaryColor, string day, string time, string link)

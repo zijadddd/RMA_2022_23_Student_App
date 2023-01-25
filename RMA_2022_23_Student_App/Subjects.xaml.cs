@@ -36,7 +36,7 @@ public partial class Subjects : ContentPage
     private async void OpenClassPage(object sender, EventArgs e)
     {
         Button b = sender as Button;
-        var id = b.ClassId;
-        await Navigation.PushModalAsync(new ClassPage(int.Parse(id)));
+        var subjectId = b.ClassId;
+        await Navigation.PushModalAsync(new ClassPage(int.Parse(subjectId)));
     } 
 }

@@ -26,6 +26,5 @@ namespace RMA_2022_23_Student_App.Models
         public string secondPartialExam { get; set; }
         [MaxLength(10)]
         public string finalExam { get; set; }
-
     }
 }

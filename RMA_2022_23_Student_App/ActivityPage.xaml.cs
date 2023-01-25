@@ -6,12 +6,18 @@ namespace RMA_2022_23_Student_App;
 public partial class ActivityPage : ContentPage
 {
     private PresenceRepository _presenceRepository;
+    private StudentSubjectRepository _studentSubjectRepository;
 	public ActivityPage(int subjectId)
     {
         InitializeComponent();
 
         _presenceRepository = new PresenceRepository();
+        _studentSubjectRepository = new StudentSubjectRepository();
+
+        SubjectModel subject = _studentSubjectRepository.getInfoAboutSubject(subjectId);
         List<Presence> presences = _presenceRepository.GetAllPresence(TabbeddPage.student.studentId, subjectId);
+
+        subjectName.Text = subject.name;
         if (presences.ElementAtOrDefault(0) != null)
         {
             if (!string.IsNullOrEmpty(presences[0].lectureDate))

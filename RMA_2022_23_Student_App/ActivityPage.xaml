@@ -5,7 +5,7 @@
              Title="ActivityPage">
     <ScrollView>
         <VerticalStackLayout Padding="30">
-            <Label Text="Razvoj mobilnih aplikacija" FontSize="20" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
+            <Label x:Name="subjectName" FontSize="20" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
             <Label Text="Presence" FontSize="13" TextColor="Gray" FontFamily="MontserratMedium"/>
             <VerticalStackLayout Spacing="10" Margin="0, 10">
                 <VerticalStackLayout>

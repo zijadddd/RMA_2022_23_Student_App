@@ -54,10 +54,10 @@ public partial class MainPage : ContentPage
         _studentSubjectRepository.addStudentToSubject(5, 4, 0, "8", "15", "5", "5", "1", "6");
         _studentSubjectRepository.addStudentToSubject(5, 5, 0, "10", "15", "10", "25", "40", "65");
 
-        _presenceRepository.addPresence(1, 1, "2020-08-23", "2020-07-31", 1, 1);
-        _presenceRepository.addPresence(1, 1, "2020-08-22", "2020-07-29", 1, 0);
-        _presenceRepository.addPresence(1, 2, "2020-08-21", "2020-07-28", 0, 0);
-        _presenceRepository.addPresence(1, 2, "2020-08-20", "2020-07-27", 1, 0);
+        _presenceRepository.addPresence(1, 1, 1, "2020-08-23", "2020-07-31", 1, 1);
+        _presenceRepository.addPresence(1, 1, 2, "2020-08-22", "2020-07-29", 1, 0);
+        _presenceRepository.addPresence(1, 2, 1, "2020-08-21", "2020-07-28", 0, 0);
+        _presenceRepository.addPresence(1, 2, 2, "2020-08-20", "2020-07-27", 1, 0);
 
         BindingContext = this;
     }

@@ -9,6 +9,8 @@ namespace RMA_2022_23_Student_App.Models
         public int studentId { get; set; }
         [Column("subjectId")]
         public int subjectId { get; set; }
+        [Column("week")]
+        public int week { get; set; }
         [Column("lectureDate"), MaxLength(10)]
         public string lectureDate { get; set; }
         [Column("exerciseDate"), MaxLength(10)]

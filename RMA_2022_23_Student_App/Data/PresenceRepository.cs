@@ -14,7 +14,7 @@ namespace RMA_2022_23_Student_App.Data
             conn.CreateTable<Presence>();
         }
 
-        public void addPresence(int subjectId, int studentId, string lectureDate, string exerciseDate, int lecturePresence, int exercisePresence)
+        public void addPresence(int studentId, int subjectId, string lectureDate, string exerciseDate, int lecturePresence, int exercisePresence)
         {
             try
             {
@@ -71,19 +71,19 @@ namespace RMA_2022_23_Student_App.Data
                     }
                 } else
                 { 
-                Presence presence = new Presence
-                {
-                    studentId = studentId,
-                    subjectId = subjectId,
-                    lectureDate = lectureDate,
-                    exerciseDate = exerciseDate,
-                    lecturePresence = lecturePresence,
-                    exercisePresence = exercisePresence
-                };
+                    Presence presence = new Presence
+                    {
+                        studentId = studentId,
+                        subjectId = subjectId,
+                        lectureDate = lectureDate,
+                        exerciseDate = exerciseDate,
+                        lecturePresence = lecturePresence,
+                        exercisePresence = exercisePresence
+                    };
 
-                List<Presence> presences = GetAllPresence(studentId, subjectId);
-                if (presences.Count > 0) foreach (Presence i in presences) if (i.lectureDate == lectureDate && i.exerciseDate == exerciseDate) return;
-                conn.Insert(presence);
+                    List<Presence> presences = GetAllPresence(studentId, subjectId);
+                    if (presences.Count > 0) foreach (Presence i in presences) if (i.lectureDate == lectureDate && i.exerciseDate == exerciseDate && i.subjectId == subjectId) return;
+                    conn.Insert(presence);
                 }
             }
             catch (Exception ex)

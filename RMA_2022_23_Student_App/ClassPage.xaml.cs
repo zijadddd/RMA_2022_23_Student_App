@@ -6,8 +6,8 @@ namespace RMA_2022_23_Student_App;
 
 public partial class ClassPage : ContentPage
 {
-    private StudentSubjectRepository _studentSubjectRepository;
     private PresenceRepository _presenceRepository;
+    private StudentSubjectRepository _studentSubjectRepository;
 	public ClassPage(int subjectId)
 	{
 		InitializeComponent();
@@ -70,94 +70,190 @@ public partial class ClassPage : ContentPage
 
         _presenceRepository = new PresenceRepository();
         List<Presence> presences = _presenceRepository.GetAllPresence(TabbeddPage.student.studentId, subjectId);
-        Presence[] presencesTemp = new Presence[16];
-        for (int i = 0; i < 16; i++) presencesTemp = null;
-        for (int i = 0; i < presences.Count; i++) presencesTemp[i] = presences[i];
-        subjectName.Text = presences.Count.ToString();
-        /*if (presencesTemp[0] != null)
+        if (presences.ElementAtOrDefault(0) != null)
         {
-            if (!string.IsNullOrEmpty(presencesTemp[0].lecturesDate)) weekLecture1.Color = Color.FromHex(lecturePresenceColor);
-            if (!string.IsNullOrEmpty(presencesTemp[0].exerciseDate)) weekExercise1.Color = Color.FromHex(exercisePresenceColor);
+            if (!string.IsNullOrEmpty(presences[0].lectureDate))
+            {
+                if (presences[0].lecturePresence == 1) weekLecture1.Color = Color.FromHex(lecturePresenceColor);
+            }
+            if (!string.IsNullOrEmpty(presences[0].exerciseDate))
+            {
+                if (presences[0].exercisePresence == 1) weekExercise1.Color = Color.FromHex(exercisePresenceColor);
+            }            
         }
-        if (presencesTemp[1] != null)
+        if (presences.ElementAtOrDefault(1) != null)
         {
-            if (!string.IsNullOrEmpty(presencesTemp[1].lecturesDate)) weekLecture2.Color = Color.FromHex(lecturePresenceColor);
-            if (!string.IsNullOrEmpty(presencesTemp[1].exerciseDate)) weekExercise2.Color = Color.FromHex(exercisePresenceColor);
+            if (!string.IsNullOrEmpty(presences[1].lectureDate))
+            {
+                if (presences[1].lecturePresence == 1) weekLecture2.Color = Color.FromHex(lecturePresenceColor);
+            }
+            if (!string.IsNullOrEmpty(presences[1].exerciseDate))
+            {
+                if (presences[1].exercisePresence == 1) weekExercise2.Color = Color.FromHex(exercisePresenceColor);
+            }
         }
-        if (presencesTemp[2] != null)
+        if (presences.ElementAtOrDefault(2) != null)
         {
-            if (!string.IsNullOrEmpty(presencesTemp[2].lecturesDate)) weekLecture3.Color = Color.FromHex(lecturePresenceColor);
-            if (!string.IsNullOrEmpty(presencesTemp[2].exerciseDate)) weekExercise3.Color = Color.FromHex(exercisePresenceColor);
+            if (!string.IsNullOrEmpty(presences[2].lectureDate))
+            {
+                if (presences[2].lecturePresence == 1) weekLecture3.Color = Color.FromHex(lecturePresenceColor);
+            }
+            if (!string.IsNullOrEmpty(presences[2].exerciseDate))
+            {
+                if (presences[2].exercisePresence == 1) weekExercise3.Color = Color.FromHex(exercisePresenceColor);
+            }
         }
-        if (presencesTemp[3] != null)
+        if (presences.ElementAtOrDefault(3) != null)
         {
-            if (!string.IsNullOrEmpty(presencesTemp[3].lecturesDate)) weekLecture4.Color = Color.FromHex(lecturePresenceColor);
-            if (!string.IsNullOrEmpty(presencesTemp[3].exerciseDate)) weekExercise4.Color = Color.FromHex(exercisePresenceColor);
+            if (!string.IsNullOrEmpty(presences[3].lectureDate))
+            {
+                if (presences[3].lecturePresence == 1) weekLecture4.Color = Color.FromHex(lecturePresenceColor);
+            }
+            if (!string.IsNullOrEmpty(presences[3].exerciseDate))
+            {
+                if (presences[3].exercisePresence == 1) weekExercise4.Color = Color.FromHex(exercisePresenceColor);
+            }
         }
-        if (presencesTemp[4] != null)
+        if (presences.ElementAtOrDefault(4) != null)
         {
-            if (!string.IsNullOrEmpty(presencesTemp[4].lecturesDate)) weekLecture5.Color = Color.FromHex(lecturePresenceColor);
-            if (!string.IsNullOrEmpty(presencesTemp[4].exerciseDate)) weekExercise5.Color = Color.FromHex(exercisePresenceColor);
+            if (!string.IsNullOrEmpty(presences[4].lectureDate))
+            {
+                if (presences[4].lecturePresence == 1) weekLecture5.Color = Color.FromHex(lecturePresenceColor);
+            }
+            if (!string.IsNullOrEmpty(presences[4].exerciseDate))
+            {
+                if (presences[4].exercisePresence == 1) weekExercise5.Color = Color.FromHex(exercisePresenceColor);
+            }
         }
-        if (presencesTemp[5] != null)
+        if (presences.ElementAtOrDefault(5) != null)
         {
-            if (!string.IsNullOrEmpty(presencesTemp[5].lecturesDate)) weekLecture6.Color = Color.FromHex(lecturePresenceColor);
-            if (!string.IsNullOrEmpty(presencesTemp[5].exerciseDate)) weekExercise6.Color = Color.FromHex(exercisePresenceColor);
+            if (!string.IsNullOrEmpty(presences[5].lectureDate))
+            {
+                if (presences[5].lecturePresence == 1) weekLecture6.Color = Color.FromHex(lecturePresenceColor);
+            }
+            if (!string.IsNullOrEmpty(presences[5].exerciseDate))
+            {
+                if (presences[5].exercisePresence == 1) weekExercise6.Color = Color.FromHex(exercisePresenceColor);
+            }
         }
-        if (presencesTemp[6] != null)
+        if (presences.ElementAtOrDefault(6) != null)
         {
-            if (!string.IsNullOrEmpty(presencesTemp[6].lecturesDate)) weekLecture7.Color = Color.FromHex(lecturePresenceColor);
-            if (!string.IsNullOrEmpty(presencesTemp[6].exerciseDate)) weekExercise7.Color = Color.FromHex(exercisePresenceColor);
+            if (!string.IsNullOrEmpty(presences[6].lectureDate))
+            {
+                if (presences[6].lecturePresence == 1) weekLecture7.Color = Color.FromHex(lecturePresenceColor);
+            }
+            if (!string.IsNullOrEmpty(presences[6].exerciseDate))
+            {
+                if (presences[6].exercisePresence == 1) weekExercise7.Color = Color.FromHex(exercisePresenceColor);
+            }
         }
-        if (presencesTemp[7] != null)
+        if (presences.ElementAtOrDefault(7) != null)
         {
-            if (!string.IsNullOrEmpty(presencesTemp[7].lecturesDate)) weekLecture8.Color = Color.FromHex(lecturePresenceColor);
-            if (!string.IsNullOrEmpty(presencesTemp[7].exerciseDate)) weekExercise8.Color = Color.FromHex(exercisePresenceColor);
+            if (!string.IsNullOrEmpty(presences[7].lectureDate))
+            {
+                if (presences[7].lecturePresence == 1) weekLecture8.Color = Color.FromHex(lecturePresenceColor);
+            }
+            if (!string.IsNullOrEmpty(presences[7].exerciseDate))
+            {
+                if (presences[7].exercisePresence == 1) weekExercise8.Color = Color.FromHex(exercisePresenceColor);
+            }
         }
-        if (presencesTemp[8] != null)
+        if (presences.ElementAtOrDefault(8) != null)
         {
-            if (!string.IsNullOrEmpty(presencesTemp[8].lecturesDate)) weekLecture9.Color = Color.FromHex(lecturePresenceColor);
-            if (!string.IsNullOrEmpty(presencesTemp[8].exerciseDate)) weekExercise9.Color = Color.FromHex(exercisePresenceColor);
+            if (!string.IsNullOrEmpty(presences[8].lectureDate))
+            {
+                if (presences[8].lecturePresence == 1) weekLecture9.Color = Color.FromHex(lecturePresenceColor);
+            }
+            if (!string.IsNullOrEmpty(presences[8].exerciseDate))
+            {
+                if (presences[8].exercisePresence == 1) weekExercise9.Color = Color.FromHex(exercisePresenceColor);
+            }
         }
-        if (presencesTemp[9] != null)
+        if (presences.ElementAtOrDefault(9) != null)
         {
-            if (!string.IsNullOrEmpty(presencesTemp[9].lecturesDate)) weekLecture10.Color = Color.FromHex(lecturePresenceColor);
-            if (!string.IsNullOrEmpty(presencesTemp[9].exerciseDate)) weekExercise10.Color = Color.FromHex(exercisePresenceColor);
+            if (!string.IsNullOrEmpty(presences[9].lectureDate))
+            {
+                if (presences[9].lecturePresence == 1) weekLecture10.Color = Color.FromHex(lecturePresenceColor);
+            }
+            if (!string.IsNullOrEmpty(presences[9].exerciseDate))
+            {
+                if (presences[9].exercisePresence == 1) weekExercise10.Color = Color.FromHex(exercisePresenceColor);
+            }
         }
-        if (presencesTemp[10] != null)
+        if (presences.ElementAtOrDefault(10) != null)
         {
-            if (!string.IsNullOrEmpty(presencesTemp[10].lecturesDate)) weekLecture11.Color = Color.FromHex(lecturePresenceColor);
-            if (!string.IsNullOrEmpty(presencesTemp[10].exerciseDate)) weekExercise11.Color = Color.FromHex(exercisePresenceColor);
+            if (!string.IsNullOrEmpty(presences[10].lectureDate))
+            {
+                if (presences[10].lecturePresence == 1) weekLecture11.Color = Color.FromHex(lecturePresenceColor);
+            }
+            if (!string.IsNullOrEmpty(presences[10].exerciseDate))
+            {
+                if (presences[10].exercisePresence == 1) weekExercise11.Color = Color.FromHex(exercisePresenceColor);
+            }
         }
-        if (presencesTemp[11] != null)
+        if (presences.ElementAtOrDefault(11) != null)
         {
-            if (!string.IsNullOrEmpty(presencesTemp[11].lecturesDate)) weekLecture12.Color = Color.FromHex(lecturePresenceColor);
-            if (!string.IsNullOrEmpty(presencesTemp[11].exerciseDate)) weekExercise12.Color = Color.FromHex(exercisePresenceColor);
+            if (!string.IsNullOrEmpty(presences[11].lectureDate))
+            {
+                if (presences[11].lecturePresence == 1) weekLecture12.Color = Color.FromHex(lecturePresenceColor);
+            }
+            if (!string.IsNullOrEmpty(presences[11].exerciseDate))
+            {
+                if (presences[11].exercisePresence == 1) weekExercise12.Color = Color.FromHex(exercisePresenceColor);
+            }
         }
-        if (presencesTemp[12] != null)
+        if (presences.ElementAtOrDefault(12) != null)
         {
-            if (!string.IsNullOrEmpty(presencesTemp[12].lecturesDate)) weekLecture13.Color = Color.FromHex(lecturePresenceColor);
-            if (!string.IsNullOrEmpty(presencesTemp[12].exerciseDate)) weekExercise13.Color = Color.FromHex(exercisePresenceColor);
+            if (!string.IsNullOrEmpty(presences[12].lectureDate))
+            {
+                if (presences[12].lecturePresence == 1) weekLecture13.Color = Color.FromHex(lecturePresenceColor);
+            }
+            if (!string.IsNullOrEmpty(presences[12].exerciseDate))
+            {
+                if (presences[12].exercisePresence == 1) weekExercise13.Color = Color.FromHex(exercisePresenceColor);
+            }
         }
-        if (presencesTemp[13] != null)
+        if (presences.ElementAtOrDefault(13) != null)
         {
-            if (!string.IsNullOrEmpty(presencesTemp[13].lecturesDate)) weekLecture14.Color = Color.FromHex(lecturePresenceColor);
-            if (!string.IsNullOrEmpty(presencesTemp[13].exerciseDate)) weekExercise14.Color = Color.FromHex(exercisePresenceColor);
+            if (!string.IsNullOrEmpty(presences[13].lectureDate))
+            {
+                if (presences[13].lecturePresence == 1) weekLecture14.Color = Color.FromHex(lecturePresenceColor);
+            }
+            if (!string.IsNullOrEmpty(presences[13].exerciseDate))
+            {
+                if (presences[13].exercisePresence == 1) weekExercise14.Color = Color.FromHex(exercisePresenceColor);
+            }
         }
-        if (presencesTemp[14] != null)
+        if (presences.ElementAtOrDefault(14) != null)
         {
-            if (!string.IsNullOrEmpty(presencesTemp[14].lecturesDate)) weekLecture15.Color = Color.FromHex(lecturePresenceColor);
-            if (!string.IsNullOrEmpty(presencesTemp[14].exerciseDate)) weekExercise15.Color = Color.FromHex(exercisePresenceColor);
+            if (!string.IsNullOrEmpty(presences[14].lectureDate))
+            {
+                if (presences[14].lecturePresence == 1) weekLecture15.Color = Color.FromHex(lecturePresenceColor);
+            }
+            if (!string.IsNullOrEmpty(presences[14].exerciseDate))
+            {
+                if (presences[14].exercisePresence == 1) weekExercise15.Color = Color.FromHex(exercisePresenceColor);
+            }
         }
-        if (presencesTemp[15] != null)
+        if (presences.ElementAtOrDefault(15) != null)
         {
-            if (!string.IsNullOrEmpty(presencesTemp[15].lecturesDate)) weekLecture16.Color = Color.FromHex(lecturePresenceColor);
-            if (!string.IsNullOrEmpty(presencesTemp[15].exerciseDate)) weekExercise16.Color = Color.FromHex(exercisePresenceColor);
-        } */
+            if (!string.IsNullOrEmpty(presences[15].lectureDate))
+            {
+                if (presences[15].lecturePresence == 1) weekLecture16.Color = Color.FromHex(lecturePresenceColor);
+            }
+            if (!string.IsNullOrEmpty(presences[15].exerciseDate))
+            {
+                if (presences[15].exercisePresence == 1) weekExercise16.Color = Color.FromHex(exercisePresenceColor);
+            }
+        }
+
+        activityPage.ClassId = subjectId.ToString();
     }
 
     private async void ActivityPageClicked(object sender, EventArgs e)
     {
-        await Navigation.PushModalAsync(new ActivityPage());
+        Button b = sender as Button;
+        var subjectId = b.ClassId;
+        await Navigation.PushModalAsync(new ActivityPage(int.Parse(subjectId)));
     }
 }

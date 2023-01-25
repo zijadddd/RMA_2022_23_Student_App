@@ -9,8 +9,8 @@ public partial class MainPage : ContentPage
 		InitializeComponent();
         StudentRepository _studentRepository = new StudentRepository();
         SubjectRepository _subjectRepository = new SubjectRepository();
-        StudentSubjectRepository _studentSubjectRepository = new StudentSubjectRepository();
         PresenceRepository _presenceRepository = new PresenceRepository();
+        StudentSubjectRepository _studentSubjectRepository = new StudentSubjectRepository();
 
         _studentRepository.AddNewStudent(1, "Zijad", "Doglod", "11.10.2001", "Zenica", "060 324 0384", "zijad@gmail.com", "123456", "185", "UNZE", "PTF", "SI", "Ja sam Zijad Doglod i dolazim iz mjesta zvano Tetovo u blizini Zenice.", "people1.jpg");
         _studentRepository.AddNewStudent(2, "Muhamed", "Haseljic", "23.05.2001", "Vjetrenice", "060 555 4444", "muhamed@gmail.com", "654321", "185", "UNZE", "PTF", "SI", "Ja sam Muhamed Haseljic i ne dajem puno informacija o sebi.", "people2.jpeg");

@@ -128,39 +128,39 @@
                     <ColumnDefinition Width="3" />
                 </Grid.ColumnDefinitions>
                 <BoxView x:Name="weekLecture1" HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="0" Grid.Column="0" CornerRadius="10"/>
-                <BoxView x:Name="weekExercise1" HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="0" Grid.Column="1" CornerRadius="10"/>
-                <BoxView x:Name="weekLecture2" HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="0" Grid.Column="2" CornerRadius="10"/>
-                <BoxView x:Name="weekExercise2" HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="0" Grid.Column="3" CornerRadius="10"/>
-                <BoxView x:Name="weekLecture3" HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="0" Grid.Column="4" CornerRadius="10"/>
-                <BoxView x:Name="weekExercise3" HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="0" Grid.Column="5" CornerRadius="10"/>
-                <BoxView x:Name="weekLecture4" HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="0" Grid.Column="6" CornerRadius="10"/>
-                <BoxView x:Name="weekExercise4" HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="0" Grid.Column="7" CornerRadius="10"/>
-                <BoxView x:Name="weekLecture5" HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="0" Grid.Column="8" CornerRadius="10"/>
-                <BoxView x:Name="weekExercise5" HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="0" Grid.Column="9" CornerRadius="10"/>
-                <BoxView x:Name="weekLecture6" HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="0" Grid.Column="10" CornerRadius="10"/>
-                <BoxView x:Name="weekExercise6" HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="0" Grid.Column="11" CornerRadius="10"/>
-                <BoxView x:Name="weekLecture7" HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="0" Grid.Column="12" CornerRadius="10"/>
-                <BoxView x:Name="weekExercise7" HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="0" Grid.Column="13" CornerRadius="10"/>
-                <BoxView x:Name="weekLecture8" HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="0" Grid.Column="14" CornerRadius="10"/>
-                <BoxView x:Name="weekExercise8" HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="0" Grid.Column="15" CornerRadius="10"/>
-                <BoxView x:Name="weekLecture9" HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="1" Grid.Column="0" CornerRadius="10"/>
-                <BoxView x:Name="weekExercise9" HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="1" Grid.Column="1" CornerRadius="10"/>
-                <BoxView x:Name="weekLecture10" HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="1" Grid.Column="2" CornerRadius="10"/>
-                <BoxView x:Name="weekExercise10" HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="1" Grid.Column="3" CornerRadius="10"/>
-                <BoxView x:Name="weekLecture11" HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="1" Grid.Column="4" CornerRadius="10"/>
-                <BoxView x:Name="weekExercise11" HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="1" Grid.Column="5" CornerRadius="10"/>
-                <BoxView x:Name="weekLecture12" HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="1" Grid.Column="6" CornerRadius="10"/>
-                <BoxView x:Name="weekExercise12" HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="1" Grid.Column="7" CornerRadius="10"/>
-                <BoxView x:Name="weekLecture13" HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="1" Grid.Column="8" CornerRadius="10"/>
-                <BoxView x:Name="weekExercise13" HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="1" Grid.Column="9" CornerRadius="10"/>
-                <BoxView x:Name="weekLecture14" HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="1" Grid.Column="10" CornerRadius="10"/>
-                <BoxView x:Name="weekExercise14" HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="1" Grid.Column="11" CornerRadius="10"/>
-                <BoxView x:Name="weekLecture15" HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="1" Grid.Column="12" CornerRadius="10"/>
-                <BoxView x:Name="weekExercise15" HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="1" Grid.Column="13" CornerRadius="10"/>
-                <BoxView x:Name="weekLecture16" HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="1" Grid.Column="14" CornerRadius="10"/>
+                <BoxView x:Name="weekLecture2" HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="0" Grid.Column="1" CornerRadius="10"/>
+                <BoxView x:Name="weekLecture3" HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="0" Grid.Column="2" CornerRadius="10"/>
+                <BoxView x:Name="weekLecture4" HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="0" Grid.Column="3" CornerRadius="10"/>
+                <BoxView x:Name="weekLecture5" HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="0" Grid.Column="4" CornerRadius="10"/>
+                <BoxView x:Name="weekLecture6" HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="0" Grid.Column="5" CornerRadius="10"/>
+                <BoxView x:Name="weekLecture7" HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="0" Grid.Column="6" CornerRadius="10"/>
+                <BoxView x:Name="weekLecture8" HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="0" Grid.Column="7" CornerRadius="10"/>
+                <BoxView x:Name="weekLecture9" HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="0" Grid.Column="8" CornerRadius="10"/>
+                <BoxView x:Name="weekLecture10" HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="0" Grid.Column="9" CornerRadius="10"/>
+                <BoxView x:Name="weekLecture11" HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="0" Grid.Column="10" CornerRadius="10"/>
+                <BoxView x:Name="weekLecture12" HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="0" Grid.Column="11" CornerRadius="10"/>
+                <BoxView x:Name="weekLecture13" HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="0" Grid.Column="12" CornerRadius="10"/>
+                <BoxView x:Name="weekLecture14" HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="0" Grid.Column="13" CornerRadius="10"/>
+                <BoxView x:Name="weekLecture15" HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="0" Grid.Column="14" CornerRadius="10"/>
+                <BoxView x:Name="weekLecture16" HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="0" Grid.Column="15" CornerRadius="10"/>
+                <BoxView x:Name="weekExercise1" HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="1" Grid.Column="0" CornerRadius="10"/>
+                <BoxView x:Name="weekExercise2" HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="1" Grid.Column="1" CornerRadius="10"/>
+                <BoxView x:Name="weekExercise3" HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="1" Grid.Column="2" CornerRadius="10"/>
+                <BoxView x:Name="weekExercise4" HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="1" Grid.Column="3" CornerRadius="10"/>
+                <BoxView x:Name="weekExercise5" HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="1" Grid.Column="4" CornerRadius="10"/>
+                <BoxView x:Name="weekExercise6" HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="1" Grid.Column="5" CornerRadius="10"/>
+                <BoxView x:Name="weekExercise7" HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="1" Grid.Column="6" CornerRadius="10"/>
+                <BoxView x:Name="weekExercise8" HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="1" Grid.Column="7" CornerRadius="10"/>
+                <BoxView x:Name="weekExercise9" HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="1" Grid.Column="8" CornerRadius="10"/>
+                <BoxView x:Name="weekExercise10" HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="1" Grid.Column="9" CornerRadius="10"/>
+                <BoxView x:Name="weekExercise11" HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="1" Grid.Column="10" CornerRadius="10"/>
+                <BoxView x:Name="weekExercise12" HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="1" Grid.Column="11" CornerRadius="10"/>
+                <BoxView x:Name="weekExercise13" HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="1" Grid.Column="12" CornerRadius="10"/>
+                <BoxView x:Name="weekExercise14" HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="1" Grid.Column="13" CornerRadius="10"/>
+                <BoxView x:Name="weekExercise15" HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="1" Grid.Column="14" CornerRadius="10"/>
                 <BoxView x:Name="weekExercise16" HeightRequest="15" WidthRequest="3" Color="#f4f5fc" Grid.Row="1" Grid.Column="15" CornerRadius="10"/>
             </Grid>
-            <Button Text="See activity" BackgroundColor="#236cde" BorderColor="Transparent" BorderWidth="1" WidthRequest="150" CornerRadius="20" Padding="15" FontAttributes="Bold" FontFamily="MontserratMedium" HorizontalOptions="Center" Clicked="ActivityPageClicked" Margin="0, 15" TextColor="White"/>
+            <Button x:Name="activityPage" Text="See activity" BackgroundColor="#236cde" BorderColor="Transparent" BorderWidth="1" WidthRequest="150" CornerRadius="20" Padding="15" FontAttributes="Bold" FontFamily="MontserratMedium" HorizontalOptions="Center" Clicked="ActivityPageClicked" Margin="0, 15" TextColor="White"/>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

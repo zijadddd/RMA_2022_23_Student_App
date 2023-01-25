@@ -15,10 +15,6 @@ public static class MauiProgram
 				fonts.AddFont("Montserrat-Medium.ttf", "MontserratMedium");
 				fonts.AddFont("MaterialIcons.ttf", "MaterialIcons");
 			});
-			builder.Services.AddSingleton<PresenceRepository>();
-			builder.Services.AddSingleton<StudentRepository>();
-			builder.Services.AddSingleton<StudentSubjectRepository>();
-			builder.Services.AddSingleton<SubjectRepository>();
         return builder.Build();
 	}
 }

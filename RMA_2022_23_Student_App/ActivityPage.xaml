@@ -9,84 +9,84 @@
             <Label Text="Presence" FontSize="13" TextColor="Gray" FontFamily="MontserratMedium"/>
             <VerticalStackLayout Spacing="10" Margin="0, 10">
                 <VerticalStackLayout>
-                    <Label Text="Predavanja (11.10.2001): +" FontSize="13" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
-                    <Label Text="Vježbe (11.10.2001): +" FontSize="13" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
-                    <BoxView HeightRequest="1" BackgroundColor="Gray" />
+                    <Label x:Name="weekLecture1"  FontSize="13" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
+                    <Label x:Name="weekExercise1" FontSize="13" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
+                    <BoxView x:Name="weekSeparator1" HeightRequest="1" Color="Transparent" />
                 </VerticalStackLayout>
                 <VerticalStackLayout>
-                    <Label Text="Predavanja (11.10.2001): +" FontSize="13" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
-                    <Label Text="Vježbe (11.10.2001): +" FontSize="13" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
-                    <BoxView HeightRequest="1" BackgroundColor="Gray" />
+                    <Label x:Name="weekLecture2" FontSize="13" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
+                    <Label x:Name="weekExercise2" FontSize="13" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
+                    <BoxView x:Name="weekSeparator2" HeightRequest="1" Color="Transparent" />
                 </VerticalStackLayout>
                 <VerticalStackLayout>
-                    <Label Text="Predavanja (11.10.2001): +" FontSize="13" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
-                    <Label Text="Vježbe (11.10.2001): +" FontSize="13" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
-                    <BoxView HeightRequest="1" BackgroundColor="Gray" />
+                    <Label x:Name="weekLecture3" FontSize="13" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
+                    <Label x:Name="weekExercise3" FontSize="13" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
+                    <BoxView x:Name="weekSeparator3" HeightRequest="1" Color="Transparent" />
                 </VerticalStackLayout>
                 <VerticalStackLayout>
-                    <Label Text="Predavanja (11.10.2001): +" FontSize="13" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
-                    <Label Text="Vježbe (11.10.2001): +" FontSize="13" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
-                    <BoxView HeightRequest="1" BackgroundColor="Gray" />
+                    <Label x:Name="weekLecture4" FontSize="13" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
+                    <Label x:Name="weekExercise4" FontSize="13" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
+                    <BoxView x:Name="weekSeparator4" HeightRequest="1" Color="Transparent" />
                 </VerticalStackLayout>
                 <VerticalStackLayout>
-                    <Label Text="Predavanja (11.10.2001): +" FontSize="13" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
-                    <Label Text="Vježbe (11.10.2001): +" FontSize="13" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
-                    <BoxView HeightRequest="1" BackgroundColor="Gray" />
+                    <Label x:Name="weekLecture5" FontSize="13" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
+                    <Label x:Name="weekExercise5" FontSize="13" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
+                    <BoxView x:Name="weekSeparator5" HeightRequest="1" Color="Transparent" />
                 </VerticalStackLayout>
                 <VerticalStackLayout>
-                    <Label Text="Predavanja (11.10.2001): +" FontSize="13" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
-                    <Label Text="Vježbe (11.10.2001): +" FontSize="13" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
-                    <BoxView HeightRequest="1" BackgroundColor="Gray" />
+                    <Label x:Name="weekLecture6" FontSize="13" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
+                    <Label x:Name="weekExercise6" FontSize="13" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
+                    <BoxView x:Name="weekSeparator6" HeightRequest="1" Color="Transparent" />
                 </VerticalStackLayout>
                 <VerticalStackLayout>
-                    <Label Text="Predavanja (11.10.2001): +" FontSize="13" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
-                    <Label Text="Vježbe (11.10.2001): +" FontSize="13" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
-                    <BoxView HeightRequest="1" BackgroundColor="Gray" />
+                    <Label x:Name="weekLecture7" FontSize="13" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
+                    <Label x:Name="weekExercise7" FontSize="13" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
+                    <BoxView x:Name="weekSeparator7" HeightRequest="1" Color="Transparent" />
                 </VerticalStackLayout>
                 <VerticalStackLayout>
-                    <Label Text="Predavanja (11.10.2001): +" FontSize="13" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
-                    <Label Text="Vježbe (11.10.2001): +" FontSize="13" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
-                    <BoxView HeightRequest="1" BackgroundColor="Gray" />
+                    <Label x:Name="weekLecture8" FontSize="13" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
+                    <Label x:Name="weekExercise8" FontSize="13" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
+                    <BoxView x:Name="weekSeparator8" HeightRequest="1" Color="Transparent" />
                 </VerticalStackLayout>
                 <VerticalStackLayout>
-                    <Label Text="Predavanja (11.10.2001): +" FontSize="13" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
-                    <Label Text="Vježbe (11.10.2001): +" FontSize="13" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
-                    <BoxView HeightRequest="1" BackgroundColor="Gray" />
+                    <Label x:Name="weekLecture9" FontSize="13" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
+                    <Label x:Name="weekExercise9" FontSize="13" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
+                    <BoxView x:Name="weekSeparator9" HeightRequest="1" Color="Transparent" />
                 </VerticalStackLayout>
                 <VerticalStackLayout>
-                    <Label Text="Predavanja (11.10.2001): +" FontSize="13" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
-                    <Label Text="Vježbe (11.10.2001): +" FontSize="13" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
-                    <BoxView HeightRequest="1" BackgroundColor="Gray" />
+                    <Label x:Name="weekLecture10" FontSize="13" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
+                    <Label x:Name="weekExercise10" FontSize="13" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
+                    <BoxView x:Name="weekSeparator10" HeightRequest="1" Color="Transparent" />
                 </VerticalStackLayout>
                 <VerticalStackLayout>
-                    <Label Text="Predavanja (11.10.2001): +" FontSize="13" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
-                    <Label Text="Vježbe (11.10.2001): +" FontSize="13" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
-                    <BoxView HeightRequest="1" BackgroundColor="Gray" />
+                    <Label x:Name="weekLecture11" FontSize="13" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
+                    <Label x:Name="weekExercise11" FontSize="13" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
+                    <BoxView x:Name="weekSeparator11" HeightRequest="1" Color="Transparent" />
                 </VerticalStackLayout>
                 <VerticalStackLayout>
-                    <Label Text="Predavanja (11.10.2001): +" FontSize="13" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
-                    <Label Text="Vježbe (11.10.2001): +" FontSize="13" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
-                    <BoxView HeightRequest="1" BackgroundColor="Gray" />
+                    <Label x:Name="weekLecture12" FontSize="13" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
+                    <Label x:Name="weekExercise12" FontSize="13" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
+                    <BoxView x:Name="weekSeparator12" HeightRequest="1" Color="Transparent" />
                 </VerticalStackLayout>
                 <VerticalStackLayout>
-                    <Label Text="Predavanja (11.10.2001): +" FontSize="13" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
-                    <Label Text="Vježbe (11.10.2001): +" FontSize="13" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
-                    <BoxView HeightRequest="1" BackgroundColor="Gray" />
+                    <Label x:Name="weekLecture13" FontSize="13" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
+                    <Label x:Name="weekExercise13" FontSize="13" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
+                    <BoxView x:Name="weekSeparator13" HeightRequest="1" Color="Transparent" />
                 </VerticalStackLayout>
                 <VerticalStackLayout>
-                    <Label Text="Predavanja (11.10.2001): +" FontSize="13" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
-                    <Label Text="Vježbe (11.10.2001): +" FontSize="13" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
-                    <BoxView HeightRequest="1" BackgroundColor="Gray" />
+                    <Label x:Name="weekLecture14" FontSize="13" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
+                    <Label x:Name="weekExercise14" FontSize="13" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
+                    <BoxView x:Name="weekSeparator14" HeightRequest="1" Color="Transparent" />
                 </VerticalStackLayout>
                 <VerticalStackLayout>
-                    <Label Text="Predavanja (11.10.2001): +" FontSize="13" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
-                    <Label Text="Vježbe (11.10.2001): +" FontSize="13" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
-                    <BoxView HeightRequest="1" BackgroundColor="Gray" />
+                    <Label x:Name="weekLecture15" FontSize="13" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
+                    <Label x:Name="weekExercise15" FontSize="13" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
+                    <BoxView x:Name="weekSeparator15" HeightRequest="1" Color="Transparent" />
                 </VerticalStackLayout>
                 <VerticalStackLayout>
-                    <Label Text="Predavanja (11.10.2001): +" FontSize="13" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
-                    <Label Text="Vježbe (11.10.2001): +" FontSize="13" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
-                    <BoxView HeightRequest="1" BackgroundColor="Gray" />
+                    <Label x:Name="weekLecture16" FontSize="13" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
+                    <Label x:Name="weekExercise16" FontSize="13" TextColor="#2a2a3e" FontFamily="MontserratMedium" />
+                    <BoxView x:Name="weekSeparator16" HeightRequest="1" Color="Transparent" />
                 </VerticalStackLayout>
             </VerticalStackLayout>
         </VerticalStackLayout>

@@ -72,7 +72,7 @@ namespace RMA_2022_23_Student_App.Data
                     homework = homework,
                     firstPartialExam = firstPartialExam,
                     secondPartialExam = secondPartialExam,
-                    finalExam = finalExam
+                    finalExam = finalExam,                   
                 };
 
                 var query = conn.Table<StudentSubject>().ToList();
@@ -154,6 +154,51 @@ namespace RMA_2022_23_Student_App.Data
                 Console.WriteLine(ex.Message);
             }
             return null;
+        }
+
+        public int GetNumOfActiveSubjects(int studentId)
+        {
+            try
+            {
+                Init();
+                return conn.Table<StudentSubject>().Where(s => s.isActivePendingOrCompleted == 0 && s.studentId == studentId).ToList().Count;
+            }
+            catch (Exception ex)
+            {
+                StatusMessage = string.Format("It's not possible to load data from database. {0}", ex.Message);
+            }
+
+            return 0;
+        }
+
+        public int GetNumOfPendingSubjects(int studentId)
+        {
+            try
+            {
+                Init();
+                return conn.Table<StudentSubject>().Where(s => s.isActivePendingOrCompleted == 1 && s.studentId == studentId).ToList().Count;
+            }
+            catch (Exception ex)
+            {
+                StatusMessage = string.Format("It's not possible to load data from database. {0}", ex.Message);
+            }
+
+            return 0;
+        }
+
+        public int GetNumOfCompletedSubjects(int studentId)
+        {
+            try
+            {
+                Init();
+                return conn.Table<StudentSubject>().Where(s => s.isActivePendingOrCompleted == 2 && s.studentId == studentId).ToList().Count;
+            }
+            catch (Exception ex)
+            {
+                StatusMessage = string.Format("It's not possible to load data from database. {0}", ex.Message);
+            }
+
+            return 0;
         }
     }
 }

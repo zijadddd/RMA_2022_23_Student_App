@@ -25,7 +25,12 @@ public partial class Subjects : ContentPage
         date.Text = temp;
 
         _studentSubjectRepository = new StudentSubjectRepository();
+
         listView.ItemsSource = _studentSubjectRepository.getAllStudentSubjects(TabbeddPage.student.studentId);
+
+        ActiveSubjectsNumber.Text = _studentSubjectRepository.GetNumOfActiveSubjects(TabbeddPage.student.studentId).ToString();
+        PendingSubjectsNumber.Text = _studentSubjectRepository.GetNumOfPendingSubjects(TabbeddPage.student.studentId).ToString();
+        CompletedSubjectsNumber.Text = _studentSubjectRepository.GetNumOfCompletedSubjects(TabbeddPage.student.studentId).ToString();
     }
 
     private async void OpenClassPage(object sender, EventArgs e)

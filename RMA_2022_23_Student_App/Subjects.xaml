@@ -6,28 +6,53 @@
              Shell.NavBarIsVisible="False">
     <ScrollView>
         <VerticalStackLayout>
-            <Border VerticalOptions="StartAndExpand" BackgroundColor="#f4f5fc" StrokeShape="RoundRectangle 0, 0, 40, 40" StrokeThickness="0" Padding="0" HeightRequest="100">
-                <FlexLayout Direction="Row" AlignItems="Center" JustifyContent="SpaceBetween" VerticalOptions="Start" HeightRequest="100">
-                    <Frame BackgroundColor="Transparent" BorderColor="Transparent" Margin="5">
-                        <VerticalStackLayout>
-                            <Label x:Name="date" FontFamily="MontserratMedium" FontSize="Micro" TextColor="Gray" FontAttributes="Bold"/>
-                            <HorizontalStackLayout>
-                                <Label Text="Hey, " FontFamily="MontserratLight" FontSize="Large" TextColor="#2a2a3e" FontAttributes="Bold" />
-                                <Label x:Name="studentFullName" FontFamily="MontserratMedium" FontSize="Large" TextColor="#2a2a3e" />
-                            </HorizontalStackLayout>
-                        </VerticalStackLayout>
-                    </Frame>
-                    <Frame HeightRequest="70" WidthRequest="70" CornerRadius="20" HorizontalOptions="End" BorderColor="Transparent" Margin="10" Padding="0">
-                        <Image x:Name="studentProfilePhoto" HeightRequest="70" WidthRequest="70" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
-                    </Frame>
-                </FlexLayout>
+            <Border VerticalOptions="StartAndExpand" BackgroundColor="#f4f5fc" StrokeShape="RoundRectangle 0, 0, 40, 40" StrokeThickness="0" Padding="0" HeightRequest="230">
+                <VerticalStackLayout>
+                    <FlexLayout Direction="Row" AlignItems="Center" JustifyContent="SpaceBetween" VerticalOptions="Start" HeightRequest="100">
+                        <Frame BackgroundColor="Transparent" BorderColor="Transparent" Margin="5">
+                            <VerticalStackLayout>
+                                <Label x:Name="date" FontFamily="MontserratMedium" FontSize="Micro" TextColor="Gray" FontAttributes="Bold"/>
+                                <HorizontalStackLayout>
+                                    <Label Text="Hey, " FontFamily="MontserratLight" FontSize="Large" TextColor="#2a2a3e" FontAttributes="Bold" />
+                                    <Label x:Name="studentFullName" FontFamily="MontserratMedium" FontSize="Large" TextColor="#2a2a3e" />
+                                </HorizontalStackLayout>
+                            </VerticalStackLayout>
+                        </Frame>
+                        <Frame HeightRequest="70" WidthRequest="70" CornerRadius="20" HorizontalOptions="End" BorderColor="Transparent" Margin="10" Padding="0">
+                            <Image x:Name="studentProfilePhoto" HeightRequest="70" WidthRequest="70" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                        </Frame>
+                    </FlexLayout>
+                    <FlexLayout HorizontalOptions="Center" Direction="Row" AlignItems="Center" JustifyContent="SpaceAround" Margin="0, 20">
+                        <Border WidthRequest="90" HeightRequest="100" StrokeShape="RoundRectangle 20, 20, 20, 20" StrokeThickness="0" Padding="0" BackgroundColor="#0067ff">
+                            <Border.Shadow>
+                                <Shadow Brush="#0067ff" Offset="10, 10" Radius="50"/>
+                            </Border.Shadow>
+                            <VerticalStackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                                <Label x:Name="ActiveSubjectsNumber" Text="13" FontSize="25" FontFamily="MontserratMedium" FontAttributes="Bold" HorizontalOptions="Center" TextColor="White" />
+                                <Label Text="Active" FontSize="15" FontFamily="MontserratMedium" FontAttributes="Bold" HorizontalOptions="Center" TextColor="White" />
+                            </VerticalStackLayout>
+                        </Border>
+                        <Border BackgroundColor="#f4f5fc" WidthRequest="90" HeightRequest="100" StrokeShape="RoundRectangle 20, 20, 20, 20" StrokeThickness="0" Padding="0">
+                            <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                                <Label x:Name="PendingSubjectsNumber" Text="15" TextColor="#24253d" FontSize="25" FontFamily="MontserratMedium" FontAttributes="Bold" HorizontalOptions="Center" />
+                                <Label Text="Pending" TextColor="#24253d" Opacity="0.3" FontSize="15" FontFamily="MontserratMedium" FontAttributes="Bold" HorizontalOptions="Center" />
+                            </VerticalStackLayout>
+                        </Border>
+                        <Border BackgroundColor="#f4f5fc" WidthRequest="90" HeightRequest="100" StrokeShape="RoundRectangle 20, 20, 20, 20" StrokeThickness="0" Padding="0">
+                            <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                                <Label x:Name="CompletedSubjectsNumber" TextColor="#24253d" FontSize="25" FontFamily="MontserratMedium" FontAttributes="Bold" HorizontalOptions="Center" />
+                                <Label Text="Completed" TextColor="#24253d" Opacity="0.3" FontSize="15" FontFamily="MontserratMedium" FontAttributes="Bold" HorizontalOptions="Center" />
+                            </VerticalStackLayout>
+                        </Border>
+                    </FlexLayout>
+                </VerticalStackLayout>
             </Border>
             <VerticalStackLayout Margin="20" Spacing="10">
-                <ListView x:Name="listView" SeparatorVisibility="None" RowHeight="320" HorizontalOptions="Center">
+                <ListView x:Name="listView" SeparatorVisibility="None" RowHeight="310" HorizontalOptions="Center" SelectionMode="None" Margin="5">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
-                                <Frame Padding="0" HeightRequest="295" BackgroundColor="{Binding primaryColor}" BorderColor="Transparent" CornerRadius="40" Margin="0, 10">
+                                <Frame Padding="0" HeightRequest="295" BackgroundColor="{Binding primaryColor}" BorderColor="Transparent" CornerRadius="40">
                                     <VerticalStackLayout>
                                         <Frame
                                             Margin="0,10,0,10" 

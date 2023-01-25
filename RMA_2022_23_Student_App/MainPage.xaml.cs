@@ -19,12 +19,12 @@ public partial class MainPage : ContentPage
         _subjectRepository.addNewSubject(3, "Uvod u tehnike programiranja", "Adnan Dželihođić", "socialmedia.png", "#cde7fc", "#AA3e8dfd", "Every Wednesday", "12:15 - 15:15", "meet.google.com/rik-pfpo-jok");
 
         _studentSubjectRepository.addStudentToSubject(1, 1, 0 ,"10", "10", "8" ,"23", "33", "56");
-        _studentSubjectRepository.addStudentToSubject(1, 2, 1, "4", "12", "10" ,"10", "36", "46");
-        _studentSubjectRepository.addStudentToSubject(1, 3, 2, "14", "15", "5" ,"21", "39", "60");
+        _studentSubjectRepository.addStudentToSubject(1, 2, 0, "4", "12", "10" ,"10", "36", "46");
+        _studentSubjectRepository.addStudentToSubject(1, 3, 0, "14", "15", "5" ,"21", "39", "60");
 
         _studentSubjectRepository.addStudentToSubject(2, 1, 0, "10", "10", "10" ,"23", "33", "56");
-        _studentSubjectRepository.addStudentToSubject(2, 2, 1, "4", "12", "8" ,"10", "36", "46");
-        _studentSubjectRepository.addStudentToSubject(2, 3, 2, "14", "15", "6" ,"21", "39", "60");
+        _studentSubjectRepository.addStudentToSubject(2, 2, 0, "4", "12", "8" ,"10", "36", "46");
+        _studentSubjectRepository.addStudentToSubject(2, 3, 0, "14", "15", "6" ,"21", "39", "60");
 
         BindingContext = this;
     }

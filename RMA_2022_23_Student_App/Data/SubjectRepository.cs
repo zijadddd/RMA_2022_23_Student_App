@@ -87,6 +87,5 @@ namespace RMA_2022_23_Student_App.Data
 
             return new List<Subject>();
         } 
-
     }
 }

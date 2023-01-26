@@ -37,21 +37,21 @@ namespace RMA_2022_23_Student_App.ViewModels
             IntroScreens.Add(new IntroScreenModels
             {
                 IntroTitle = "Welcome To StudentApp",
-                IntroDescription = "Enjoy the captivating process of online education in a place and at a time of your choice",
+                IntroDescription = "We welcome you with a sense of pride and excitement.",
                 IntroImage = "student1"
             });
 
             IntroScreens.Add(new IntroScreenModels
             {
                 IntroTitle = "Anytime, Anywhere",
-                IntroDescription = "Now you can check homework anytime right from mobile",
+                IntroDescription = "Now you can check your student activity anytime directly from your mobile phone.",
                 IntroImage = "student2"
             });
 
             IntroScreens.Add(new IntroScreenModels
             {
                 IntroTitle = "Ready to Find A Course",
-                IntroDescription = "Join our online school that will help you learn the cutting-edge skills to scale new heights in your creative career.",
+                IntroDescription = "Enter StudentApp.",
                 IntroImage = "student3"
             });
         }

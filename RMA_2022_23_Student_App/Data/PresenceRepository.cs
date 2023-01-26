@@ -51,11 +51,8 @@ namespace RMA_2022_23_Student_App.Data
                 var query = conn.Table<Presence>().Where(p => p.week == week && p.subjectId == subjectId).ToList();
                 if(query.Count > 0)
                 {
-                    if(query[0].lectureDate.Length == 0)
-                    {
-                        conn.Execute("UPDATE presence SET lecturePresence = ? WHERE week = ?", lecturePresence, week);
-                        conn.Execute("UPDATE presence SET lectureDate = ? WHERE week = ?", lectureDate, week);
-                    }
+                    conn.Execute("UPDATE presence SET lecturePresence = ? WHERE week = ?", lecturePresence, week);
+                    conn.Execute("UPDATE presence SET lectureDate = ? WHERE week = ?", lectureDate, week);
                 } else
                 {
                     Presence presence = new Presence
@@ -86,11 +83,8 @@ namespace RMA_2022_23_Student_App.Data
                 var query = conn.Table<Presence>().Where(p => p.week == week && p.subjectId == subjectId).ToList();
                 if (query.Count > 0)
                 {
-                    if(query[0].exerciseDate.Length == 0)
-                    {
-                        conn.Execute("UPDATE presence SET exercisePresence = ? WHERE week = ?", exercisePresence, week);
-                        conn.Execute("UPDATE presence SET exerciseDate = ? WHERE week = ?", exerciseDate, week);
-                    }
+                    conn.Execute("UPDATE presence SET exercisePresence = ? WHERE week = ?", exercisePresence, week);
+                    conn.Execute("UPDATE presence SET exerciseDate = ? WHERE week = ?", exerciseDate, week);
                 }
                 else
                 {

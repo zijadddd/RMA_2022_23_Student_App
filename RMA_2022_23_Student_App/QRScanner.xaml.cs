@@ -27,7 +27,6 @@ public partial class QRScanner : ContentPage
             {
                 if (presence.lectureDate == "null" && presence.exerciseDate != "null") _presenceRepository.addExercisePresence(TabbeddPage.student.studentId, int.Parse(presence.subjectId), int.Parse(presence.week), presence.lectureDate, presence.exerciseDate, 0, 1);
                 if (presence.lectureDate != "null" && presence.exerciseDate == "null") _presenceRepository.addLecturePresence(TabbeddPage.student.studentId, int.Parse(presence.subjectId), int.Parse(presence.week), presence.lectureDate, presence.exerciseDate, 1, 0);
-                else _presenceRepository.addPresence(TabbeddPage.student.studentId, int.Parse(presence.subjectId), int.Parse(presence.week), presence.lectureDate, presence.exerciseDate, 1, 1);
                 if (_studentSubjectRepository.isSubjectActive(TabbeddPage.student.studentId, int.Parse(presence.subjectId))) barcode.Text = "Your evidence have been recorded for today.";
                 else barcode.Text = "You cannot set evidence for pending or completed subjects.";
             }

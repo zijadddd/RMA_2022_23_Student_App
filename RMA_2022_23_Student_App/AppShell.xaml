@@ -6,7 +6,8 @@
     xmlns:local="clr-namespace:RMA_2022_23_Student_App"
     Shell.FlyoutBehavior="Disabled"
     Shell.NavBarIsVisible="False"
-    xmlns:helpers="clr-namespace:RMA_2022_23_Student_App.Helpers">
+    xmlns:helpers="clr-namespace:RMA_2022_23_Student_App.Helpers"
+    BackgroundColor="White">
 
 
     <ShellContent

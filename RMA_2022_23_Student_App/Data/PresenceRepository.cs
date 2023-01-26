@@ -6,18 +6,20 @@ namespace RMA_2022_23_Student_App.Data
     public class PresenceRepository
     {
         private SQLiteConnection conn;
-
+        private StudentSubjectRepository _studentSubjectRepository;
         private void Init()
         {
             if (conn != null) return;
             conn = new SQLiteConnection(Database.DatabasePath, Database.Flags);
             conn.CreateTable<Presence>();
+            _studentSubjectRepository = new StudentSubjectRepository();
         }
 
         public void addPresence(int studentId, int subjectId, int week, string lectureDate, string exerciseDate, int lecturePresence, int exercisePresence)
         {
             try
             {
+                if (!_studentSubjectRepository.isSubjectActive(studentId, subjectId)) return;
                 //if (presence.lectureDate == "null" && presence.exerciseDate != "null") 
                 Init();
                 Presence presence = new Presence
@@ -45,6 +47,7 @@ namespace RMA_2022_23_Student_App.Data
         {
             try
             {
+                if (!_studentSubjectRepository.isSubjectActive(studentId, subjectId)) return;
                 Init();
                 var query = conn.Table<Presence>().Where(p => p.week == week && p.subjectId == subjectId).ToList();
                 if(query.Count > 0 && query[0].lectureDate.Length == 0)
@@ -76,6 +79,7 @@ namespace RMA_2022_23_Student_App.Data
         {
             try
             {
+                if (!_studentSubjectRepository.isSubjectActive(studentId, subjectId)) return;
                 Init();
                 var query = conn.Table<Presence>().Where(p => p.week == week && p.subjectId == subjectId).ToList();
                 if (query.Count > 0 && query[0].lectureDate.Length == 0)

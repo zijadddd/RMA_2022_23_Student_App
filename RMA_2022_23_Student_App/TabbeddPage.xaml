@@ -10,8 +10,8 @@
             BarBackgroundColor="White"
             >
 
-    <local:ProfilePage IconImageSource="profile.svg" Title="Profile" />
     <local:Subjects IconImageSource="subject.svg" Title="Subjects"/>
     <local:QRScanner IconImageSource="scanner.png" Title="QR Scanner" />
+    <local:ProfilePage IconImageSource="profile.svg" Title="Profile" />
 
 </TabbedPage>

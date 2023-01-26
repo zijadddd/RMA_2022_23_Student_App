@@ -48,7 +48,8 @@
                 BorderColor="Transparent">
                 <Label TextColor="White" 
                        Text="{Binding ButtonText}"
-                       FontSize="20"              
+                       FontSize="20"      
+                       FontFamily="MontserratMedium"
                        HorizontalTextAlignment="Center" 
                        VerticalTextAlignment="Center" />
                 <Frame.GestureRecognizers>

@@ -200,16 +200,5 @@ namespace RMA_2022_23_Student_App.Data
 
             return 0;
         }
-
-        public bool isSubjectActive(int studentId, int subjectId)
-        {
-            try
-            {
-                Init();
-                StudentSubject studentSubject = conn.Table<StudentSubject>().Where(s => s.studentId == studentId && s.subjectId == subjectId).FirstOrDefault();
-                if (studentSubject.isActivePendingOrCompleted == 0) return true;
-            } catch(Exception ex) { }
-            return false;
-        }
     }
 }

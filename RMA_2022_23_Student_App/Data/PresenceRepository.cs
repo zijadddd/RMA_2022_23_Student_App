@@ -46,7 +46,6 @@ namespace RMA_2022_23_Student_App.Data
         {
             try
             {
-                if (!_studentSubjectRepository.isSubjectActive(studentId, subjectId)) return;
                 Init();
                 var query = conn.Table<Presence>().Where(p => p.week == week && p.subjectId == subjectId).ToList();
                 if(query.Count > 0)
@@ -78,7 +77,6 @@ namespace RMA_2022_23_Student_App.Data
         {
             try
             {
-                if (!_studentSubjectRepository.isSubjectActive(studentId, subjectId)) return;
                 Init();
                 var query = conn.Table<Presence>().Where(p => p.week == week && p.subjectId == subjectId).ToList();
                 if (query.Count > 0)

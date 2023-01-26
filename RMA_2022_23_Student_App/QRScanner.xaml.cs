@@ -27,7 +27,7 @@ public partial class QRScanner : ContentPage
             {
                 if (presence.lectureDate == "null" && presence.exerciseDate != "null") _presenceRepository.addExercisePresence(TabbeddPage.student.studentId, int.Parse(presence.subjectId), int.Parse(presence.week), presence.lectureDate, presence.exerciseDate, 0, 1);
                 if (presence.lectureDate != "null" && presence.exerciseDate == "null") _presenceRepository.addLecturePresence(TabbeddPage.student.studentId, int.Parse(presence.subjectId), int.Parse(presence.week), presence.lectureDate, presence.exerciseDate, 1, 0);
-                barcode.Text = "Your evidence have been recorded for today.";
+                barcode.Text = "Your presence has been recorded.";
             }
         });
     }

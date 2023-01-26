@@ -12,18 +12,18 @@ public partial class MainPage : ContentPage
         PresenceRepository _presenceRepository = new PresenceRepository();
         StudentSubjectRepository _studentSubjectRepository = new StudentSubjectRepository();
 
-        _studentRepository.AddNewStudent(1, "Zijad", "Doglod", "11.10.2001", "Zenica", "060 324 0384", "zijad@gmail.com", "123456", "185", "UNZE", "PTF", "SI", "Ja sam Zijad Doglod i dolazim iz mjesta zvano Tetovo u blizini Zenice.", "people1.jpg");
-        _studentRepository.AddNewStudent(2, "Muhamed", "Haseljic", "23.05.2001", "Vjetrenice", "060 555 4444", "muhamed@gmail.com", "654321", "185", "UNZE", "PTF", "SI", "Ja sam Muhamed Haseljic i dolazim iz mjesta zvano Vjetrenice u blizini Zenice.", "people2.jpeg");
-        _studentRepository.AddNewStudent(3, "Suljo", "Suljic", "16.8.2002", "Kakanj", "060 452 671", "suljo@gmail.com", "komp", "184", "UNZE", "PTF", "SI", "Ja sam Suljo Suljic i dolazim iz mjesta zvano Bašići u blizini Kaknja.", "people3.jpeg");
-        _studentRepository.AddNewStudent(4, "Suljo", "Suljic", "16.8.2002", "Kakanj", "060 452 671", "sulo@gmail.com", "komp", "182", "UNZE", "PTF", "SI", "Ja sam Suljo Suljic i dolazim iz mjesta zvano Bašići u blizini Kaknja.", "people4.jpg");
-        _studentRepository.AddNewStudent(5, "Zijada", "Ramoni", "23.05.2001", "Zanzibar", "060 555 333", "mlada@gmail.com", "komp", "186", "UNZE", "PTF", "SI", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit laoreet risus et imperdiet. In molestie in arcu eget ornare.", "people5.jpg");
-        _studentRepository.AddNewStudent(6, "Ramo", "Ramoni", "23.05.2001", "Zanzibar", "060 555 333", "ramo@gmail.com", "komp", "186", "UNZE", "PTF", "SI", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit laoreet risus et imperdiet. In molestie in arcu eget ornare.", "people5.jpg");
-        _studentRepository.AddNewStudent(7, "Anida", "Đuliman", "23.05.2001", "Zanzibar", "060 555 333", "anida@gmail.com", "komp", "186", "UNZE", "PTF", "SI", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit laoreet risus et imperdiet. In molestie in arcu eget ornare.", "people5.jpg");
-        _studentRepository.AddNewStudent(8, "Miljana", "Kulic", "23.05.2001", "Zanzibar", "060 555 333", "mila@gmail.com", "komp", "186", "UNZE", "PTF", "SI", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit laoreet risus et imperdiet. In molestie in arcu eget ornare.", "people5.jpg");
-        _studentRepository.AddNewStudent(9, "John", "Johns", "23.05.2001", "Zanzibar", "060 555 333", "mila@gmail.com", "komp", "186", "UNZE", "PTF", "SI", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit laoreet risus et imperdiet. In molestie in arcu eget ornare.", "people5.jpg");
-        _studentRepository.AddNewStudent(10, "Arnold", "Arnodolski", "23.05.2001", "Zanzibar", "060 555 333", "arnold@gmail.com", "komp", "186", "UNZE", "PTF", "SI", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit laoreet risus et imperdiet. In molestie in arcu eget ornare.", "people5.jpg");
-        _studentRepository.AddNewStudent(11, "Azem", "Azemović", "23.05.2001", "Zanzibar", "060 555 333", "azem@gmail.com", "komp", "186", "UNZE", "PTF", "SI", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit laoreet risus et imperdiet. In molestie in arcu eget ornare.", "people5.jpg");
-        _studentRepository.AddNewStudent(12, "Selim", "Šišman", "23.05.2001", "Zanzibar", "060 555 333", "selim@gmail.com", "komp", "186", "UNZE", "PTF", "SI", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit laoreet risus et imperdiet. In molestie in arcu eget ornare.", "people5.jpg");
+        _studentRepository.AddNewStudent(1, "Zijad", "Doglod", "11.10.2001", "Zenica", "060 324 0384", "zijad@gmail.com", "123456", "185", "UNZE", "PTF", "SI", "A highly motivated second year Software engineering Student with all\r\npassed subjects through four semesters. My studies have taught me\r\nstrong programming and problem solving skills in the way I can, in a\r\nrelatively short time, adopt to the problem and solve it. I'm also offering\r\nstrong experience with many programming tools, logical approach and\r\nmany other advanced computer skills. I am ready to utilize my skills and\r\npassion to further the mission of a company. I can say for myself that I am\r\nhardworking, ambitious, well organized and motivational individual with a\r\nstrong passion in Information Technology sector.", "person1.jpg");
+        _studentRepository.AddNewStudent(2, "Muhamed", "Haseljic", "23.05.2001", "Vjetrenice", "060 555 4444", "muhamed@gmail.com", "654321", "185", "UNZE", "PTF", "SI", "Ja sam Muhamed Haseljic i dolazim iz mjesta zvano Vjetrenice u blizini Zenice.", "person4.jpg");
+        _studentRepository.AddNewStudent(3, "Ajla", "Doglod", "16.8.2002", "Kakanj", "060 452 671", "ajla@gmail.com", "komp", "184", "UNZE", "PTF", "SI", "Ja sam Suljo Suljic i dolazim iz mjesta zvano Bašići u blizini Kaknja.", "person3.jpg");
+        _studentRepository.AddNewStudent(4, "Sedina", "Selimovic", "16.8.2002", "Kakanj", "060 452 671", "sedina@gmail.com", "komp", "182", "UNZE", "PTF", "SI", "Ja sam Suljo Suljic i dolazim iz mjesta zvano Bašići u blizini Kaknja.", "person4.jpg");
+        _studentRepository.AddNewStudent(5, "Ramiz", "Bajramovic", "23.05.2001", "Vitez", "060 555 333", "ramiz@gmail.com", "komp", "186", "UNZE", "PTF", "SI", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit laoreet risus et imperdiet. In molestie in arcu eget ornare.", "person5.jpg");
+        _studentRepository.AddNewStudent(6, "Ramiz", "Heleg", "23.05.2001", "Zenica", "060 555 333", "ramiz@gmail.com", "komp", "186", "UNZE", "PTF", "SI", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit laoreet risus et imperdiet. In molestie in arcu eget ornare.", "person6.jpg");
+        _studentRepository.AddNewStudent(7, "Samid", "Badnjar", "23.05.2001", "Sarajevo", "060 555 333", "samid@gmail.com", "komp", "186", "UNZE", "PTF", "SI", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit laoreet risus et imperdiet. In molestie in arcu eget ornare.", "person7.jpg");
+        _studentRepository.AddNewStudent(8, "Samir", "Mujanovic", "23.05.2001", "Zepce", "060 555 333", "samir@gmail.com", "komp", "186", "UNZE", "PTF", "SI", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit laoreet risus et imperdiet. In molestie in arcu eget ornare.", "person8.jpg");
+        _studentRepository.AddNewStudent(9, "Ajdin", "Avdic", "23.05.2001", "Doboj", "060 555 333", "ajdin@gmail.com", "komp", "186", "UNZE", "PTF", "SI", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit laoreet risus et imperdiet. In molestie in arcu eget ornare.", "person9.jpg");
+        _studentRepository.AddNewStudent(10, "Halid", "Kalabuzic", "23.05.2001", "Kakanj", "060 555 333", "halid@gmail.com", "komp", "186", "UNZE", "PTF", "SI", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit laoreet risus et imperdiet. In molestie in arcu eget ornare.", "person10.jpg");
+        _studentRepository.AddNewStudent(11, "Azem", "Sarajcic", "23.05.2001", "Bugojno", "060 555 333", "azem@gmail.com", "komp", "186", "UNZE", "PTF", "SI", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit laoreet risus et imperdiet. In molestie in arcu eget ornare.", "person11.jpg");
+        _studentRepository.AddNewStudent(12, "Selim", "Šišman", "23.05.2001", "Mostar", "060 555 333", "selim@gmail.com", "komp", "186", "UNZE", "PTF", "SI", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit laoreet risus et imperdiet. In molestie in arcu eget ornare.", "person12.jpg");
 
         _subjectRepository.addNewSubject(1, "Razvoj mobilnih aplikacija", "Esad Kadušić", "socialmedia.png", "#cde7fc", "#AA3e8dfd", "Every Monday", "15:30 - 17:30", "meet.google.com/puj-fkho-yuw");
         _subjectRepository.addNewSubject(2, "Web programiranje", "Đulaga Hadžić", "subjectone.png", "#e6ceff", "#AAd078ff", "Every Tuesday", "09:15 - 12:15", "meet.google.com/koj-lghu-zuj");
@@ -143,8 +143,8 @@ public partial class MainPage : ContentPage
         _studentSubjectRepository.addStudentToSubject(12, 8, 0, "10", "60", "10", "0", "0", "0");
 
         //1. student
-        _presenceRepository.addPresence(1, 1, 1, "2020-08-23", "2020-07-31", 1, 1);
-        _presenceRepository.addPresence(1, 1, 2, "2020-08-22", "2020-07-29", 1, 0);
+        _presenceRepository.addPresence(1, 1, 1, "2020-08-23", "2020-08-31", 1, 1);
+        _presenceRepository.addPresence(1, 1, 2, "2020-08-22", "2020-08-29", 1, 0);
         _presenceRepository.addPresence(1, 1, 3, "2020-08-30", "2020-08-07", 1, 1);
         _presenceRepository.addPresence(1, 1, 4, "2020-08-29", "2020-08-05", 1, 0);
         _presenceRepository.addPresence(1, 1, 5, "2020-09-06", "2020-08-14", 1, 1);
@@ -152,8 +152,8 @@ public partial class MainPage : ContentPage
         _presenceRepository.addPresence(1, 1, 7, "2020-09-13", "2020-08-21", 1, 1);
         _presenceRepository.addPresence(1, 1, 8, "2020-09-12", "2020-08-19", 1, 1);
 
-        _presenceRepository.addPresence(1, 2, 1, "2020-08-23", "2020-07-31", 1, 1);
-        _presenceRepository.addPresence(1, 2, 2, "2020-08-22", "2020-07-29", 1, 0);
+        _presenceRepository.addPresence(1, 2, 1, "2020-08-23", "2020-08-31", 1, 1);
+        _presenceRepository.addPresence(1, 2, 2, "2020-08-22", "2020-08-29", 1, 0);
         _presenceRepository.addPresence(1, 2, 3, "2020-08-30", "2020-08-07", 1, 1);
         _presenceRepository.addPresence(1, 2, 4, "2020-08-29", "2020-08-05", 1, 0);
         _presenceRepository.addPresence(1, 2, 5, "2020-09-06", "2020-08-14", 1, 1);
@@ -162,8 +162,8 @@ public partial class MainPage : ContentPage
         _presenceRepository.addPresence(1, 2, 8, "2020-09-12", "2020-08-19", 1, 1);
 
         // 2. student
-        _presenceRepository.addPresence(2, 1, 1, "2020-08-23", "2020-07-31", 1, 1);
-        _presenceRepository.addPresence(2, 1, 2, "2020-08-22", "2020-07-29", 1, 0);
+        _presenceRepository.addPresence(2, 1, 1, "2020-08-23", "2020-08-31", 1, 1);
+        _presenceRepository.addPresence(2, 1, 2, "2020-08-22", "2020-08-29", 1, 0);
         _presenceRepository.addPresence(2, 1, 3, "2020-08-30", "2020-08-07", 1, 1);
         _presenceRepository.addPresence(2, 1, 4, "2020-08-29", "2020-08-05", 1, 0);
         _presenceRepository.addPresence(2, 1, 5, "2020-09-06", "2020-08-14", 1, 1);
@@ -171,8 +171,8 @@ public partial class MainPage : ContentPage
         _presenceRepository.addPresence(2, 1, 7, "2020-09-13", "2020-08-21", 1, 1);
         _presenceRepository.addPresence(2, 1, 8, "2020-09-12", "2020-08-19", 1, 1);
 
-        _presenceRepository.addPresence(2, 2, 1, "2020-08-23", "2020-07-31", 1, 1);
-        _presenceRepository.addPresence(2, 2, 2, "2020-08-22", "2020-07-29", 1, 0);
+        _presenceRepository.addPresence(2, 2, 1, "2020-08-23", "2020-08-31", 1, 1);
+        _presenceRepository.addPresence(2, 2, 2, "2020-08-22", "2020-08-29", 1, 0);
         _presenceRepository.addPresence(2, 2, 3, "2020-08-30", "2020-08-07", 1, 1);
         _presenceRepository.addPresence(2, 2, 4, "2020-08-29", "2020-08-05", 1, 0);
         _presenceRepository.addPresence(2, 2, 5, "2020-09-06", "2020-08-14", 1, 1);

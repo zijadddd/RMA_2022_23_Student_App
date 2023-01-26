@@ -12,7 +12,7 @@ public partial class MainPage : ContentPage
         PresenceRepository _presenceRepository = new PresenceRepository();
         StudentSubjectRepository _studentSubjectRepository = new StudentSubjectRepository();
 
-        _studentRepository.AddNewStudent(1, "Zijad", "Doglod", "11.10.2001", "Zenica", "060 324 0384", "zijad@gmail.com", "123456", "185", "UNZE", "PTF", "SI", "A highly motivated second year Software engineering Student with all passed subjects through four semesters. My studies have taught me strong programming and problem solving skills in the way I can, in a\r\nrelatively short time, adopt to the problem and solve it. I'm also offering strong experience with many programming tools, logical approach and many other advanced computer skills. I am ready to utilize my skills and passion to further the mission of a company. I can say for myself that I am hardworking, ambitious, well organized and motivational individual with a strong passion in Information Technology sector", "people1.jpg");
+        _studentRepository.AddNewStudent(1, "Zijad", "Doglod", "11.10.2001", "Zenica", "060 324 0384", "zijad@gmail.com", "123456", "185", "UNZE", "PTF", "SI", "Ja sam Zijad Doglod i dolazim iz mjesta zvano Tetovo u blizini Zenice.", "people1.jpg");
         _studentRepository.AddNewStudent(2, "Muhamed", "Haseljic", "23.05.2001", "Vjetrenice", "060 555 4444", "muhamed@gmail.com", "654321", "185", "UNZE", "PTF", "SI", "Ja sam Muhamed Haseljic i dolazim iz mjesta zvano Vjetrenice u blizini Zenice.", "people2.jpeg");
         _studentRepository.AddNewStudent(3, "Suljo", "Suljic", "16.8.2002", "Kakanj", "060 452 671", "suljo@gmail.com", "komp", "184", "UNZE", "PTF", "SI", "Ja sam Suljo Suljic i dolazim iz mjesta zvano Bašići u blizini Kaknja.", "people3.jpeg");
         _studentRepository.AddNewStudent(4, "Suljo", "Suljic", "16.8.2002", "Kakanj", "060 452 671", "sulo@gmail.com", "komp", "182", "UNZE", "PTF", "SI", "Ja sam Suljo Suljic i dolazim iz mjesta zvano Bašići u blizini Kaknja.", "people4.jpg");
@@ -30,84 +30,117 @@ public partial class MainPage : ContentPage
         _subjectRepository.addNewSubject(3, "Uvod u tehnike programiranja", "Adnan Dželihođić", "socialmedia.png", "#cfd8dc", "#AA78909c", "Every Wednesday", "12:15 - 15:15", "meet.google.com/rik-pfpo-jok");
         _subjectRepository.addNewSubject(4, "Razvoj softvera", "Mujo Hodzic", "socialmedia.png", "#dcffce", "#AA8ed385", "Every Friday", "15:15 - 17:00", "meet.google.com/jus-zvyt-joq");
         _subjectRepository.addNewSubject(5, "Embedded i Real Time sistemi", "Elmir Babovic", "subjectone.png", "#ffcdd2", "#AAe57373", "Every Friday", "17:15 - 19:00", "meet.google.com/aqm-oexz-ikb");
+        _subjectRepository.addNewSubject(6, "Sistemska i mrežna administracija", "Enes Saletović", "socialmedia.png", "#cde7fc", "#AA3e8dfd", "Every Monday", "12:15 - 15:15", "meet.google.com/rik-pfpo-jok");
+        _subjectRepository.addNewSubject(7, "Napredne tehnike programiranja", "Adnan Dželihođić", "subjectone.png", "#e6ceff", "#AAd078ff", "Every Tuesday", "15:15 - 17:00", "meet.google.com/jus-zvyt-joq");
+        _subjectRepository.addNewSubject(8, "Napredne baze podataka", "Jasmin Azemović", "socialmedia.png", "#cfd8dc", "#AA78909c", "Every Friday", "17:15 - 19:00", "meet.google.com/aqm-oexz-ikb");
 
         _studentSubjectRepository.addStudentToSubject(1, 1, 0, "10", "10", "8", "23", "33", "56");
         _studentSubjectRepository.addStudentToSubject(1, 2, 1, "4", "12", "10", "10", "36", "46");
         _studentSubjectRepository.addStudentToSubject(1, 3, 2, "14", "15", "5", "21", "39", "60");
         _studentSubjectRepository.addStudentToSubject(1, 4, 0, "14", "15", "5", "21", "39", "60");
         _studentSubjectRepository.addStudentToSubject(1, 5, 0, "10", "60", "10", "0", "0", "0");
+        _studentSubjectRepository.addStudentToSubject(1, 6, 0, "10", "60", "10", "0", "0", "0");
+        _studentSubjectRepository.addStudentToSubject(1, 7, 0, "10", "60", "10", "0", "0", "0");
+        _studentSubjectRepository.addStudentToSubject(1, 8, 0, "10", "60", "10", "0", "0", "0");
 
         _studentSubjectRepository.addStudentToSubject(2, 1, 0, "10", "10", "10", "23", "33", "56");
         _studentSubjectRepository.addStudentToSubject(2, 2, 1, "4", "12", "8", "10", "36", "46");
         _studentSubjectRepository.addStudentToSubject(2, 3, 2, "14", "15", "6", "21", "39", "60");
         _studentSubjectRepository.addStudentToSubject(2, 4, 0, "8", "15", "5", "5", "1", "6");
         _studentSubjectRepository.addStudentToSubject(2, 5, 0, "10", "15", "10", "25", "40", "65");
+        _studentSubjectRepository.addStudentToSubject(2, 6, 0, "10", "60", "10", "0", "0", "0");
+        _studentSubjectRepository.addStudentToSubject(2, 7, 0, "10", "60", "10", "0", "0", "0");
+        _studentSubjectRepository.addStudentToSubject(2, 8, 0, "10", "60", "10", "0", "0", "0");
 
         _studentSubjectRepository.addStudentToSubject(3, 1, 0, "10", "10", "10", "23", "33", "56");
         _studentSubjectRepository.addStudentToSubject(3, 2, 1, "4", "12", "8", "10", "36", "46");
         _studentSubjectRepository.addStudentToSubject(3, 3, 2, "14", "15", "6", "21", "39", "60");
         _studentSubjectRepository.addStudentToSubject(3, 4, 0, "8", "15", "5", "5", "1", "6");
         _studentSubjectRepository.addStudentToSubject(3, 5, 0, "10", "15", "10", "25", "40", "65");
+        _studentSubjectRepository.addStudentToSubject(3, 6, 0, "10", "60", "10", "0", "0", "0");
+        _studentSubjectRepository.addStudentToSubject(3, 7, 0, "10", "60", "10", "0", "0", "0");
+        _studentSubjectRepository.addStudentToSubject(3, 8, 0, "10", "60", "10", "0", "0", "0");
 
         _studentSubjectRepository.addStudentToSubject(4, 1, 0, "10", "10", "10", "23", "33", "56");
         _studentSubjectRepository.addStudentToSubject(4, 2, 1, "4", "12", "8", "10", "36", "46");
         _studentSubjectRepository.addStudentToSubject(4, 3, 2, "14", "15", "6", "21", "39", "60");
         _studentSubjectRepository.addStudentToSubject(4, 4, 0, "8", "15", "5", "5", "1", "6");
         _studentSubjectRepository.addStudentToSubject(4, 5, 0, "10", "15", "10", "25", "40", "65");
+        _studentSubjectRepository.addStudentToSubject(4, 6, 0, "10", "60", "10", "0", "0", "0");
+        _studentSubjectRepository.addStudentToSubject(4, 7, 0, "10", "60", "10", "0", "0", "0");
+        _studentSubjectRepository.addStudentToSubject(4, 8, 0, "10", "60", "10", "0", "0", "0");
 
         _studentSubjectRepository.addStudentToSubject(5, 1, 0, "10", "10", "10", "23", "33", "56");
         _studentSubjectRepository.addStudentToSubject(5, 2, 1, "4", "12", "8", "10", "36", "46");
         _studentSubjectRepository.addStudentToSubject(5, 3, 2, "14", "15", "6", "21", "39", "60");
         _studentSubjectRepository.addStudentToSubject(5, 4, 0, "8", "15", "5", "5", "1", "6");
         _studentSubjectRepository.addStudentToSubject(5, 5, 0, "10", "15", "10", "25", "40", "65");
+        _studentSubjectRepository.addStudentToSubject(5, 6, 0, "10", "60", "10", "0", "0", "0");
+        _studentSubjectRepository.addStudentToSubject(5, 7, 0, "10", "60", "10", "0", "0", "0");
+        _studentSubjectRepository.addStudentToSubject(5, 8, 0, "10", "60", "10", "0", "0", "0");
 
         _studentSubjectRepository.addStudentToSubject(6, 1, 0, "10", "10", "10", "23", "33", "56");
         _studentSubjectRepository.addStudentToSubject(6, 2, 1, "4", "12", "8", "10", "36", "46");
         _studentSubjectRepository.addStudentToSubject(6, 3, 2, "14", "15", "6", "21", "39", "60");
         _studentSubjectRepository.addStudentToSubject(6, 4, 0, "8", "15", "5", "5", "1", "6");
         _studentSubjectRepository.addStudentToSubject(6, 5, 0, "10", "15", "10", "25", "40", "65");
+        _studentSubjectRepository.addStudentToSubject(6, 6, 0, "10", "60", "10", "0", "0", "0");
+        _studentSubjectRepository.addStudentToSubject(6, 7, 0, "10", "60", "10", "0", "0", "0");
+        _studentSubjectRepository.addStudentToSubject(6, 8, 0, "10", "60", "10", "0", "0", "0");
 
         _studentSubjectRepository.addStudentToSubject(7, 1, 0, "10", "10", "10", "23", "33", "56");
         _studentSubjectRepository.addStudentToSubject(7, 2, 1, "4", "12", "8", "10", "36", "46");
         _studentSubjectRepository.addStudentToSubject(7, 3, 2, "14", "15", "6", "21", "39", "60");
         _studentSubjectRepository.addStudentToSubject(7, 4, 0, "8", "15", "5", "5", "1", "6");
         _studentSubjectRepository.addStudentToSubject(7, 5, 0, "10", "15", "10", "25", "40", "65");
+        _studentSubjectRepository.addStudentToSubject(7, 6, 0, "10", "60", "10", "0", "0", "0");
+        _studentSubjectRepository.addStudentToSubject(7, 7, 0, "10", "60", "10", "0", "0", "0");
+        _studentSubjectRepository.addStudentToSubject(7, 8, 0, "10", "60", "10", "0", "0", "0");
 
         _studentSubjectRepository.addStudentToSubject(8, 1, 0, "10", "10", "10", "23", "33", "56");
         _studentSubjectRepository.addStudentToSubject(8, 2, 1, "4", "12", "8", "10", "36", "46");
         _studentSubjectRepository.addStudentToSubject(8, 3, 2, "14", "15", "6", "21", "39", "60");
         _studentSubjectRepository.addStudentToSubject(8, 4, 0, "8", "15", "5", "5", "1", "6");
         _studentSubjectRepository.addStudentToSubject(8, 5, 0, "10", "15", "10", "25", "40", "65");
+        _studentSubjectRepository.addStudentToSubject(8, 6, 0, "10", "60", "10", "0", "0", "0");
+        _studentSubjectRepository.addStudentToSubject(8, 7, 0, "10", "60", "10", "0", "0", "0");
+        _studentSubjectRepository.addStudentToSubject(8, 8, 0, "10", "60", "10", "0", "0", "0");
 
         _studentSubjectRepository.addStudentToSubject(9, 1, 0, "10", "10", "10", "23", "33", "56");
         _studentSubjectRepository.addStudentToSubject(9, 2, 1, "4", "12", "8", "10", "36", "46");
         _studentSubjectRepository.addStudentToSubject(9, 3, 2, "14", "15", "6", "21", "39", "60");
         _studentSubjectRepository.addStudentToSubject(9, 4, 0, "8", "15", "5", "5", "1", "6");
         _studentSubjectRepository.addStudentToSubject(9, 5, 0, "10", "15", "10", "25", "40", "65");
-
-        _studentSubjectRepository.addStudentToSubject(9, 1, 0, "10", "10", "10", "23", "33", "56");
-        _studentSubjectRepository.addStudentToSubject(9, 2, 1, "4", "12", "8", "10", "36", "46");
-        _studentSubjectRepository.addStudentToSubject(9, 3, 2, "14", "15", "6", "21", "39", "60");
-        _studentSubjectRepository.addStudentToSubject(9, 4, 0, "8", "15", "5", "5", "1", "6");
-        _studentSubjectRepository.addStudentToSubject(9, 5, 0, "10", "15", "10", "25", "40", "65");
+        _studentSubjectRepository.addStudentToSubject(9, 6, 0, "10", "60", "10", "0", "0", "0");
+        _studentSubjectRepository.addStudentToSubject(9, 7, 0, "10", "60", "10", "0", "0", "0");
+        _studentSubjectRepository.addStudentToSubject(9, 8, 0, "10", "60", "10", "0", "0", "0");
 
         _studentSubjectRepository.addStudentToSubject(10, 1, 0, "10", "10", "10", "23", "33", "56");
         _studentSubjectRepository.addStudentToSubject(10, 2, 1, "4", "12", "8", "10", "36", "46");
         _studentSubjectRepository.addStudentToSubject(10, 3, 2, "14", "15", "6", "21", "39", "60");
         _studentSubjectRepository.addStudentToSubject(10, 4, 0, "8", "15", "5", "5", "1", "6");
         _studentSubjectRepository.addStudentToSubject(10, 5, 0, "10", "15", "10", "25", "40", "65");
+        _studentSubjectRepository.addStudentToSubject(10, 6, 0, "10", "60", "10", "0", "0", "0");
+        _studentSubjectRepository.addStudentToSubject(10, 7, 0, "10", "60", "10", "0", "0", "0");
+        _studentSubjectRepository.addStudentToSubject(10, 8, 0, "10", "60", "10", "0", "0", "0");
 
         _studentSubjectRepository.addStudentToSubject(11, 1, 0, "10", "10", "10", "23", "33", "56");
         _studentSubjectRepository.addStudentToSubject(11, 2, 1, "4", "12", "8", "10", "36", "46");
         _studentSubjectRepository.addStudentToSubject(11, 3, 2, "14", "15", "6", "21", "39", "60");
         _studentSubjectRepository.addStudentToSubject(11, 4, 0, "8", "15", "5", "5", "1", "6");
         _studentSubjectRepository.addStudentToSubject(11, 5, 0, "10", "15", "10", "25", "40", "65");
+        _studentSubjectRepository.addStudentToSubject(11, 6, 0, "10", "60", "10", "0", "0", "0");
+        _studentSubjectRepository.addStudentToSubject(11, 7, 0, "10", "60", "10", "0", "0", "0");
+        _studentSubjectRepository.addStudentToSubject(11, 8, 0, "10", "60", "10", "0", "0", "0");
 
         _studentSubjectRepository.addStudentToSubject(12, 1, 0, "10", "10", "10", "23", "33", "56");
         _studentSubjectRepository.addStudentToSubject(12, 2, 1, "4", "12", "8", "10", "36", "46");
         _studentSubjectRepository.addStudentToSubject(12, 3, 2, "14", "15", "6", "21", "39", "60");
         _studentSubjectRepository.addStudentToSubject(12, 4, 0, "8", "15", "5", "5", "1", "6");
         _studentSubjectRepository.addStudentToSubject(12, 5, 0, "10", "15", "10", "25", "40", "65");
+        _studentSubjectRepository.addStudentToSubject(12, 6, 0, "10", "60", "10", "0", "0", "0");
+        _studentSubjectRepository.addStudentToSubject(12, 7, 0, "10", "60", "10", "0", "0", "0");
+        _studentSubjectRepository.addStudentToSubject(12, 8, 0, "10", "60", "10", "0", "0", "0");
 
         //1. student
         _presenceRepository.addPresence(1, 1, 1, "2020-08-23", "2020-07-31", 1, 1);

@@ -22,10 +22,14 @@ public partial class QRScanner : ContentPage
         {
             JObject jsonObject = JObject.Parse($"{e.Results[0].Value}");
             PresenceModel presence = new PresenceModel(jsonObject.GetValue("subjectId").ToString(), jsonObject.GetValue("week").ToString(), jsonObject.GetValue("lectureDate").ToString(), jsonObject.GetValue("exerciseDate").ToString());
-            if (presence.lectureDate == "null" && presence.exerciseDate != "null") _presenceRepository.addExercisePresence(TabbeddPage.student.studentId, int.Parse(presence.subjectId), int.Parse(presence.week), presence.lectureDate, presence.exerciseDate, 0, 1);
-            if (presence.lectureDate != "null" && presence.exerciseDate == "null") _presenceRepository.addLecturePresence(TabbeddPage.student.studentId, int.Parse(presence.subjectId), int.Parse(presence.week), presence.lectureDate, presence.exerciseDate, 1, 0);
-            if (_studentSubjectRepository.isSubjectActive(TabbeddPage.student.studentId, int.Parse(presence.subjectId))) barcode.Text = "Your evidence have been recorded for today.";
-            else barcode.Text = "You cannot set evidence for pending or completed subjects.";
+            if (int.Parse(presence.week) < 1 || int.Parse(presence.week) > 16) barcode.Text = "Week value must be between 1-16.";
+            else
+            {
+                if (presence.lectureDate == "null" && presence.exerciseDate != "null") _presenceRepository.addExercisePresence(TabbeddPage.student.studentId, int.Parse(presence.subjectId), int.Parse(presence.week), presence.lectureDate, presence.exerciseDate, 0, 1);
+                if (presence.lectureDate != "null" && presence.exerciseDate == "null") _presenceRepository.addLecturePresence(TabbeddPage.student.studentId, int.Parse(presence.subjectId), int.Parse(presence.week), presence.lectureDate, presence.exerciseDate, 1, 0);
+                if (_studentSubjectRepository.isSubjectActive(TabbeddPage.student.studentId, int.Parse(presence.subjectId))) barcode.Text = "Your evidence have been recorded for today.";
+                else barcode.Text = "You cannot set evidence for pending or completed subjects.";
+            }
         });
     }
 }

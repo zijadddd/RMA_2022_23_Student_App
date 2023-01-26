@@ -8,10 +8,12 @@ namespace RMA_2022_23_Student_App;
 public partial class QRScanner : ContentPage
 {
     private PresenceRepository _presenceRepository;
+    private StudentSubjectRepository _studentSubjectRepository;
 	public QRScanner()
 	{
 		InitializeComponent();
         _presenceRepository = new PresenceRepository();
+        _studentSubjectRepository = new StudentSubjectRepository();
 	}
 
     private void CameraBarcodeReaderView_BarcodesDetected(object sender, ZXing.Net.Maui.BarcodeDetectionEventArgs e)
@@ -22,7 +24,8 @@ public partial class QRScanner : ContentPage
             PresenceModel presence = new PresenceModel(jsonObject.GetValue("subjectId").ToString(), jsonObject.GetValue("week").ToString(), jsonObject.GetValue("lectureDate").ToString(), jsonObject.GetValue("exerciseDate").ToString());
             if (presence.lectureDate == "null" && presence.exerciseDate != "null") _presenceRepository.addExercisePresence(TabbeddPage.student.studentId, int.Parse(presence.subjectId), int.Parse(presence.week), presence.lectureDate, presence.exerciseDate, 0, 1);
             if (presence.lectureDate != "null" && presence.exerciseDate == "null") _presenceRepository.addLecturePresence(TabbeddPage.student.studentId, int.Parse(presence.subjectId), int.Parse(presence.week), presence.lectureDate, presence.exerciseDate, 1, 0);
-            barcode.Text = "Your evidence have been recorded for today.";
+            if (_studentSubjectRepository.isSubjectActive(TabbeddPage.student.studentId, int.Parse(presence.subjectId))) barcode.Text = "Your evidence have been recorded for today.";
+            else barcode.Text = "You cannot set evidence for pending or completed subjects.";
         });
     }
 }

@@ -81,7 +81,7 @@ namespace RMA_2022_23_Student_App.Data
                 if (!_studentSubjectRepository.isSubjectActive(studentId, subjectId)) return;
                 Init();
                 var query = conn.Table<Presence>().Where(p => p.week == week && p.subjectId == subjectId).ToList();
-                if (query.Count > 0 && query[0].lectureDate.Length == 0)
+                if (query.Count > 0 && query[0].exerciseDate.Length == 0)
                 {
                     conn.Execute("UPDATE presence SET exercisePresence = ? WHERE week = ?", exercisePresence, week);
                     conn.Execute("UPDATE presence SET exerciseDate = ? WHERE week = ?", exerciseDate, week);

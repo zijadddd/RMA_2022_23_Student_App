@@ -19,7 +19,6 @@ namespace RMA_2022_23_Student_App.Data
         {
             try
             {
-                if (!_studentSubjectRepository.isSubjectActive(studentId, subjectId)) return;
                 //if (presence.lectureDate == "null" && presence.exerciseDate != "null") 
                 Init();
                 Presence presence = new Presence

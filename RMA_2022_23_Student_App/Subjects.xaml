@@ -19,7 +19,7 @@
                             </VerticalStackLayout>
                         </Frame>
                         <Frame HeightRequest="70" WidthRequest="70" CornerRadius="20" HorizontalOptions="End" BorderColor="Transparent" Margin="10" Padding="0">
-                            <Image x:Name="studentProfilePhoto" HeightRequest="70" WidthRequest="70" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                            <Image x:Name="studentProfilePhoto" HeightRequest="70" WidthRequest="70" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Aspect="AspectFill"/>
                         </Frame>
                     </FlexLayout>
                     <FlexLayout HorizontalOptions="Center" Direction="Row" AlignItems="Center" JustifyContent="SpaceAround" Margin="0, 20">

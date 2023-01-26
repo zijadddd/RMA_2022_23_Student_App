@@ -23,5 +23,10 @@ public partial class ProfilePage : ContentPage
         profilePhotoUrl.Source = TabbeddPage.student.profilePhotoUrl;
     }
 
+    private async void LogoutClicked(object sender, EventArgs e)
+    {
+        Application.Current.MainPage = new Login();
+    }
+
     protected override bool OnBackButtonPressed() { return true; }
 }

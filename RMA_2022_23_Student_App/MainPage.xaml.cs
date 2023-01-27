@@ -142,43 +142,42 @@ public partial class MainPage : ContentPage
         _studentSubjectRepository.addStudentToSubject(12, 7, 0, "10", "60", "10", "0", "0", "0");
         _studentSubjectRepository.addStudentToSubject(12, 8, 0, "10", "60", "10", "0", "0", "0");
 
-        //1. student
-        _presenceRepository.addPresence(1, 1, 1, "2020-08-23", "2020-08-31", 1, 1);
-        _presenceRepository.addPresence(1, 1, 2, "2020-08-22", "2020-08-29", 1, 0);
-        _presenceRepository.addPresence(1, 1, 3, "2020-08-30", "2020-08-07", 1, 1);
-        _presenceRepository.addPresence(1, 1, 4, "2020-08-29", "2020-08-05", 1, 0);
-        _presenceRepository.addPresence(1, 1, 5, "2020-09-06", "2020-08-14", 1, 1);
-        _presenceRepository.addPresence(1, 1, 6, "2020-09-05", "2020-08-12", 1, 1);
-        _presenceRepository.addPresence(1, 1, 7, "2020-09-13", "2020-08-21", 1, 1);
-        _presenceRepository.addPresence(1, 1, 8, "2020-09-12", "2020-08-19", 1, 1);
+        _presenceRepository.addPresence(1, 1, 1, "2022-10-02", "2022-10-04", 1, 1);
+        _presenceRepository.addPresence(1, 1, 2, "2022-10-09", "2022-10-11", 1, 0);
+        _presenceRepository.addPresence(1, 1, 3, "2022-10-16", "2022-10-18", 1, 1);
+        _presenceRepository.addPresence(1, 1, 4, "2022-10-23", "2022-10-25", 1, 0);
+        _presenceRepository.addPresence(1, 1, 5, "2022-10-30", "2022-11-01", 1, 1);
+        _presenceRepository.addPresence(1, 1, 6, "2022-11-05", "2022-11-08", 1, 1);
+        _presenceRepository.addPresence(1, 1, 7, "2022-11-12", "2022-11-15", 1, 1);
+        _presenceRepository.addPresence(1, 1, 8, "2022-11-19", "2022-11-22", 1, 1);
 
-        _presenceRepository.addPresence(1, 2, 1, "2020-08-23", "2020-08-31", 1, 1);
-        _presenceRepository.addPresence(1, 2, 2, "2020-08-22", "2020-08-29", 1, 0);
-        _presenceRepository.addPresence(1, 2, 3, "2020-08-30", "2020-08-07", 1, 1);
-        _presenceRepository.addPresence(1, 2, 4, "2020-08-29", "2020-08-05", 1, 0);
-        _presenceRepository.addPresence(1, 2, 5, "2020-09-06", "2020-08-14", 1, 1);
-        _presenceRepository.addPresence(1, 2, 6, "2020-09-05", "2020-08-12", 1, 1);
-        _presenceRepository.addPresence(1, 2, 7, "2020-09-13", "2020-08-21", 1, 1);
-        _presenceRepository.addPresence(1, 2, 8, "2020-09-12", "2020-08-19", 1, 1);
+        _presenceRepository.addPresence(1, 2, 1, "2022-10-02", "2022-10-04", 1, 1);
+        _presenceRepository.addPresence(1, 2, 2, "2022-10-09", "2022-10-11", 1, 0);
+        _presenceRepository.addPresence(1, 2, 3, "2022-10-16", "2022-10-18", 1, 1);
+        _presenceRepository.addPresence(1, 2, 4, "2022-10-23", "2022-10-25", 1, 0);
+        _presenceRepository.addPresence(1, 2, 5, "2022-10-30", "2022-11-01", 1, 1);
+        _presenceRepository.addPresence(1, 2, 6, "2022-11-05", "2022-11-08", 1, 1);
+        _presenceRepository.addPresence(1, 2, 7, "2022-11-12", "2022-11-15", 1, 1);
+        _presenceRepository.addPresence(1, 2, 8, "2022-11-19", "2022-11-22", 1, 1);
 
         // 2. student
-        _presenceRepository.addPresence(2, 1, 1, "2020-08-23", "2020-08-31", 1, 1);
-        _presenceRepository.addPresence(2, 1, 2, "2020-08-22", "2020-08-29", 1, 0);
-        _presenceRepository.addPresence(2, 1, 3, "2020-08-30", "2020-08-07", 1, 1);
-        _presenceRepository.addPresence(2, 1, 4, "2020-08-29", "2020-08-05", 1, 0);
-        _presenceRepository.addPresence(2, 1, 5, "2020-09-06", "2020-08-14", 1, 1);
-        _presenceRepository.addPresence(2, 1, 6, "2020-09-05", "2020-08-12", 1, 1);
-        _presenceRepository.addPresence(2, 1, 7, "2020-09-13", "2020-08-21", 1, 1);
-        _presenceRepository.addPresence(2, 1, 8, "2020-09-12", "2020-08-19", 1, 1);
+        _presenceRepository.addPresence(2, 1, 1, "2022-10-02", "2022-10-04", 1, 1);
+        _presenceRepository.addPresence(2, 1, 2, "2022-10-09", "2022-10-11", 1, 0);
+        _presenceRepository.addPresence(2, 1, 3, "2022-10-16", "2022-10-18", 1, 1);
+        _presenceRepository.addPresence(2, 1, 4, "2022-10-23", "2022-10-25", 1, 0);
+        _presenceRepository.addPresence(2, 1, 5, "2022-10-30", "2022-11-01", 1, 1);
+        _presenceRepository.addPresence(2, 1, 6, "2022-11-05", "2022-11-08", 1, 1);
+        _presenceRepository.addPresence(2, 1, 7, "2022-11-12", "2022-11-15", 1, 1);
+        _presenceRepository.addPresence(2, 1, 8, "2022-11-19", "2022-11-22", 1, 1);
 
-        _presenceRepository.addPresence(2, 2, 1, "2020-08-23", "2020-08-31", 1, 1);
-        _presenceRepository.addPresence(2, 2, 2, "2020-08-22", "2020-08-29", 1, 0);
-        _presenceRepository.addPresence(2, 2, 3, "2020-08-30", "2020-08-07", 1, 1);
-        _presenceRepository.addPresence(2, 2, 4, "2020-08-29", "2020-08-05", 1, 0);
-        _presenceRepository.addPresence(2, 2, 5, "2020-09-06", "2020-08-14", 1, 1);
-        _presenceRepository.addPresence(2, 2, 6, "2020-09-05", "2020-08-12", 1, 1);
-        _presenceRepository.addPresence(2, 2, 7, "2020-09-13", "2020-08-21", 1, 1);
-        _presenceRepository.addPresence(2, 2, 8, "2020-09-12", "2020-08-19", 1, 1);
+        _presenceRepository.addPresence(2, 2, 1, "2022-10-02", "2022-10-04", 1, 1);
+        _presenceRepository.addPresence(2, 2, 2, "2022-10-09", "2022-10-11", 1, 0);
+        _presenceRepository.addPresence(2, 2, 3, "2022-10-16", "2022-10-18", 1, 1);
+        _presenceRepository.addPresence(2, 2, 4, "2022-10-23", "2022-10-25", 1, 0);
+        _presenceRepository.addPresence(2, 2, 5, "2022-10-30", "2022-11-01", 1, 1);
+        _presenceRepository.addPresence(2, 2, 6, "2022-11-05", "2022-11-08", 1, 1);
+        _presenceRepository.addPresence(2, 2, 7, "2022-11-12", "2022-11-15", 1, 1);
+        _presenceRepository.addPresence(2, 2, 8, "2022-11-19", "2022-11-22", 1, 1);
 
         BindingContext = this;
     }

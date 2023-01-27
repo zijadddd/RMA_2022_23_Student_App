@@ -79,7 +79,7 @@
                                             VerticalOptions="End">
 
                                             <VerticalStackLayout Spacing="5">
-                                                <Label Text="{Binding name}" FontFamily="MontserratMedium" TextColor="White" FontSize="18" FontAttributes="Bold"/>
+                                                <Label Text="{Binding name}" FontFamily="MontserratMedium" TextColor="White" FontSize="16" FontAttributes="Bold"/>
                                                 <Label Text="{Binding professor}" FontFamily="MontserratMedium" TextColor="White" FontSize="15"/>
                                                 <Button Clicked="OpenClassPage" ClassId="{Binding subjectId}" Text="Enter" BackgroundColor="Transparent" BorderColor="White" BorderWidth="1" WidthRequest="100" CornerRadius="20" Padding="15" FontAttributes="Bold" FontFamily="MontserratMedium" HorizontalOptions="End" TextColor="White" />
                                             </VerticalStackLayout>
